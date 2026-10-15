@@ -125,3 +125,119 @@ Stage Summary:
 - VERIFIED: page renders cleanly with no runtime/hydration errors; mobile responsive; footer sticky-to-bottom; FAQ accordion interactive.
 - Files produced by build agent (Task 2): `src/app/page.tsx`, `src/app/layout.tsx` (Fraunces+Archivo fonts + metadata), `src/app/globals.css` (tokens + ~700 lines component CSS), `src/hooks/use-reveal.ts`, and 13 components under `src/components/ns/`.
 - Task complete. No known blocking issues. (Minor non-blocking notes from Task 2: sonner toaster briefly overlaps the floating WhatsApp button during a toast; buyer CTA buttons are plain `#quote` anchors.)
+
+---
+Task ID: 4 (analysis)
+Agent: orchestrator
+Task: Analyze the NEW uploaded HTML reference (`/home/z/my-project/upload/Pasted Content_1792061488991.txt`, 1927 lines vs original 1826) to find new features to combine into the existing Next.js home page; also map every contact-info reference that must be updated to the user's real WhatsApp +84 981848702 and email callmekai@nurserysupply.us.
+
+Work Log:
+- Diffed the two HTML references. The NEW file adds TWO features not in the original:
+  1. **Product Detail view** — `data-page="product"` shell (line 984) with `#pdRoot` populated by `openProduct(id)` (line 1446). Layout (`.pd-grid`, 3-col: 92px thumbs | hero | 400px info): vertical thumbnail gallery (6 imgs via seed suffixes), hero image with **Shopee-style hover zoom** (a `.pd-zoom` layer using the hero as `background-image`, `background-size:200%`, `background-position` follows cursor), a "View larger" button + click-hero → opens lightbox. Spec table (`.pd-spec` rows: Specification, Growth Form, Family Name, Mature Foliage Color & Shape, Preferred Climate, Propagation=TC, Transportation=Express/Air, Plantlet Size, MOQ, FOB Price, Availability). "SEND INQUIRY NOW" button + WhatsApp note. Social share row (Facebook, X, Pinterest, Telegram, LinkedIn, WhatsApp). Related products grid (4 more from same genus). Genus metadata comes from `GENUS_INFO` (line 1434) — family/growth/climate/foliage per genus.
+  2. **Lightbox** — fullscreen image preview (lines 1242-1246, CSS 433-436): `#lightbox` fixed overlay, `rgba(14,42,30,.85)` bg, click-outside / close-btn / Escape to dismiss.
+- Catalog product cards link via `href="#/product/${p.id}"` and `openProduct(id)` is called on hash route. Hot-products section + genus cards are the entry points on the home page.
+- CSS for the new features is at lines 401-449 (pd-grid, pd-thumbs, pd-thumb, pd-tick, pd-main, pd-zoom, pd-larger, pd-info, pd-desc, pd-spec-row, pd-inq, pd-share, pd-related) + 433-436 (lightbox) + responsive at 439-449.
+
+CONTACT INFO TO UPDATE (grep-confirmed locations in the EXISTING Next.js code — all currently `+66 81 555 2143` / `sales@nurserysupply.com`):
+- `src/components/ns/header.tsx` line 48 (`tel:+66815552143`), line 55 (`wa.me/66815552143?text=...`), line 114 (`wa.me/66815552143`)
+- `src/components/ns/footer.tsx` line 161 (`mailto:sales@nurserysupply.com`), line 162 (`tel:+66815552143` + display "+66 81 555 2143")
+- `src/components/ns/whatsapp-float.tsx` line 9 (`wa.me/66815552143?text=...`)
+- `src/components/ns/quote-form.tsx` line 72 (`wa.me/66815552143?text=...`), line 93 (`wa.me/66815552143`)
+- ALSO the new product-detail component (built in this task) must use the same new contacts in its "SEND INQUIRY" WhatsApp note.
+
+NEW CONTACT VALUES (use EXACTLY):
+- WhatsApp: `https://wa.me/84981848702` (country code 84 + 981848702, no plus sign in wa.me URL). Display text in UI: "+84 981848702". `tel:` link: `tel:+84981848702`.
+- Email: `callmekai@nurserysupply.us` (mailto + display).
+- Keep the pre-filled WhatsApp text where present (e.g. "Hello Nursery Supply — I'd like the wholesale price list." / "wholesale inquiry") but on the wa.me URL, percent-encode the space/em-dash properly.
+
+CONSTRAINTS FOR THE BUILD (Task 5-7):
+- The user can ONLY see the `/` route. Do NOT create `/catalog` or `/product` routes. Implement the product detail as a **full-screen modal overlay** rendered within the home page (e.g. a `<ProductDetailModal />` mounted in `page.tsx`), opened by a zustand store (`useProductStore`) with an `openProduct(id)` action. Same for the lightbox — a `<Lightbox />` overlay.
+- Use the REAL `z-cdn.chatglm.cn` product images already in `hot-products.tsx` (and the genus category images in `shop-by-genus.tsx`) for the hero + thumbnails. The reference's `pdImg()` returns picsum URLs — DO NOT use picsum. For the 6-thumbnail gallery, reuse the product's real image as thumb[0] and use other real same-genus / category images for thumbs 1-5 so the gallery looks rich with REAL photos.
+- Wire BOTH the Hot Products cards AND the Shop-by-genus cards to open the detail: clicking a hot-product card opens that product; clicking a genus card opens a representative product of that genus (first product with `cat === slug`, fallback to the monstera product).
+- The detail modal must be scrollable, dismissible (X button, click-backdrop, Escape), lock body scroll while open, and accessible (role="dialog", aria-modal, focus trap optional). The lightbox stacks above the detail modal (higher z-index).
+- Add all the pd-* and lightbox CSS to `src/app/globals.css` (port the rules from reference lines 401-449 + 433-436, adapted to the project's token names). Keep the elegant hover already in place.
+- "SEND INQUIRY NOW" button: scroll to the `#quote` section and close the modal (or open the quote form). Social share buttons open real sharer URLs in new tabs.
+- Self-verify with Agent Browser (Task 8): click a hot-product card → modal opens with gallery+zoom+specs+share+related; click a thumbnail → hero swaps; click hero/"View larger" → lightbox opens; Escape closes both; contact info shows the new number/email; `bun run lint` clean.
+
+Stage Summary:
+- Identified 2 new features to add (Product Detail modal + Lightbox) and their full CSS/JS spec from the new reference.
+- Mapped all 7 contact-info sites to update to +84 981848702 / callmekai@nurserysupply.us.
+- Handed off to the build agent (Task 5-7) with explicit constraints: single `/` route, real CDN images, zustand-driven modal, accessible dismiss, self-verify.
+
+---
+Task ID: 5-7
+Agent: full-stack-developer
+Task: Add Product Detail modal + Lightbox features and update contact info to +84 981848702 / callmekai@nurserysupply.us, combined into the existing home page.
+
+Work Log:
+- Read worklog.md (Tasks 1–4 handoffs) — picked up the 2 new features (Product Detail modal + Lightbox), the 7 contact-info sites to update, the catalog product list, and the constraint to keep everything within the `/` route via modals/overlays.
+- Read existing files: hot-products.tsx (4 featured products with real z-cdn images), shop-by-genus.tsx (8 genus cards with real category images), header.tsx, footer.tsx, whatsapp-float.tsx, quote-form.tsx, page.tsx, and the tail of globals.css (which already had ~1612 lines of ns-* component CSS, the refined cat-card hover, the reduced-motion block, etc.).
+- Read the NEW HTML reference at /home/z/my-project/upload/Pasted Content_1792061488991.txt to extract: GENUS_INFO metadata (lines 1434–1443), the openProduct() render function (1446–1538), the pd-* CSS (401–449), lightbox CSS (433–436), the 16 DEFAULT_PRODUCTS (1255–1272), the 6 social-share link builders (1527–1536), and the 6-thumbnail seed-suffix pattern (1453).
+- Created src/lib/catalog-data.ts — single source of truth: Product type, 16 PRODUCTS (the 4 hot-sellers get their distinct z-cdn photos; the remaining 12 get the relevant genus category image so every thumbnail is a real photo — never picsum), GENUS_INFO (verbatim from reference), CAT_NAMES, STATUS map, helpers productsByGenus() / galleryFor() (returns 6 de-duped real z-cdn URLs) / findProduct() / firstProductIdWithGenus().
+- Created src/hooks/use-product-store.ts — two zustand stores: useProductStore {openId, open(id), close()} and useLightboxStore {src, open(src), close()}.
+- Created src/components/ns/lightbox.tsx — fixed overlay z-95, rgba(14,42,30,.85) bg, click-outside / X-button / Escape dismiss (Escape listener active only while open).
+- Created src/components/ns/product-detail.tsx — full modal. Split into an outer wrapper (handles body-scroll lock + Escape, never touches React state in the effect, so no set-state-in-effect lint violation) and an inner ProductDetailContent component keyed by openId (the keyed remount resets all per-product state — activeIdx, heroSrc, swapping, zoomPos, zoomOn — cleanly without setState-in-effect). Renders: breadcrumb (Home › Products Catalog › {name}), 3-col pd-grid (92px thumbs | hero | 400px info), 6-button thumbnail gallery (vertical on desktop, horizontal scroll on mobile), Shopee-style hover-zoom layer (background-image = hero, background-size 200% 200%, background-position follows cursor, only on @media hover:hover and pointer:fine), "View larger" pill + click-hero → opens lightbox, spec table (11 rows), SEND INQUIRY NOW button (closes modal + smooth-scrolls to #quote), WhatsApp note (+84 981848702 / wa.me/84981848702), 6-button social share row (Facebook/X/Pinterest/Telegram/LinkedIn/WhatsApp — real sharer URLs), and a "More {genus}" related-products grid (up to 4 same-genus products). Clicking a related card calls useProductStore.getState().open(relatedId) — the wrapper's key={openId} causes a clean remount with new content and scroll-to-top.
+- Updated src/components/ns/hot-products.tsx — cards are now clickable (role=button, tabindex=0, Enter/Space triggers open); pulls the 4 featured products from the shared PRODUCTS list; preserves the existing elegant hover lift + image scale; adds a "View details" pill that fades in on hover.
+- Updated src/components/ns/shop-by-genus.tsx — each genus card now preventDefault + calls open(firstProductIdWithGenus(slug)). The elegant CSS-only hover (lift -6px, image scale 1.06, gradient overlay, arrow nudge) is UNCHANGED.
+- Updated src/app/page.tsx — mounts <ProductDetailModal /> and <Lightbox /> at the end of the root wrapper (after Footer + WhatsAppFloat).
+- Updated contact info in 4 files: header.tsx (tel:+84981848702 / wa.me/84981848702?text=Hello%20Nursery%20Supply...), footer.tsx (mailto:callmekai@nurserysupply.us / +84 981848702 / tel:+84981848702), whatsapp-float.tsx (wa.me/84981848702?text=...wholesale%20inquiry), quote-form.tsx (both CTAs → wa.me/84981848702). Confirmed zero remaining occurrences of 66815552143 / 66 81 555 2143 / sales@nurserysupply.com via grep.
+- Appended ~410 lines to src/app/globals.css: pd-grid, pd-thumbs, pd-thumb, pd-tick, pd-main, pd-zoom (hover-zoom layer), pd-larger pill, pd-info h1, pd-desc, pd-spec-row table, pd-inq + pd-inq-note, pd-share row with sh-facebook/sh-x/sh-pinterest/sh-telegram/sh-linkedin/sh-whatsapp background colors, pd-related grid, ns-pd-overlay + ns-pd-card + ns-pd-close + ns-pd-crumb, ns-lightbox + ns-lb-img + ns-lb-x, clickable ns-prod-card-clickable modifier with focus-visible ring + hover-revealed ns-prod-view-hint pill. Responsive breakpoints at 1180px (info col → 340px), 980px (single col, horizontal thumb strip), 560px (related 1-col, spec rows stack). Reduced-motion block disables all pd- animations/transitions.
+- Hit one Turbopack HMR issue: the first globals.css append didn't propagate to the served CSS chunk — the static chunk hash 9fa7f085 stayed the same and curl-ing the chunk confirmed zero pd-tick/pd-thumb rules. Adding a sentinel comment near the top of globals.css (just after the @import lines) forced a chunk-hash change; the new chunk (md5 f64e8d75…) contains all 15 pd-* / ns-pd-* rules. Verified via curl + agent-browser eval on document.styleSheets.
+- First lint pass surfaced: (1) react-hooks/set-state-in-effect error from the per-product reset useEffect calling setActiveIdx/setHeroSrc synchronously — fixed by splitting the modal into a wrapper + keyed inner component (the keyed remount resets state via React's mount semantics, no setState-in-effect needed); (2) 4 "Unused eslint-disable directive" warnings for @next/next/no-img-element — removed the now-unnecessary comments (the project's ESLint config doesn't enforce that rule on plain <img>). Final lint: clean.
+- Verified end-to-end with agent-browser (CLI):
+  1. Opened http://localhost:3000/ → title "Nursery Supply — Wholesale Tissue-Culture Plants for U.S. Retailers & Growers". No errors.
+  2. Hot Products: 4 cards, role=button, tabindex=0, aria-label="View details of …". Clicked the Cream Brulee card.
+  3. Modal opened with: role=dialog, aria-modal=true, breadcrumb "Home › Products Catalog › Monstera deliciosa 'Cream Brulee'", h1 with size + "Phytosanitary Certified", 6 thumbnails (all real z-cdn URLs — ca601fef3e71, 57e903ca3e0f, 750e39fd8e20, b523973032ef, 1544695fef31, e44e9e3db623), 11 spec rows (Specification / Growth Form / Family Name / Mature Foliage Color(s) & Shape / Preferred Climate / Propagation / Transportation / Plantlet Size / MOQ / FOB Price / Availability), 6 share links (Facebook/X/Pinterest/Telegram/LinkedIn/WhatsApp with real sharer URLs), 3 related cards (Albo Variegata, Thai Constellation, adansonii Variegated), body scroll locked (overflow: hidden).
+  4. Clicked thumbnail 2 → active thumb changed (border-color --ok), green pd-tick badge appeared (opacity 0 → 1 on the active thumb; verified 1/0/0/0/0/0 across the 6 thumbs), hero src swapped from ca601fef3e71 → 57e903ca3e0f with the .swap opacity transition.
+  5. Hovered the hero (desktop, 1280×800) → pd-zoom layer became opacity:1, background-image = hero, background-size 200% 200%, background-position followed the cursor (verified 50% 49.94% → 34.07% 57.72% on mouse move).
+  6. Clicked "View larger" pill → lightbox opened: z-index 95 (stacks above modal z-80), position fixed, bg rgba(14,42,30,.85), img max-width 900px max-height 88vh, role=dialog aria-modal=true.
+  7. Pressed Escape once → lightbox closed, modal stayed open, body scroll still locked. Pressed Escape again → modal closed, body scroll re-enabled (overflow: ""). Also verified X button + backdrop click close the modal cleanly.
+  8. Shop by genus: clicked each genus card — Monstera → m-cream, Philodendron → p-wizard (related: Pink Princess + gloriosum), Anthurium → an-crys, Caladium → c-white (no related section since only 1 product in genus), Other → h-krim. All open the representative first product of the genus.
+  9. Clicked a related card (Albo Variegata) → modal content swapped (h1 = "Monstera deliciosa 'Albo Variegata'…", hero = 57e903ca3e0f, breadcrumb updated), modal scrollTop reset to 0.
+  10. SEND INQUIRY NOW button → modal closed, body scroll re-enabled, page smooth-scrolled to #quote section (quoteTop ≈ 0.05).
+  11. Mobile (375×812): pd-grid reflows to single column (305px), pd-thumbs becomes a horizontal scroll strip (flex-direction: row, 64×64 thumbs), modal still scrollable, body scroll still locked.
+  12. Contact info verified everywhere: header tel:+84981848702 + wa.me/84981848702?text=Hello%20Nursery%20Supply%20%E2%80%94%20I%27d%20like%20the%20wholesale%20price%20list.; footer "Wholesale desk: callmekai@nurserysupply.us · +84 981848702" (mailto + tel:+84981848702); whatsapp-float wa.me/84981848702?text=Hello%20Nursery%20Supply%20%E2%80%94%20wholesale%20inquiry; quote-form both CTAs wa.me/84981848702; modal inquiry note "Replies within 1 business day · or WhatsApp +84 981848702" (href wa.me/84981848702).
+  13. `bun run lint` — clean. `agent-browser errors` — empty.
+- Screenshots saved to /home/z/my-project/verify/ (04-pd-modal.png, 05-mobile-modal.png, 06-lightbox.png).
+
+Stage Summary:
+- Files created: src/lib/catalog-data.ts; src/hooks/use-product-store.ts; src/components/ns/product-detail.tsx; src/components/ns/lightbox.tsx; agent-ctx/5-7-full-stack-developer.md.
+- Files modified: src/app/page.tsx; src/app/globals.css (+ ~410 lines pd-* + lightbox CSS); src/components/ns/{hot-products,shop-by-genus,header,footer,whatsapp-float,quote-form}.tsx.
+- Key decisions: (1) Two zustand stores (useProductStore, useLightboxStore) drive the modal and lightbox independently; the lightbox stacks at z-95 above the modal at z-80. (2) Split the modal into wrapper + keyed inner component to avoid setState-in-effect (React 16 + Turbopack lint flags the per-product reset effect; the keyed remount pattern resets state cleanly). (3) The modal's Escape handler checks `useLightboxStore.getState().src` — if the lightbox is open, the modal's Escape is a no-op so the lightbox handles it (one Escape closes the lightbox first, a second Escape closes the modal). (4) Real z-cdn images only — the 4 hot-sellers keep their distinct photos; the remaining 12 products get the relevant genus category image so every thumbnail is a real photo. The gallery helper builds a 6-image de-duped set from same-genus product images + the genus category image + other real CDN images. (5) Reused the existing .ns-prod-card styling for related-product mini-cards (the .pd-related-card class just adds cursor:pointer). (6) Added a sentinel comment in globals.css to force Turbopack to recompile the CSS chunk hash on the dev server (the first CSS append wasn't propagating to the served chunk).
+- Verification results: Agent Browser confirmed the Product Detail modal opens with breadcrumb + 6-thumbnail gallery (real z-cdn photos) + hero + Shopee-style hover-zoom layer + 11-row spec table + SEND INQUIRY NOW button + 6 social share links (real sharer URLs) + related products grid. Thumbnail click swaps the hero (with .swap opacity transition + green pd-tick on active thumb). Hero/"View larger" click opens the Lightbox at z-95. Escape closes the lightbox first, then the modal — body scroll re-enables after the modal closes. X button + backdrop click also dismiss. Shop-by-genus cards open a representative product of that genus; related-card click swaps content + scrolls modal to top. SEND INQUIRY NOW closes the modal + smooth-scrolls to #quote. Contact info updated everywhere (header tel + WhatsApp icon, footer desk line, floating WhatsApp button, both quote-form CTAs, modal inquiry note) to +84 981848702 (wa.me/84981848702) and callmekai@nurserysupply.us. Mobile responsive at 375×812 (single-col grid, horizontal thumb strip). `bun run lint` clean. `agent-browser errors` empty.
+- Caveats: (1) For genera with only one product (Caladium, Other) the "More {genus}" related section is omitted. (2) The hover-zoom layer is gated by `@media (hover:hover) and (pointer:fine)` so touch devices don't get a broken hover; tapping the hero still opens the lightbox. (3) The pd-tick badge opacity transition only animates on devices without prefers-reduced-motion. (4) Turbopack HMR for CSS may serve a stale chunk on the first append after a CSS edit; adding a sentinel comment near the top of globals.css forces the chunk hash to change. (5) Sonner toaster is still mounted bottom-right which briefly overlaps the floating WhatsApp button during a toast — same non-blocking note as Task 2.
+
+---
+Task ID: 8 (self-verification)
+Agent: orchestrator
+Task: Independently verify the two new features (Product Detail modal + Lightbox) and the contact-info update (+84 981848702 / callmekai@nurserysupply.us) via Agent Browser; confirm lint clean.
+
+Work Log:
+- grep confirmed NO old contact refs remain (`66815552143` / `66 81 555 2143` / `sales@nurserysupply.com` all gone). New `84981848702` present in header(3), footer(2), whatsapp-float(1), quote-form(2), product-detail(1). New email `callmekai@nurserysupply.us` in footer.
+- dev.log tail: clean `GET / 200`, `Compiled in 223ms` — no compile/runtime errors.
+- Agent Browser: opened `/`, no page errors.
+- Clicked Hot Products card "View details of Monstera deliciosa 'Cream Brulee'" → Product Detail modal (`.ns-pd-overlay`, z-80) opened. Inspected:
+  - breadcrumb "Home › Products Catalog › Monstera deliciosa 'Cream Brulee'" ✓
+  - h1 "Monstera deliciosa 'Cream Brulee' Variegated Tissue Culture Plantlet..." ✓
+  - thumbnail gallery = 6 real z-cdn images ✓
+  - spec table = 11 rows (Specification, Growth Form, Family Name, Mature Foliage Color(s)…, etc.) ✓
+  - social share = 6 links (Facebook, X, Pinterest, Telegram, LinkedIn, WhatsApp) ✓
+  - related products = 3 cards ✓
+  - hero = real z-cdn image (ca601fef3e71.jpg), has `.pd-zoom` layer + "View larger" button ✓
+  - inquiry WhatsApp link = `https://wa.me/84981848702` ✓ (new number!)
+- Thumbnail #2 click → active tick moved to index 1, hero swapped to a different real image (57e903ca3e0f.jpg) ✓
+- "View larger" click → Lightbox opened (z-95, above the z-80 modal), image matched current hero ✓
+- Escape #1 → lightbox closed, modal stayed open, body still scroll-locked ✓
+- Escape #2 → modal closed, body scroll restored ✓
+- Shop-by-genus cards open a representative product per genus ✓ (reported by subagent, consistent with store wiring).
+- Footer contacts: `mailto:callmekai@nurserysupply.us` (text "callmekai@nurserysupply.us") + `tel:+84981848702` (text "+84 981848702") ✓
+- Header: `tel:+84981848702` ("Call our sales desk") + `https://wa.me/84981848702?text=Hello%20Nursery%20Supply…` ("Chat on WhatsApp") ✓
+- Floating WhatsApp button(s): `https://wa.me/84981848702?text=Hello%20Nursery%20Supply…` ✓
+- `bun run lint` → clean (no errors/warnings).
+
+Stage Summary:
+- VERIFIED: Product Detail modal fully functional — 6-thumbnail gallery (real photos, click-to-swap hero with green tick), Shopee-style hover-zoom layer, 11-row spec table, 6-button social share, related products, breadcrumb, SEND INQUIRY (closes + scrolls to #quote), WhatsApp note with new number.
+- VERIFIED: Lightbox opens above modal on hero/"View larger" click; Escape closes lightbox then modal in sequence; body scroll lock/unlock correct.
+- VERIFIED: All contact info updated to WhatsApp +84 981848702 (`wa.me/84981848702`) and email callmekai@nurserysupply.us across header, footer, float, quote-form, and the new product-detail inquiry note.
+- Files created by build agent: `src/lib/catalog-data.ts`, `src/hooks/use-product-store.ts`, `src/components/ns/product-detail.tsx`, `src/components/ns/lightbox.tsx`. Modified: `src/app/page.tsx`, `src/app/globals.css` (+~410 lines pd/lightbox CSS), `src/components/ns/{hot-products,shop-by-genus,header,footer,whatsapp-float,quote-form}.tsx`.
+- Task complete. No blocking issues. (Non-blocking: single-product genera omit the related section; hover-zoom gated to fine-pointer devices; sonner/WhatsApp float z-overlap during toast — same as before.)

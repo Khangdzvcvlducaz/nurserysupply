@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* sentinel: pd-modal-v1 — forces Turbopack CSS chunk recompile */
 @custom-variant dark (&:is(.dark *));
 
 /* ============== Design tokens (from worklog.md) ============== */
@@ -1608,5 +1609,418 @@
   .ns-cat-card:hover .ns-cat-media img,
   .ns-cat-card:focus-within .ns-cat-media img {
     transform: none;
+  }
+  .ns-pd-overlay { animation: none !important; }
+  .ns-pd-card { animation: none !important; }
+  .pd-main:hover .pd-zoom { opacity: 0 !important; }
+  .pd-thumb:hover { transform: none; }
+}
+
+/* =========================================================== */
+/* ============ Product Detail modal (Task 5-7) ============== */
+/* =========================================================== */
+
+/* Overlay backdrop + scrollable card */
+.ns-pd-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: rgba(14, 42, 30, 0.78);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 32px 16px 64px;
+  overflow-y: auto;
+  animation: ns-pd-fade 0.25s ease;
+  backdrop-filter: blur(2px);
+}
+@keyframes ns-pd-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.ns-pd-card {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  background: var(--paper);
+  border-radius: 22px;
+  box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.45);
+  border: 1px solid var(--line);
+  padding: 28px 32px 40px;
+  animation: ns-pd-pop 0.32s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+@keyframes ns-pd-pop {
+  from { opacity: 0; transform: translateY(14px) scale(0.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.ns-pd-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--cream-2);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, color 0.2s;
+}
+.ns-pd-close:hover {
+  background: var(--green-deep);
+  color: #fff;
+  transform: rotate(90deg);
+}
+.ns-pd-crumb {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--ink-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 8px;
+}
+.ns-pd-crumb a {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 600;
+}
+.ns-pd-crumb a:hover { text-decoration: underline; }
+.ns-pd-crumb .cur {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* 3-col grid: thumbs | hero | info */
+.pd-grid {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr) 400px;
+  gap: 30px;
+  align-items: start;
+  margin-top: 1.6rem;
+}
+.pd-thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: sticky;
+  top: 100px;
+}
+.pd-thumb {
+  width: 92px;
+  height: 92px;
+  border-radius: 10px;
+  border: 2px solid var(--line-2);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  background: var(--sage-3);
+  padding: 0;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.pd-thumb:hover { transform: translateY(-2px); }
+.pd-thumb.on { border-color: var(--ok); }
+.pd-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.pd-tick {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background: var(--ok);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.pd-thumb.on .pd-tick { opacity: 1; }
+
+/* Hero image with hover-zoom layer */
+.pd-main {
+  position: relative;
+  width: 100%;
+  max-width: min(100%, 540px);
+  aspect-ratio: 1 / 1;
+  margin-inline: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: var(--sh);
+  cursor: crosshair;
+}
+.pd-main img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: zoom-in;
+  transition: opacity 0.25s;
+}
+.pd-main img.swap { opacity: 0; }
+.pd-zoom {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: 200% 200%;
+  background-position: 50% 50%;
+  transition: opacity 0.25s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .pd-main:hover .pd-zoom { opacity: 1; }
+}
+.pd-larger {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(28, 35, 29, 0.72);
+  color: #fff;
+  font: 600 0.8rem var(--font-sans);
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  border: 0;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s, transform 0.2s;
+}
+.pd-larger:hover {
+  background: rgba(28, 35, 29, 0.9);
+  transform: translateY(-1px);
+}
+
+/* Info column */
+.pd-info h1 {
+  font-size: clamp(1.5rem, 2.4vw, 2.05rem);
+  margin-bottom: 1rem;
+  line-height: 1.18;
+}
+.pd-desc {
+  color: var(--ink-2);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+  max-width: 52ch;
+}
+.pd-spec { border-top: 1px solid var(--line); }
+.pd-spec-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.pd-spec-row .dt {
+  font: 700 0.8rem var(--font-sans);
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+.pd-spec-row .dd {
+  font-size: 0.88rem;
+  color: var(--ink-2);
+  line-height: 1.4;
+}
+.pd-inq { margin-top: 1.6rem; }
+.pd-inq-note {
+  margin-top: 0.8rem;
+  text-align: left;
+  font-size: 0.85rem;
+  color: var(--ink-2);
+}
+.pd-inq-note a {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: none;
+}
+.pd-inq-note a:hover { text-decoration: underline; }
+
+/* Social share row */
+.pd-share {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.8rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+.pd-share .k {
+  font: 600 0.78rem var(--font-sans);
+  color: var(--ink-2);
+  margin-right: 0.3rem;
+}
+.pd-share .sh {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: transform 0.2s;
+}
+.pd-share .sh:hover { transform: translateY(-2px); }
+.sh-facebook { background: #1877f2; }
+.sh-x { background: #111; }
+.sh-pinterest { background: #e60023; }
+.sh-telegram { background: #2aabee; }
+.sh-linkedin { background: #0a66c2; }
+.sh-whatsapp { background: #25d366; }
+
+/* Related products section */
+.pd-related { margin-top: 5rem; }
+.pd-related-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+  flex-wrap: wrap;
+}
+.pd-related-h2 {
+  font-size: 1.6rem;
+  margin-top: 0.2rem;
+}
+.pd-related-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+.pd-related-card {
+  cursor: pointer;
+}
+
+/* Clickable hot-product card */
+.ns-prod-card-clickable {
+  cursor: pointer;
+  outline: none;
+}
+.ns-prod-card-clickable:focus-visible {
+  box-shadow: 0 0 0 3px rgba(23, 59, 44, 0.35), 0 20px 38px -22px rgba(23, 59, 44, 0.3);
+  border-color: rgba(23, 59, 44, 0.3);
+}
+.ns-prod-view-hint {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(28, 35, 29, 0.78);
+  color: #fff;
+  font: 600 0.72rem var(--font-sans);
+  letter-spacing: 0.04em;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+.ns-prod-card-clickable:hover .ns-prod-view-hint,
+.ns-prod-card-clickable:focus-visible .ns-prod-view-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============ Lightbox ============ */
+.ns-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 95;
+  background: rgba(14, 42, 30, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  cursor: zoom-out;
+  animation: ns-pd-fade 0.2s ease;
+}
+.ns-lb-img {
+  max-width: min(900px, 92vw);
+  max-height: 88vh;
+  border-radius: 12px;
+  box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+.ns-lb-x {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.ns-lb-x:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: rotate(90deg);
+}
+
+/* ============ Responsive — Product detail ============ */
+/* Laptop hẹp: thu cột info còn 340px */
+@media (max-width: 1180px) and (min-width: 981px) {
+  .pd-grid { grid-template-columns: 92px minmax(0, 1fr) 340px; }
+}
+/* Mobile: ảnh full-width vuông, thumbnails cuộn ngang */
+@media (max-width: 980px) {
+  .ns-pd-card { padding: 24px 18px 32px; border-radius: 18px; }
+  .pd-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .pd-main { order: 1; max-width: 100%; cursor: default; }
+  .pd-thumbs {
+    order: 2;
+    position: static;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .pd-thumbs::-webkit-scrollbar { display: none; }
+  .pd-thumb { width: 64px; height: 64px; flex: 0 0 64px; }
+  .pd-info { order: 3; }
+  .pd-spec-row { grid-template-columns: 150px 1fr; }
+  .pd-related-grid { grid-template-columns: repeat(2, 1fr); }
+  .pd-related { margin-top: 3.5rem; }
+}
+@media (max-width: 560px) {
+  .pd-related-grid { grid-template-columns: 1fr; }
+  .pd-spec-row { grid-template-columns: 1fr; gap: 0.15rem; }
+  .pd-spec-row .dt { font-size: 0.72rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ns-pd-overlay, .ns-pd-card, .ns-lightbox { animation: none !important; }
+  .pd-main img { transition: none !important; }
+  .pd-zoom { transition: none !important; }
+  .pd-thumb, .pd-larger, .pd-share .sh, .ns-pd-close, .ns-lb-x {
+    transition: none !important;
   }
 }

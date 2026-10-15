@@ -1,6 +1,8 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import { useProductStore } from "@/hooks/use-product-store";
+import { firstProductIdWithGenus } from "@/lib/catalog-data";
 
 type Cat = {
   slug: string;
@@ -88,6 +90,19 @@ const CATS: Cat[] = [
 ];
 
 export function ShopByGenus() {
+  const open = useProductStore((s) => s.open);
+
+  const onClick = (slug: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    open(firstProductIdWithGenus(slug));
+  };
+  const onKeyDown = (slug: string) => (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      open(firstProductIdWithGenus(slug));
+    }
+  };
+
   return (
     <section className="ns-sec" id="catalog">
       <div className="ns-wrap">
@@ -109,9 +124,11 @@ export function ShopByGenus() {
           {CATS.map((c) => (
             <a
               key={c.slug}
-              href={`#${c.slug}`}
+              href="#catalog"
               className={`ns-cat-card ${c.layout}`}
-              aria-label={`Shop ${c.name}`}
+              aria-label={`View ${c.name} varieties`}
+              onClick={onClick(c.slug)}
+              onKeyDown={onKeyDown(c.slug)}
             >
               <div className="ns-cat-media">
                 <img

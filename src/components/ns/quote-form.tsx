@@ -69,7 +69,7 @@ export function QuoteForm() {
               ))}
             </div>
             <a
-              href="https://wa.me/66815552143?text=Hello%20%E2%80%94%20I%27d%20like%20the%20wholesale%20price%20list."
+              href="https://wa.me/84981848702?text=Hello%20%E2%80%94%20I%27d%20like%20the%20wholesale%20price%20list."
               target="_blank"
               rel="noopener noreferrer"
               className="ns-btn ns-btn-cream"
@@ -90,7 +90,7 @@ export function QuoteForm() {
                   WhatsApp us any time.
                 </p>
                 <a
-                  href="https://wa.me/66815552143"
+                  href="https://wa.me/84981848702"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ns-btn ns-btn-outline"

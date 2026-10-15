@@ -158,8 +158,8 @@ export function Footer() {
           </span>
           <span>
             Wholesale desk:{" "}
-            <a href="mailto:sales@nurserysupply.com">sales@nurserysupply.com</a>{" "}
-            · <a href="tel:+66815552143">+66 81 555 2143</a>
+            <a href="mailto:callmekai@nurserysupply.us">callmekai@nurserysupply.us</a>{" "}
+            · <a href="tel:+84981848702">+84 981848702</a>
           </span>
         </div>
       </div>

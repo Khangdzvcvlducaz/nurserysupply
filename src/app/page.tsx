@@ -15,6 +15,8 @@ import { Faq } from "@/components/ns/faq";
 import { QuoteForm } from "@/components/ns/quote-form";
 import { Footer } from "@/components/ns/footer";
 import { WhatsAppFloat } from "@/components/ns/whatsapp-float";
+import { ProductDetailModal } from "@/components/ns/product-detail";
+import { Lightbox } from "@/components/ns/lightbox";
 
 export default function Home() {
   useReveal();
@@ -37,6 +39,8 @@ export default function Home() {
       </main>
       <Footer />
       <WhatsAppFloat />
+      <ProductDetailModal />
+      <Lightbox />
     </div>
   );
 }

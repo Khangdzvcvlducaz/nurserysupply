@@ -45,14 +45,14 @@ export function Header() {
           <div className="ns-hdr-acts">
             <a
               className="ns-icon-btn"
-              href="tel:+66815552143"
+              href="tel:+84981848702"
               aria-label="Call our sales desk"
             >
               <Phone size={18} />
             </a>
             <a
               className="ns-icon-btn wa"
-              href="https://wa.me/66815552143?text=Hello%20Nursery%20Supply%20%E2%80%94%20I%27d%20like%20the%20wholesale%20price%20list."
+              href="https://wa.me/84981848702?text=Hello%20Nursery%20Supply%20%E2%80%94%20I%27d%20like%20the%20wholesale%20price%20list."
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat on WhatsApp"
@@ -111,7 +111,7 @@ export function Header() {
         <div className="ns-mnav-foot">
           <a
             className="ns-btn ns-btn-cream"
-            href="https://wa.me/66815552143"
+            href="https://wa.me/84981848702"
             target="_blank"
             rel="noopener noreferrer"
           >

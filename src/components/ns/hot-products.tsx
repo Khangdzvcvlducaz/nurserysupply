@@ -1,70 +1,14 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
-
-type Status = "in-stock" | "limited" | "pre-order";
-
-type Product = {
-  id: string;
-  name: string;
-  variety: string;
-  image: string;
-  price: string;
-  moq: string;
-  desc: string;
-  status: Status;
-};
-
-const STATUS_LABEL: Record<Status, string> = {
-  "in-stock": "In stock",
-  limited: "Limited stock",
-  "pre-order": "Pre-order",
-};
-
-const PRODUCTS: Product[] = [
-  {
-    id: "m-cream",
-    name: "Monstera deliciosa 'Cream Brulee'",
-    variety: "Cream & caramel marbling",
-    image: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ca601fef3e71.jpg",
-    price: "$14.50",
-    moq: "MOQ 20",
-    desc: "A rare variegated Monstera with cream and caramel-yellow marbling, suitable for premium indoor plant retailers and collectors.",
-    status: "limited",
-  },
-  {
-    id: "m-thai",
-    name: "Monstera 'Thai Constellation'",
-    variety: "Cream speckle & splash",
-    image: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/750e39fd8e20.jpg",
-    price: "$9.80",
-    moq: "MOQ 50",
-    desc: "Stable speckled variegation from certified culture — the most reliable volume seller for U.S. retail shelves.",
-    status: "in-stock",
-  },
-  {
-    id: "p-wizard",
-    name: "Philodendron 'White Wizard'",
-    variety: "Pure white sectoral blocks",
-    image: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b523973032ef.jpg",
-    price: "$11.00",
-    moq: "MOQ 25",
-    desc: "Green-and-white variegation on self-heading stock — ships well and acclimatizes fast for online sellers.",
-    status: "in-stock",
-  },
-  {
-    id: "a-frydek",
-    name: "Alocasia 'Frydek Variegata'",
-    variety: "White blotch on velvet green",
-    image: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1544695fef31.jpg",
-    price: "$16.00",
-    moq: "MOQ 25",
-    desc: "High-velocity variegated Alocasia — pre-hardened in community trays to handle shipping stress.",
-    status: "limited",
-  },
-];
+import { useProductStore } from "@/hooks/use-product-store";
+import { PRODUCTS, STATUS, type Product } from "@/lib/catalog-data";
 
 export function HotProducts() {
+  const open = useProductStore((s) => s.open);
+  // Show only the 4 featured products that are marked as hot-sellers.
+  const HOT = PRODUCTS.filter((p) => p.featured).slice(0, 4);
+
   return (
     <section className="ns-sec-tight" id="hot">
       <div className="ns-wrap">
@@ -83,44 +27,67 @@ export function HotProducts() {
         </div>
 
         <div className="ns-p-grid">
-          {PRODUCTS.map((p) => {
-            const statusCls =
-              p.status === "in-stock"
-                ? ""
-                : p.status === "limited"
-                ? "lim"
-                : "pre";
-            return (
-              <article key={p.id} className="ns-prod-card ns-reveal">
-                <div className="ns-prod-media">
-                  <img
-                    src={p.image}
-                    alt={`${p.name} — ${p.variety}`}
-                    width={600}
-                    height={600}
-                    loading="lazy"
-                  />
-                  <span className={`ns-status-pill ${statusCls}`}>
-                    {STATUS_LABEL[p.status]}
-                  </span>
-                </div>
-                <div className="ns-prod-body">
-                  <span className="ns-prod-variety">{p.variety}</span>
-                  <span className="ns-prod-name">{p.name}</span>
-                  <p className="ns-prod-desc">{p.desc}</p>
-                  <div className="ns-prod-foot">
-                    <span className="ns-prod-price">
-                      {p.price}
-                      <small> / plantlet</small>
-                    </span>
-                    <span className="ns-prod-moq">{p.moq}</span>
-                  </div>
-                </div>
-              </article>
-            );
-          })}
+          {HOT.map((p) => (
+            <ProductCard key={p.id} product={p} onOpen={() => open(p.id)} />
+          ))}
         </div>
       </div>
     </section>
+  );
+}
+
+// Clickable product card. Whole card is interactive (cursor pointer,
+// role=button, Enter / Space triggers open). Hover lift effect preserved.
+export function ProductCard({
+  product,
+  onOpen,
+}: {
+  product: Product;
+  onOpen: () => void;
+}) {
+  const st = STATUS[product.status] ?? STATUS["in-stock"];
+  const statusCls =
+    st.cls === "in" ? "" : st.cls === "lim" ? "lim" : "pre";
+
+  return (
+    <article
+      className="ns-prod-card ns-reveal ns-prod-card-clickable"
+      role="button"
+      tabIndex={0}
+      aria-label={`View details of ${product.name}`}
+      onClick={onOpen}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onOpen();
+        }
+      }}
+    >
+      <div className="ns-prod-media">
+        <img
+          src={product.image}
+          alt={`${product.name} — ${product.variety}`}
+          width={600}
+          height={600}
+          loading="lazy"
+        />
+        <span className={`ns-status-pill ${statusCls}`}>{st.label}</span>
+        <span className="ns-prod-view-hint" aria-hidden="true">
+          View details <ArrowRight size={13} />
+        </span>
+      </div>
+      <div className="ns-prod-body">
+        <span className="ns-prod-variety">{product.variety}</span>
+        <span className="ns-prod-name">{product.name}</span>
+        <p className="ns-prod-desc">{product.desc}</p>
+        <div className="ns-prod-foot">
+          <span className="ns-prod-price">
+            {product.price}
+            <small> / plantlet</small>
+          </span>
+          <span className="ns-prod-moq">MOQ {product.moq}</span>
+        </div>
+      </div>
+    </article>
   );
 }

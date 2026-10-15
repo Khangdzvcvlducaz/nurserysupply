@@ -273,3 +273,24 @@ Stage Summary:
 - The "Shop by genus" section has been completely redesigned: from plain white image-top cards to premium full-bleed photo cards with editorial number badges, glass leaf accents, glass bottom panels, and a reveal-on-hover description + caramel CTA — keeping the elegant hover philosophy and the click-to-open product-detail integration intact.
 - Files modified: `src/components/ns/shop-by-genus.tsx` (rewritten), `src/app/globals.css` (cat-grid block replaced ~365 lines + duplicate reduced-motion rule removed).
 - No blocking issues. Click-to-open, hover reveal/zoom, big-card hierarchy, and mobile touch behavior all verified in-browser.
+
+---
+Task ID: 10
+Agent: orchestrator
+Task: Switch the project to static HTML export for Cloudflare Pages hosting ("sửa về http tĩnh vì tôi sử dụng cloudflare cho host").
+
+Work Log:
+- Audited blockers for `output: 'export'`: no server actions, no dynamic routes, no middleware, no next/image usage. Only blocker = `src/app/api/route.ts` (an unused "Hello world" placeholder GET handler) — deleted it and removed the empty `src/app/api` dir.
+- `next.config.ts`: changed `output: 'standalone'` → `output: 'export'`, added `trailingSlash: true` (folder-style URLs friendlier on static hosts), `images.unoptimized: true` (next/image optimizer needs a Node server). Kept `typescript.ignoreBuildErrors: true` + `reactStrictMode: false`.
+- `package.json`: simplified `build` to plain `next build` (dropped the standalone `cp` commands that don't apply to export); changed `start` to `bunx serve out -l 3000` so a built `out/` can be served statically.
+- `.gitignore`: added `out/` (build artifact) and `upload/` (chat reference files). Fixed a mangled `/skills/out` line back to `/skills/` + `out/`.
+- Ran `bun run build` (one-time, dev server stopped first to avoid .next cache contention): ✓ Compiled in 4.6s, route `/` prerendered as `(Static)`. Produced `out/` (1.4 MB total, `index.html` 76.9 KB, CSS+JS chunks under `out/_next/static/`).
+- Served `out/` via `python3 -m http.server 4173` and verified with Agent Browser on the static URL: page renders with correct title, 8 genus cards present, Philodendron card click → Product Detail modal opens with "Philodendron 'White Wizard'", reveal-hidden state correct. Static export is fully functional client-side.
+- Committed: `d73c661 "Switch to static HTML export for Cloudflare Pages hosting"` (4 files: next.config.ts, package.json, .gitignore, deleted api/route.ts). Set local git identity to `Khangdzvcvlducaz <Khangdzvcvlducaz@users.noreply.github.com>`.
+- Push to GitHub FAILED: `remote: Invalid username or token. Password authentication is not supported.` — the PAT the user shared earlier (`github_pat_11A2...`) is now invalid (revoked or expired, as I had recommended). Remote `main` still at `87f7e3c`; local HEAD at `d73c661`. Commit is NOT on GitHub yet.
+- Restarted dev server on port 3000 (HTTP 200) so the preview panel keeps working. `out/` folder retained for direct Cloudflare upload.
+
+Stage Summary:
+- Static export is configured and VERIFIED working: `bun run build` → `out/` (1.4MB) renders correctly with all client features (modal, lightbox, hover) intact.
+- Commit `d73c661` is local-only; GitHub push needs a fresh PAT (or the user pushes from their own machine after downloading).
+- Deployment options handed to the user: (A) direct upload of `out/` to Cloudflare Pages (no GitHub needed), or (B) Cloudflare Pages Git integration with build command `bun run build` + output dir `out` (requires pushing commit d73c661 first).

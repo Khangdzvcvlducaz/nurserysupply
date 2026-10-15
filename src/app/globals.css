@@ -540,177 +540,324 @@
   }
 }
 
-/* ============== Shop by genus (cat-grid) ============== */
+/* ============== Shop by genus — redesigned (photo-forward, glass panels) ============== */
+.ns-catalog { position: relative; }
+
 .ns-cat-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 255px;
-  gap: 22px;
+  grid-auto-rows: 300px;
+  gap: 20px;
 }
 .ns-cat-card {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  background: #ffffff;
-  border: 1px solid var(--line);
-  border-radius: 18px;
+  display: block;
+  border-radius: 20px;
   overflow: hidden;
+  background: var(--green-deep);
+  border: 1px solid rgba(23, 59, 44, 0.1);
   text-decoration: none;
-  color: inherit;
-  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1),
-    box-shadow 0.45s cubic-bezier(0.2, 0.7, 0.2, 1),
-    border-color 0.45s ease;
+  color: #fff;
+  isolation: isolate;
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.5s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.5s ease;
   will-change: transform;
 }
-.ns-cat-card:hover,
-.ns-cat-card:focus-within {
-  transform: translateY(-6px);
-  box-shadow: 0 26px 50px -28px rgba(23, 59, 44, 0.4);
-  border-color: rgba(23, 59, 44, 0.3);
-}
+
+/* Full-bleed media */
 .ns-cat-media {
-  position: relative;
+  position: absolute;
+  inset: 0;
   overflow: hidden;
-  background: var(--sage-3);
-  flex-shrink: 0;
+  z-index: 0;
 }
 .ns-cat-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition: transform 0.85s cubic-bezier(0.2, 0.7, 0.2, 1);
   will-change: transform;
 }
-.ns-cat-card:hover .ns-cat-media img,
-.ns-cat-card:focus-within .ns-cat-media img {
-  transform: scale(1.06);
-}
-.ns-cat-overlay {
+
+/* Shade — always-on for legibility, deepens on hover */
+.ns-cat-shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(23, 59, 44, 0.55), transparent 60%);
-  opacity: 0;
-  transition: opacity 0.45s ease;
+  z-index: 1;
   pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(14, 42, 30, 0.82) 0%,
+    rgba(14, 42, 30, 0.4) 40%,
+    rgba(14, 42, 30, 0.06) 64%,
+    transparent 100%
+  );
+  transition: background 0.5s ease;
 }
-.ns-cat-card:hover .ns-cat-overlay,
-.ns-cat-card:focus-within .ns-cat-overlay {
-  opacity: 1;
+
+/* Editorial number badge (top-left) */
+.ns-cat-num {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  z-index: 3;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.62);
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  transition: color 0.4s ease;
 }
-.ns-cat-body {
-  padding: 18px 20px 18px;
+.ns-cat-num::after {
+  content: "";
+  width: 0;
+  height: 1.5px;
+  background: var(--caramel);
+  transition: width 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* Glass leaf accent (top-right) */
+.ns-cat-leaf {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  transition: background 0.4s ease, transform 0.4s ease, border-color 0.4s ease;
+}
+
+/* Bottom glass panel */
+.ns-cat-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 18px 20px 20px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  flex: 1;
 }
-.ns-cat-body h3 {
-  font-size: 1.18rem;
+.ns-cat-panel h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.28rem;
+  line-height: 1.1;
+  color: #fff;
   margin: 0;
-  color: var(--ink);
-  line-height: 1.15;
+  letter-spacing: -0.01em;
 }
 .ns-cat-meta {
   display: flex;
-  gap: 14px;
-  font-size: 0.76rem;
-  color: var(--ink-3);
-  font-weight: 500;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.74);
 }
-.ns-cat-meta b { color: var(--green); font-weight: 600; }
-.ns-cat-desc {
-  font-size: 0.86rem;
-  color: var(--ink-2);
+.ns-cat-meta .ns-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--caramel);
+  display: inline-block;
+  opacity: 0.85;
+}
+
+/* Reveal-on-hover description (hidden on hover-capable devices, shown on hover) */
+.ns-cat-reveal {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.55s cubic-bezier(0.2, 0.7, 0.2, 1),
+    opacity 0.4s ease, margin-top 0.45s ease;
+}
+.ns-cat-reveal p {
+  font-size: 0.84rem;
   line-height: 1.55;
+  color: rgba(255, 255, 255, 0.88);
   margin: 0;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.ns-cat-link {
-  margin-top: auto;
+
+/* CTA pill — always visible so cards are actionable on touch */
+.ns-cat-cta {
+  margin-top: 4px;
+  align-self: flex-start;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: 0.86rem;
-  color: var(--green);
-  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: #f4f1e4;
+  padding: 0.5rem 0.95rem;
+  border-radius: 999px;
+  background: var(--green);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  transition: background 0.3s ease, gap 0.3s ease;
 }
-.ns-cat-link .ic {
-  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-.ns-cat-card:hover .ns-cat-link .ic,
-.ns-cat-card:focus-within .ns-cat-link .ic {
-  transform: translateX(4px);
+.ns-cat-cta svg {
+  transition: transform 0.3s ease;
 }
 
-/* Standard vertical card */
-.ns-cat-card.std .ns-cat-media { aspect-ratio: 4 / 3; }
+/* HOVER */
+.ns-cat-card:hover,
+.ns-cat-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 32px 58px -28px rgba(14, 42, 30, 0.55);
+  border-color: rgba(23, 59, 44, 0.32);
+}
+.ns-cat-card:hover .ns-cat-media img,
+.ns-cat-card:focus-within .ns-cat-media img {
+  transform: scale(1.07);
+}
+.ns-cat-card:hover .ns-cat-shade,
+.ns-cat-card:focus-within .ns-cat-shade {
+  background: linear-gradient(
+    to top,
+    rgba(14, 42, 30, 0.94) 0%,
+    rgba(14, 42, 30, 0.58) 48%,
+    rgba(14, 42, 30, 0.14) 80%,
+    transparent 100%
+  );
+}
+.ns-cat-card:hover .ns-cat-num,
+.ns-cat-card:focus-within .ns-cat-num {
+  color: #fff;
+}
+.ns-cat-card:hover .ns-cat-num::after,
+.ns-cat-card:focus-within .ns-cat-num::after {
+  width: 30px;
+}
+.ns-cat-card:hover .ns-cat-leaf,
+.ns-cat-card:focus-within .ns-cat-leaf {
+  background: var(--green);
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: scale(1.06);
+}
+.ns-cat-card:hover .ns-cat-reveal,
+.ns-cat-card:focus-within .ns-cat-reveal {
+  max-height: 160px;
+  opacity: 1;
+  margin-top: 8px;
+}
+.ns-cat-card:hover .ns-cat-cta,
+.ns-cat-card:focus-within .ns-cat-cta {
+  background: var(--caramel);
+  gap: 10px;
+}
+.ns-cat-card:hover .ns-cat-cta svg,
+.ns-cat-card:focus-within .ns-cat-cta svg {
+  transform: translateX(2px);
+}
 
-/* Big card (2x2) */
+/* Big card (2x2) — anchor genus, always shows the description + larger type */
 .ns-cat-card.big {
   grid-column: span 2;
   grid-row: span 2;
-  flex-direction: row;
 }
-.ns-cat-card.big .ns-cat-media {
-  flex: 1.05;
-  min-height: 100%;
-  aspect-ratio: auto;
+.ns-cat-card.big .ns-cat-panel {
+  padding: 34px 36px 36px;
+  gap: 12px;
 }
-.ns-cat-card.big .ns-cat-body {
-  flex: 0.95;
-  padding: 36px 36px 36px;
-  justify-content: center;
-  gap: 14px;
+.ns-cat-card.big .ns-cat-panel h3 {
+  font-size: 2.45rem;
+  line-height: 1.02;
+  max-width: 14ch;
 }
-.ns-cat-card.big .ns-cat-body h3 {
-  font-size: 1.9rem;
-  line-height: 1.05;
+.ns-cat-card.big .ns-cat-meta {
+  font-size: 0.78rem;
 }
-.ns-cat-card.big .ns-cat-desc {
-  font-size: 0.95rem;
+.ns-cat-card.big .ns-cat-reveal {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 10px;
+}
+.ns-cat-card.big .ns-cat-reveal p {
+  font-size: 0.96rem;
   -webkit-line-clamp: 4;
+  max-width: 40ch;
+}
+.ns-cat-card.big .ns-cat-cta {
+  font-size: 0.85rem;
+  padding: 0.6rem 1.1rem;
+  margin-top: 6px;
+}
+.ns-cat-card.big .ns-cat-num {
+  font-size: 1.25rem;
+  top: 26px;
+  left: 30px;
+}
+.ns-cat-card.big .ns-cat-leaf {
+  top: 24px;
+  right: 28px;
+  width: 38px;
+  height: 38px;
 }
 
-/* Wide card (2x1) */
+/* Wide card (2x1) — bottom panel, larger type */
 .ns-cat-card.wide {
   grid-column: span 2;
-  flex-direction: row;
 }
-.ns-cat-card.wide .ns-cat-media {
-  flex: 0.85;
-  aspect-ratio: auto;
-  min-height: 100%;
+.ns-cat-card.wide .ns-cat-panel {
+  padding: 22px 28px 24px;
+  max-width: 540px;
 }
-.ns-cat-card.wide .ns-cat-body {
-  flex: 1.15;
-  padding: 22px 26px;
-  justify-content: center;
-  gap: 10px;
+.ns-cat-card.wide .ns-cat-panel h3 {
+  font-size: 1.65rem;
 }
-.ns-cat-card.wide .ns-cat-body h3 { font-size: 1.4rem; }
+
+/* On hover-capable pointers, hide reveal until hover (default open on touch) */
+@media (hover: hover) and (pointer: fine) {
+  .ns-cat-card.std .ns-cat-reveal,
+  .ns-cat-card.wide .ns-cat-reveal {
+    max-height: 0;
+    opacity: 0;
+  }
+}
 
 /* Responsive cat-grid */
 @media (max-width: 1019px) {
   .ns-cat-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 300px;
+    grid-auto-rows: 280px;
+    gap: 16px;
   }
   .ns-cat-card.big {
     grid-column: span 2;
     grid-row: auto;
-    min-height: 300px;
+    min-height: 360px;
   }
-  .ns-cat-card.big .ns-cat-media { min-height: 300px; }
+  .ns-cat-card.big .ns-cat-panel h3 {
+    font-size: 2rem;
+  }
+  .ns-cat-card.big .ns-cat-reveal {
+    max-height: 300px;
+    opacity: 1;
+  }
   .ns-cat-card.wide {
     grid-column: span 2;
   }
-  .ns-cat-card.wide .ns-cat-media { min-height: 300px; }
 }
 @media (max-width: 600px) {
   .ns-cat-grid {
@@ -722,15 +869,43 @@
   .ns-cat-card.std {
     grid-column: span 1;
     grid-row: auto;
-    flex-direction: column;
-    min-height: 420px;
+    min-height: 360px;
   }
-  .ns-cat-card .ns-cat-media {
-    aspect-ratio: 16 / 10;
-    min-height: auto;
-    flex: none;
+  /* Touch: description always visible so the card is informative without hover */
+  .ns-cat-reveal {
+    max-height: 200px !important;
+    opacity: 1 !important;
+    margin-top: 8px !important;
   }
-  .ns-cat-card.big .ns-cat-body h3 { font-size: 1.5rem; }
+  .ns-cat-card.big .ns-cat-panel h3 {
+    font-size: 1.7rem;
+  }
+  .ns-cat-card.big .ns-cat-panel {
+    padding: 24px 22px 24px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .ns-cat-card,
+  .ns-cat-media img,
+  .ns-cat-shade,
+  .ns-cat-reveal,
+  .ns-cat-cta,
+  .ns-cat-cta svg,
+  .ns-cat-num,
+  .ns-cat-num::after,
+  .ns-cat-leaf {
+    transition: none !important;
+  }
+  .ns-cat-card:hover,
+  .ns-cat-card:focus-within {
+    transform: none;
+  }
+  .ns-cat-card:hover .ns-cat-media img,
+  .ns-cat-card:focus-within .ns-cat-media img {
+    transform: none;
+  }
 }
 
 /* ============== Hot products ============== */
@@ -1602,14 +1777,6 @@
   .ns-ticker-track { animation: none !important; }
   .ns-chip-1, .ns-chip-2 { animation: none !important; }
   .ns-wa-float::before { animation: none !important; opacity: 0 !important; }
-  .ns-cat-card:hover,
-  .ns-cat-card:focus-within {
-    transform: none;
-  }
-  .ns-cat-card:hover .ns-cat-media img,
-  .ns-cat-card:focus-within .ns-cat-media img {
-    transform: none;
-  }
   .ns-pd-overlay { animation: none !important; }
   .ns-pd-card { animation: none !important; }
   .pd-main:hover .pd-zoom { opacity: 0 !important; }

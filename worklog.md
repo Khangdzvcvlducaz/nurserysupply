@@ -241,3 +241,35 @@ Stage Summary:
 - VERIFIED: All contact info updated to WhatsApp +84 981848702 (`wa.me/84981848702`) and email callmekai@nurserysupply.us across header, footer, float, quote-form, and the new product-detail inquiry note.
 - Files created by build agent: `src/lib/catalog-data.ts`, `src/hooks/use-product-store.ts`, `src/components/ns/product-detail.tsx`, `src/components/ns/lightbox.tsx`. Modified: `src/app/page.tsx`, `src/app/globals.css` (+~410 lines pd/lightbox CSS), `src/components/ns/{hot-products,shop-by-genus,header,footer,whatsapp-float,quote-form}.tsx`.
 - Task complete. No blocking issues. (Non-blocking: single-product genera omit the related section; hover-zoom gated to fine-pointer devices; sonner/WhatsApp float z-overlap during toast — same as before.)
+
+---
+Task ID: 9
+Agent: orchestrator
+Task: Redesign the "Shop by genus" catalog section visually (user asked "thiết kế lại phần Shop by genus catalog").
+
+Work Log:
+- Read the existing `src/components/ns/shop-by-genus.tsx` and the `.ns-cat-*` CSS block (lines 543-734): old design = 4-col mosaic of WHITE cards (image top, white body below with name/meta/desc/CTA). Functional but visually plain and dated.
+- Redesigned into a **photo-forward editorial** look:
+  * Cards are now full-bleed PHOTO cards on a dark green-deep background (no white body) so the plant photography is the hero.
+  * Always-on legibility shade (green-deep gradient) at the bottom; deepens on hover.
+  * Editorial number badge top-left ("01".."08" in Fraunces serif) with a caramel underline that grows on hover.
+  * Glass leaf accent pill top-right (backdrop-blur, lucide Leaf icon) that turns solid green + scales on hover.
+  * Bottom glass panel: white serif h3 (genus name), uppercase meta "Plantlet {size} • MOQ {moq}" with a caramel dot separator, a reveal-on-hover description (hidden by default on hover-capable pointers, shown on hover / on touch), and an always-visible green "View collection →" CTA pill that turns caramel on hover.
+  * Big card (Monstera 2×2): h3 2.45rem, description always visible, larger number/leaf badges.
+  * Wide card (Other 2×1): larger h3 1.65rem, panel constrained to 540px.
+  * Hover: card lifts -6px, layered shadow, image zoom 1.07, shade deepens to 0.94, reveal slides open (maxHeight 160px / opacity 1 / margin-top 8px), CTA → caramel + gap widens, number → white + caramel underline grows.
+  * Responsive: 4→2→1 cols; ≤600px the reveal is force-shown (touch-friendly, no hover needed).
+  * Reduced-motion block disables transforms/transitions.
+- Rewrote `shop-by-genus.tsx` (added `.ns-cat-shade`, `.ns-cat-num`, `.ns-cat-leaf`, `.ns-cat-panel`, `.ns-cat-reveal`, `.ns-cat-cta`, `.ns-dot`; kept the zustand click-to-open behavior unchanged) and REPLACED the entire `.ns-cat-*` CSS block in `globals.css` with the new design (~365 lines). Removed a now-redundant duplicate cat-card reduced-motion rule near line 1780.
+- Agent Browser verification (all passed, no page errors, lint clean):
+  * 8 cards, layouts [big, std×6, wide], card bg rgb(14,42,30), radius 20px, media position:absolute (full-bleed), shade present, number "03" in Fraunces on the Alocasia card, leaf accent present, panel absolute (glass), h3 "Alocasia" white, meta "Plantlet 3–6 cm MOQ 25–30".
+  * Big card: h3 "Variegated Monstera" 39.2px, reveal maxHeight 300px/opacity 1 (always visible), num "01" 20px.
+  * Hovered Philodendron (std) card: isHovered true, reveal maxHeight 160px/opacity 1/margin-top 8px, img scale 1.07, shade deepened to 0.94, CTA bg → rgb(176,118,58) caramel, num color white, num::after width 30px, desc "Pink Princess, White Wizard, gloriosum f...".
+  * Click Philodendron card → Product Detail modal opens with "Philodendron 'White Wizard'" (first product of that genus), body scroll locked. Escape closes it.
+  * Mobile 375×812: grid → single column (327px), std card reveal always visible (maxHeight 177px, opacity 1) — informative without hover.
+- Screenshot saved to `/home/z/my-project/verify/03-shop-by-genus.png`. `bun run lint` clean.
+
+Stage Summary:
+- The "Shop by genus" section has been completely redesigned: from plain white image-top cards to premium full-bleed photo cards with editorial number badges, glass leaf accents, glass bottom panels, and a reveal-on-hover description + caramel CTA — keeping the elegant hover philosophy and the click-to-open product-detail integration intact.
+- Files modified: `src/components/ns/shop-by-genus.tsx` (rewritten), `src/app/globals.css` (cat-grid block replaced ~365 lines + duplicate reduced-motion rule removed).
+- No blocking issues. Click-to-open, hover reveal/zoom, big-card hierarchy, and mobile touch behavior all verified in-browser.

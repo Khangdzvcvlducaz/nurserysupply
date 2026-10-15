@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Leaf } from "lucide-react";
 import { useProductStore } from "@/hooks/use-product-store";
 import { firstProductIdWithGenus } from "@/lib/catalog-data";
 
@@ -104,7 +104,7 @@ export function ShopByGenus() {
   };
 
   return (
-    <section className="ns-sec" id="catalog">
+    <section className="ns-sec ns-catalog" id="catalog">
       <div className="ns-wrap">
         <div className="ns-sec-head ns-reveal">
           <div>
@@ -121,7 +121,7 @@ export function ShopByGenus() {
         </div>
 
         <div className="ns-cat-grid">
-          {CATS.map((c) => (
+          {CATS.map((c, i) => (
             <a
               key={c.slug}
               href="#catalog"
@@ -135,24 +135,30 @@ export function ShopByGenus() {
                   src={c.image}
                   alt={`${c.name} — tissue culture plantlets`}
                   width={c.layout === "big" ? 900 : 600}
-                  height={c.layout === "big" ? 900 : 450}
+                  height={c.layout === "big" ? 900 : 600}
                   loading="lazy"
                 />
-                <span className="ns-cat-overlay" aria-hidden="true" />
               </div>
-              <div className="ns-cat-body">
+              <span className="ns-cat-shade" aria-hidden="true" />
+              <span className="ns-cat-num" aria-hidden="true">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span className="ns-cat-leaf" aria-hidden="true">
+                <Leaf size={15} strokeWidth={1.8} />
+              </span>
+
+              <div className="ns-cat-panel">
                 <h3>{c.name}</h3>
                 <div className="ns-cat-meta">
-                  <span>
-                    Size: <b>{c.size}</b>
-                  </span>
-                  <span>
-                    MOQ: <b>{c.moq}</b>
-                  </span>
+                  <span>Plantlet {c.size}</span>
+                  <i className="ns-dot" />
+                  <span>MOQ {c.moq}</span>
                 </div>
-                <p className="ns-cat-desc">{c.desc}</p>
-                <span className="ns-cat-link">
-                  View Products <ArrowRight size={14} />
+                <div className="ns-cat-reveal">
+                  <p>{c.desc}</p>
+                </div>
+                <span className="ns-cat-cta">
+                  View collection <ArrowRight size={14} />
                 </span>
               </div>
             </a>

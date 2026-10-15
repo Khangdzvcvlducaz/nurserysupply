@@ -1,0 +1,802 @@
+     1→     1→<!DOCTYPE html>
+     2→     2→<html lang="en">
+     3→     3→<head>
+     4→     4→<meta charset="UTF-8">
+     5→     5→<meta name="viewport" content="width=device-width, initial-scale=1.0">
+     6→     6→<title>Nursery Supply — Wholesale Tissue-Culture Plants for U.S. Retailers & Growers</title>
+     7→     7→<meta name="description" content="Wholesale supplier of rare tissue-culture plants to the USA: variegated Monstera, Philodendron, Alocasia, Anthurium and rare aroids. Phytosanitary certification, secure live-plant export packaging, MOQ from 20 plants. Request the wholesale price list.">
+     8→     8→<meta property="og:title" content="Nursery Supply — Rare Tissue-Culture Plants for U.S. Retailers">
+     9→     9→<meta property="og:description" content="Wholesale Monstera, Philodendron, Alocasia, Anthurium and rare foliage plants — with export documentation and secure packaging.">
+    10→    10→<meta property="og:type" content="website">
+    11→    11→<link rel="icon" type="image/png" href="images/logo.png">
+    12→    12→<link rel="preconnect" href="https://fonts.googleapis.com">
+    13→    13→<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    14→    14→<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    15→    15→
+    16→    16→<!-- Schema: Organization -->
+    17→    17→<script type="application/ld+json">
+    18→    18→{"@context":"https://schema.org","@type":"Organization","name":"Nursery Supply","logo":"https://nurserysupply.com/images/logo.png","description":"Wholesale exporter of rare tissue-culture foliage plants to the United States.","email":"sales@nurserysupply.com","telephone":"+66-81-555-2143","sameAs":["https://instagram.com/nurserysupply","https://facebook.com/nurserysupply","https://tiktok.com/@nurserysupply"],"contactPoint":[{"@type":"ContactPoint","contactType":"sales","availableLanguage":["English"]}]}
+    19→    19→</script>
+    20→    20→<!-- Schema: FAQ -->
+    21→    21→<script type="application/ld+json">
+    22→    22→{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    23→    23→{"@type":"Question","name":"Do you ship directly to the United States?","acceptedAnswer":{"@type":"Answer","text":"Yes. Weekly air freight to major U.S. plant inspection airports including Miami, New York and Los Angeles, with delivery coordination to all 50 states."}},
+    24→    24→{"@type":"Question","name":"What documents are included with each shipment?","acceptedAnswer":{"@type":"Answer","text":"A phytosanitary certificate, commercial invoice, packing list and airway bill with every shipment; certificates of origin and fumigation records on request."}},
+    25→    25→{"@type":"Question","name":"Do I need an import permit?","acceptedAnswer":{"@type":"Answer","text":"It depends on the genera and destination state. Buyers are responsible for confirming current USDA/APHIS and state-level requirements; we flag issues at the quotation stage."}},
+    26→    26→{"@type":"Question","name":"What is the minimum order quantity?","acceptedAnswer":{"@type":"Answer","text":"Typically 20–50 plantlets per variety with a 100-plantlet minimum per shipment. Varieties can be mixed within one order."}},
+    27→    27→{"@type":"Question","name":"How are plants packaged for international shipping?","acceptedAnswer":{"@type":"Answer","text":"Roots in sterile moisture-controlled media, sealed with barrier film, cushioned in insulated ventilated export boxes with heat packs in winter."}},
+    28→    28→{"@type":"Question","name":"What happens if plants arrive damaged?","acceptedAnswer":{"@type":"Answer","text":"Document with photos within 48 hours. Our live-arrival guarantee covers transit failures with replacement plants or credit on the next order."}},
+    29→    29→{"@type":"Question","name":"What are your payment terms?","acceptedAnswer":{"@type":"Answer","text":"50% deposit to reserve stock or production slots, balance before dispatch, via bank transfer or Wise. Recurring schedules for established accounts."}},
+    30→    30→{"@type":"Question","name":"Can I order mixed varieties in one shipment?","acceptedAnswer":{"@type":"Answer","text":"Yes — mixed orders are standard. Combine varieties across genera as long as each meets its MOQ."}}
+    31→    31→]}
+    32→    32→</script>
+    33→    33→<!-- Schema: Products -->
+    34→    34→<script type="application/ld+json">
+    35→    35→{"@context":"https://schema.org","@type":"ItemList","itemListElement":[
+    36→    36→{"@type":"Product","position":1,"name":"Monstera deliciosa 'Cream Brulee' Tissue-Culture Plantlet","description":"Rare variegated Monstera with cream and caramel-yellow marbling.","offers":{"@type":"Offer","priceCurrency":"USD","price":"14.50","availability":"https://schema.org/LimitedAvailability"}},
+    37→    37→{"@type":"Product","position":2,"name":"Monstera deliciosa 'Thai Constellation' Tissue-Culture Plantlet","description":"Stable cream-speckled variegation from certified culture.","offers":{"@type":"Offer","priceCurrency":"USD","price":"9.80","availability":"https://schema.org/InStock"}},
+    38→    38→{"@type":"Product","position":3,"name":"Philodendron 'White Wizard' Tissue-Culture Plantlet","description":"Pure white sectoral variegation, acclimatizes fast.","offers":{"@type":"Offer","priceCurrency":"USD","price":"11.00","availability":"https://schema.org/InStock"}},
+    39→    39→{"@type":"Product","position":4,"name":"Alocasia micholitziana 'Frydek Variegata' Tissue-Culture Plantlet","description":"White blotch variegation on velvet green foliage.","offers":{"@type":"Offer","priceCurrency":"USD","price":"16.00","availability":"https://schema.org/LimitedAvailability"}}
+    40→    40→]}
+    41→    41→</script>
+    42→    42→<!-- Schema: Breadcrumbs -->
+    43→    43→<script type="application/ld+json">
+    44→    44→{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    45→    45→{"@type":"ListItem","position":1,"name":"Home","item":"https://nurserysupply.com/"},
+    46→    46→{"@type":"ListItem","position":2,"name":"Wholesale Catalog","item":"https://nurserysupply.com/#/catalog"},
+    47→    47→{"@type":"ListItem","position":3,"name":"Resources","item":"https://nurserysupply.com/#/resources"}]}
+    48→    48→</script>
+    49→    49→
+    50→    50→<style>
+    51→    51→/* ============ Tokens ============ */
+    52→    52→:root{
+    53→    53→  --cream:#F6F3EA; --cream-2:#EFEBDD; --paper:#FDFCF7; --white:#FFFFFF;
+    54→    54→  --ink:#1C231D; --ink-2:#4C564C; --ink-3:#79816F;
+    55→    55→  --green:#173B2C; --green-deep:#0E2A1E; --green-soft:#245040;
+    56→    56→  --sage:#9BB4A2; --sage-2:#C9D6C6; --sage-3:#E7EBDC;
+    57→    57→  --line:#E2DECE; --line-2:#D6D2C0;
+    58→    58→  --caramel:#B0763A; --caramel-d:#8F5C26; --caramel-bg:#F5E9D7;
+    59→    59→  --ok:#2E7D4F; --ok-bg:#E8F2E9;
+    60→    60→  --serif:'Fraunces',Georgia,serif; --sans:'Archivo',sans-serif;
+    61→    61→  --r:16px; --sh:0 22px 44px -24px rgba(23,59,44,.28);
+    62→    62→}
+    63→    63→*{margin:0;padding:0;box-sizing:border-box}
+    64→    64→html{scroll-behavior:smooth}
+    65→    65→body{font:400 16px/1.6 var(--sans);color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+    66→    66→img{display:block;max-width:100%}
+    67→    67→a{color:inherit;text-decoration:none}
+    68→    68→button{font:inherit;cursor:pointer;background:none;border:none;color:inherit}
+    69→    69→.ic{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    70→    70→.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+    71→    71→.sec{padding:96px 0}
+    72→    72→.sec-tight{padding:72px 0}
+    73→    73→h1,h2,h3,.serif{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.12}
+    74→    74→::selection{background:var(--sage-2)}
+    75→    75→:focus-visible{outline:2px solid var(--caramel);outline-offset:2px}
+    76→    76→
+    77→    77→.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font:600 .72rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#5E7A66;margin-bottom:1.1rem}
+    78→    78→.eyebrow::before{content:'';width:26px;height:2px;background:var(--caramel)}
+    79→    79→.h2{font-size:clamp(1.9rem,3.6vw,2.7rem);color:var(--ink)}
+    80→    80→.lead{color:var(--ink-2);max-width:56ch}
+    81→    81→.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:3rem;flex-wrap:wrap}
+    82→    82→.sec-head p{margin-top:.9rem}
+    83→    83→
+    84→    84→/* ============ Buttons ============ */
+    85→    85→.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font:600 .92rem var(--sans);padding:.85rem 1.45rem;border-radius:999px;border:1.5px solid transparent;transition:all .22s ease;white-space:nowrap}
+    86→    86→.btn .ic{width:16px;height:16px;transition:transform .22s}
+    87→    87→.btn:hover .ic{transform:translateX(3px)}
+    88→    88→.btn-p{background:var(--green);color:#F4F1E4}
+    89→    89→.btn-p:hover{background:var(--green-deep);transform:translateY(-1px)}
+    90→    90→.btn-o{border-color:rgba(23,59,44,.45);color:var(--green)}
+    91→    91→.btn-o:hover{background:var(--green);color:#F4F1E4;border-color:var(--green)}
+    92→    92→.btn-cream{background:#F4F1E4;color:var(--green)}
+    93→    93→.btn-cream:hover{background:#fff}
+    94→    94→.btn-wide{width:100%}
+    95→    95→.btn-sm{padding:.55rem 1rem;font-size:.82rem}
+    96→    96→
+    97→    97→/* ============ Header ============ */
+    98→    98→#hdr{position:sticky;top:0;z-index:60;background:rgba(246,243,234,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+    99→    99→#hdr.scrolled{box-shadow:0 10px 30px -18px rgba(23,59,44,.25)}
+   100→   100→.hdr-in{display:flex;align-items:center;gap:1.6rem;height:74px}
+   101→   101→.logo{display:flex;align-items:center;gap:.65rem;margin-right:auto}
+   102→   102→.logo-mark{width:56px;height:56px;flex:none;object-fit:contain}
+   103→   103→.logo-word{font-family:var(--serif);font-weight:600;font-size:1.22rem;line-height:1.05;color:var(--green)}
+   104→   104→.logo-word small{display:block;font:600 .56rem var(--sans);letter-spacing:.24em;color:#5E7A66;text-transform:uppercase;margin-top:2px}
+   105→   105→.nav{display:flex;gap:1.7rem}
+   106→   106→.nav a{font:500 .92rem var(--sans);color:var(--ink-2);position:relative;padding:.3rem 0}
+   107→   107→.nav a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--caramel);transition:width .25s}
+   108→   108→.nav a:hover,.nav a.on{color:var(--ink)}
+   109→   109→.nav a.on::after,.nav a:hover::after{width:100%}
+   110→   110→.hdr-acts{display:flex;align-items:center;gap:.55rem}
+   111→   111→.icon-btn{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(23,59,44,.3);display:inline-flex;align-items:center;justify-content:center;color:var(--green);transition:.2s}
+   112→   112→.icon-btn:hover{background:var(--green);color:#F4F1E4;border-color:var(--green)}
+   113→   113→#menuBtn{display:none}
+   114→   114→@media(max-width:1020px){.nav{display:none}#menuBtn{display:inline-flex}.hdr-acts .btn{display:none}}
+   115→   115→
+   116→   116→/* Mobile nav */
+   117→   117→#mnav{position:fixed;inset:0;z-index:70;background:var(--green-deep);color:#EFEAD9;display:flex;flex-direction:column;padding:1.4rem 1.6rem 2.4rem;transform:translateY(-102%);transition:transform .45s cubic-bezier(.7,0,.2,1)}
+   118→   118→#mnav.open{transform:none}
+   119→   119→.mnav-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:2.5rem}
+   120→   120→#mnav a.mlink{font-family:var(--serif);font-size:2rem;padding:.65rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
+   121→   121→#mnav a.mlink:hover{color:var(--sage)}
+   122→   122→.mnav-foot{margin-top:auto;display:flex;gap:.7rem;flex-wrap:wrap}
+   123→   123→.mnav-foot .btn{flex:1}
+   124→   124→.xbtn{color:#EFEAD9;border-color:rgba(255,255,255,.35)}
+   125→   125→.xbtn:hover{background:rgba(255,255,255,.12)}
+   126→   126→
+   127→   127→/* ============ Hero ============ */
+   128→   128→.hero{padding:64px 0 84px;overflow:hidden}
+   129→   129→.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+   130→   130→.hero h1{font-size:clamp(2.4rem,4.6vw,3.85rem);color:var(--ink);margin-bottom:1.2rem}
+   131→   131→.hero h1 em{font-style:italic;font-weight:500;color:var(--green)}
+   132→   132→.hero .lead{font-size:1.08rem;margin-bottom:2rem}
+   133→   133→.hero-ctas{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:2.2rem}
+   134→   134→.hero-trust{display:flex;flex-direction:column;gap:.55rem}
+   135→   135→.hero-trust span{display:flex;gap:.6rem;align-items:center;font-size:.9rem;color:var(--ink-2)}
+   136→   136→.hero-trust .ic{width:15px;height:15px;color:var(--ok)}
+   137→   137→.hero-visual{position:relative;min-height:520px}
+   138→   138→.hero-frame{position:absolute;right:0;top:0;width:78%;height:100%;border-radius:22px;overflow:hidden;border:1px solid var(--line-2);box-shadow:var(--sh)}
+   139→   139→.hero-frame img{width:100%;height:100%;object-fit:cover}
+   140→   140→.hero-leaf{position:absolute;left:-2%;bottom:-3%;width:58%;filter:drop-shadow(0 14px 20px rgba(23,59,44,.12))}
+   141→   141→.hero-leaf .draw{stroke-dasharray:1500;stroke-dashoffset:1500;animation:draw 2.4s ease forwards}
+   142→   142→.hero-leaf .d2{animation-delay:.5s}.hero-leaf .d3{animation-delay:1s}.hero-leaf .d4{animation-delay:1.4s}
+   143→   143→@keyframes draw{to{stroke-dashoffset:0}}
+   144→   144→.sway{transform-origin:230px 400px;animation:sway 7s ease-in-out 3s infinite alternate}
+   145→   145→@keyframes sway{from{transform:rotate(-1.2deg)}to{transform:rotate(1.4deg)}}
+   146→   146→.chip{position:absolute;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:.7rem .95rem;display:flex;gap:.7rem;align-items:center;box-shadow:0 16px 34px -18px rgba(23,59,44,.35);animation:bob 5.5s ease-in-out infinite}
+   147→   147→.chip .ic{width:20px;height:20px;color:var(--green)}
+   148→   148→.chip strong{display:block;font:700 .82rem var(--sans)}
+   149→   149→.chip span{font-size:.72rem;color:var(--ink-3)}
+   150→   150→.chip-1{top:6%;left:2%}
+   151→   151→.chip-2{bottom:10%;right:4%;animation-delay:1.6s}
+   152→   152→@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+   153→   153→@media(max-width:920px){
+   154→   154→  .hero-grid{grid-template-columns:1fr;gap:44px}
+   155→   155→  .hero-visual{min-height:400px;max-width:560px}
+   156→   156→  .hero-frame{width:88%}
+   157→   157→}
+   158→   158→
+   159→   159→/* ============ Ticker ============ */
+   160→   160→.ticker{background:var(--green-deep);color:#E9E4D2;overflow:hidden;padding:.85rem 0;border-block:1px solid var(--green-deep)}
+   161→   161→.ticker-track{display:flex;width:max-content;animation:tick 30s linear infinite}
+   162→   162→.ticker span{display:inline-flex;align-items:center;gap:2rem;padding-right:2rem;font:600 .8rem var(--sans);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+   163→   163→.ticker .ic{width:13px;height:13px;color:var(--sage)}
+   164→   164→@keyframes tick{to{transform:translateX(-50%)}}
+   165→   165→
+   166→   166→/* ============ Categories mosaic ============ */
+   167→   167→.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:255px;gap:18px}
+   168→   168→.cat-card{position:relative;background:var(--white);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+   169→   169→.cat-card:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+   170→   170→.cat-media{flex:1;min-height:0;position:relative;overflow:hidden}
+   171→   171→.cat-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+   172→   172→.cat-card:hover .cat-media img{transform:scale(1.06)}
+   173→   173→.cat-body{padding:1.1rem 1.2rem 1.2rem;background:var(--white);flex:none}
+   174→   174→.cat-body h3{font-size:1.12rem;color:var(--ink)}
+   175→   175→.cat-body p{font-size:.82rem;color:var(--ink-2);margin:.35rem 0 .6rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+   176→   176→.cat-meta{display:flex;gap:.9rem;font:600 .7rem var(--sans);letter-spacing:.05em;text-transform:uppercase;color:#5E7A66;margin-bottom:.55rem}
+   177→   177→.cat-link{display:inline-flex;align-items:center;gap:.4rem;font:700 .82rem var(--sans);color:var(--green)}
+   178→   178→.cat-link .ic{width:14px;height:14px;transition:transform .2s}
+   179→   179→.cat-card:hover .cat-link .ic{transform:translateX(4px)}
+   180→   180→.cat-card.big{grid-column:span 2;grid-row:span 2;flex-direction:row}
+   181→   181→.cat-card.big .cat-media{width:52%}
+   182→   182→.cat-card.big .cat-body{width:48%;display:flex;flex-direction:column;justify-content:center;padding:1.6rem}
+   183→   183→.cat-card.big .cat-body h3{font-size:1.7rem;margin-bottom:.4rem}
+   184→   184→.cat-card.big .cat-body p{-webkit-line-clamp:4;font-size:.92rem}
+   185→   185→/* Leaf cursor-follow accent — transparent PNG of the genus's own leaf, follows the cursor.
+   186→   186→   mix-blend-mode:multiply hides any white background (in case the PNG wasn't saved with alpha).
+   187→   187→   drop-shadow is omitted because it would render a rectangular shadow if the PNG has white bg. */
+   188→   188→.cat-leaf{position:absolute;left:50%;top:50%;width:140px;height:140px;mix-blend-mode:multiply;opacity:0;transform:translate(-50%,-50%) scale(.5);pointer-events:none;z-index:5;will-change:transform,opacity}
+   189→   189→.cat-card.big .cat-leaf{width:172px;height:172px}
+   190→   190→.cat-card.wide .cat-leaf{width:158px;height:158px}
+   191→   191→@media(max-width:600px){.cat-leaf{width:96px;height:96px}.cat-card.big .cat-leaf,.cat-card.wide .cat-leaf{width:118px;height:118px}}
+   192→   192→@media(prefers-reduced-motion:reduce){.cat-leaf{opacity:0;transform:translate(-50%,-50%) scale(1)}.cat-card:hover .cat-leaf{opacity:1}}
+   193→   193→.cat-card.wide{grid-column:span 2;flex-direction:row}
+   194→   194→.cat-card.wide .cat-media{width:42%}
+   195→   195→.cat-card.wide .cat-body{width:58%;display:flex;flex-direction:column;justify-content:center}
+   196→   196→@media(max-width:1019px){
+   197→   197→  .cat-grid{grid-template-columns:1fr 1fr;grid-auto-rows:270px}
+   198→   198→  .cat-card.big{grid-column:1/-1;grid-row:span 1;height:300px}
+   199→   199→  .cat-card.wide{grid-column:1/-1}
+   200→   200→}
+   201→   201→@media(max-width:600px){
+   202→   202→  .cat-grid{grid-template-columns:1fr;grid-auto-rows:auto}
+   203→   203→  .cat-card.big,.cat-card.wide{flex-direction:column;height:auto}
+   204→   204→  .cat-card.big .cat-media,.cat-card.wide .cat-media,.cat-card.big .cat-body,.cat-card.wide .cat-body{width:100%}
+   205→   205→  .cat-card:not(.big):not(.wide) .cat-media{aspect-ratio:16/10}
+   206→   206→  .cat-card.big .cat-media{aspect-ratio:16/10}
+   207→   207→}
+   208→   208→
+   209→   209→/* ============ Product cards ============ */
+   210→   210→.p-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+   211→   211→@media(max-width:1019px){.p-grid{grid-template-columns:1fr 1fr}}
+   212→   212→@media(max-width:600px){.p-grid{grid-template-columns:1fr}}
+   213→   213→.p-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+   214→   214→.p-card:hover{transform:translateY(-5px);box-shadow:var(--sh)}
+   215→   215→.p-media{aspect-ratio:4/3;position:relative;overflow:hidden;background:var(--sage-3)}
+   216→   216→.p-media img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+   217→   217→.p-card:hover .p-media img{transform:scale(1.07)}
+   218→   218→.pill{position:absolute;display:inline-flex;align-items:center;gap:.4rem;font:700 .68rem var(--sans);letter-spacing:.06em;text-transform:uppercase;padding:.38rem .7rem;border-radius:999px;background:var(--white);border:1px solid var(--line)}
+   219→   219→.pill .dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+   220→   220→.st-in{color:var(--ok);background:var(--ok-bg);border-color:transparent}
+   221→   221→.st-lim{color:var(--caramel-d);background:var(--caramel-bg);border-color:transparent}
+   222→   222→.st-pre{color:#4A544B;background:#ECEDE4;border-color:transparent}
+   223→   223→.pill-new{top:12px;right:12px;background:var(--green);color:#F1EDDD;border-color:transparent}
+   224→   224→.st-pill{top:12px;left:12px}
+   225→   225→.p-body{padding:1.15rem 1.2rem 1.25rem;display:flex;flex-direction:column;flex:1}
+   226→   226→.p-name{font-size:1.06rem;line-height:1.25}
+   227→   227→.p-name em{display:block;font-size:.76rem;font-weight:400;color:var(--ink-3);letter-spacing:.04em;margin-top:2px}
+   228→   228→.p-var{font:600 .74rem var(--sans);color:var(--caramel-d);margin:.5rem 0 .4rem}
+   229→   229→.p-desc{font-size:.84rem;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:.9rem}
+   230→   230→.p-specs{display:flex;flex-wrap:wrap;gap:.35rem .9rem;align-items:center;font:600 .76rem var(--sans);color:var(--ink-2);padding-top:.7rem;border-top:1px dashed var(--line-2);margin-bottom:.95rem}
+   231→   231→.p-specs span{display:inline-flex;align-items:center;gap:.35rem}
+   232→   232→.p-specs .ic{width:13px;height:13px;color:#5E7A66}
+   233→   233→.p-price{color:var(--green);font-weight:700;margin-left:auto;font-size:.86rem}
+   234→   234→.p-body .btn{margin-top:auto}
+   235→   235→
+   236→   236→/* ============ Dark section (why us) ============ */
+   237→   237→.dark{background:var(--green-deep);color:#C6D1C3;position:relative;overflow:hidden}
+   238→   238→.dark .h2,.dark h3{color:#F2EEE0}
+   239→   239→.dark-leafbg{position:absolute;right:-90px;top:-60px;width:480px;opacity:.055;pointer-events:none}
+   240→   240→.why-grid{display:grid;grid-template-columns:1fr 1.35fr;gap:4.5rem;align-items:start}
+   241→   241→.why-left{position:sticky;top:110px}
+   242→   242→.why-left .eyebrow{color:var(--sage)}
+   243→   243→.why-left p{margin-top:1rem;max-width:42ch}
+   244→   244→.benefit{display:grid;grid-template-columns:78px 1fr;gap:1.4rem;padding:1.5rem 0;border-bottom:1px solid rgba(255,255,255,.13)}
+   245→   245→.benefit:first-child{padding-top:0}
+   246→   246→.benefit .num{font-family:var(--serif);font-style:italic;font-size:2rem;color:var(--sage);line-height:1}
+   247→   247→.benefit h3{font-size:1.22rem;margin-bottom:.4rem}
+   248→   248→.benefit p{font-size:.92rem}
+   249→   249→@media(max-width:880px){.why-grid{grid-template-columns:1fr;gap:2.5rem}.why-left{position:static}.benefit{grid-template-columns:52px 1fr}}
+   250→   250→.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:4.5rem;border-top:1px solid rgba(255,255,255,.14)}
+   251→   251→.stat{padding:2rem 1.5rem 0;border-left:1px solid rgba(255,255,255,.14)}
+   252→   252→.stat:first-child{border-left:none;padding-left:0}
+   253→   253→.stat b{font-family:var(--serif);font-weight:500;font-size:2.5rem;color:#F2EEE0;display:block;line-height:1}
+   254→   254→.stat span{font:600 .74rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--sage);display:block;margin-top:.5rem}
+   255→   255→@media(max-width:880px){.stats{grid-template-columns:1fr 1fr;gap:1.5rem 0}.stat:nth-child(3){border-left:none;padding-left:0}}
+   256→   256→
+   257→   257→/* ============ Process route ============ */
+   258→   258→.route{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:22px;margin:3.5rem 0}
+   259→   259→.route-line,.route-dot{position:absolute;top:23px}
+   260→   260→.route-line{left:23px;right:23px;height:2px;background:repeating-linear-gradient(90deg,var(--sage) 0 9px,transparent 9px 18px);animation:march 1s linear infinite}
+   261→   261→@keyframes march{to{background-position:18px 0}}
+   262→   262→.route-dot{left:23px;width:10px;height:10px;border-radius:50%;background:var(--caramel);animation:travel 14s linear infinite;z-index:2}
+   263→   263→@keyframes travel{0%{left:23px;opacity:0}6%{opacity:1}94%{opacity:1}100%{left:calc(100% - 33px);opacity:0}}
+   264→   264→.step{display:flex;flex-direction:column}
+   265→   265→.s-node{width:46px;height:46px;border-radius:50%;background:var(--green);color:#F1EDDD;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.05rem;position:relative;z-index:2;box-shadow:0 0 0 6px var(--cream)}
+   266→   266→.step:nth-of-type(even) .s-body{margin-top:26px}
+   267→   267→.s-body{padding-top:1rem}
+   268→   268→.s-body h4{font-family:var(--serif);font-weight:500;font-size:1.08rem;margin-bottom:.35rem}
+   269→   269→.s-body p{font-size:.82rem;color:var(--ink-2)}
+   270→   270→.compliance{display:flex;gap:1rem;align-items:flex-start;background:var(--sage-3);border:1px solid var(--line-2);border-radius:var(--r);padding:1.4rem 1.6rem;max-width:840px}
+   271→   271→.compliance .ic{width:22px;height:22px;color:var(--green);margin-top:2px}
+   272→   272→.compliance strong{display:block;font:700 .8rem var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:.25rem}
+   273→   273→.compliance p{font-size:.88rem;color:var(--ink-2)}
+   274→   274→@media(max-width:880px){
+   275→   275→  .route{grid-template-columns:1fr;gap:0;margin-left:6px}
+   276→   276→  .route-line{left:23px;top:23px;bottom:10px;right:auto;width:2px;height:auto;background:repeating-linear-gradient(180deg,var(--sage) 0 9px,transparent 9px 18px);animation-name:marchv}
+   277→   277→  @keyframes marchv{to{background-position:0 18px}}
+   278→   278→  .route-dot{display:none}
+   279→   279→  .step{flex-direction:row;gap:1.2rem;padding-bottom:1.8rem}
+   280→   280→  .s-node{flex:none}
+   281→   281→  .step:nth-of-type(even) .s-body{margin-top:0}
+   282→   282→  .s-body{padding-top:.35rem}
+   283→   283→}
+   284→   284→
+   285→   285→/* ============ Quality ============ */
+   286→   286→.quality-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:4rem;align-items:center}
+   287→   287→.q-photo{position:relative}
+   288→   288→.q-photo img{border-radius:20px;border:1px solid var(--line-2);box-shadow:var(--sh)}
+   289→   289→.q-tag{position:absolute;bottom:-16px;left:22px;background:var(--green);color:#F1EDDD;border-radius:12px;padding:.75rem 1.1rem;font:600 .78rem var(--sans);display:flex;gap:.55rem;align-items:center;box-shadow:var(--sh)}
+   290→   290→.q-tag .ic{width:16px;height:16px;color:var(--sage)}
+   291→   291→.q-list{margin-top:2rem}
+   292→   292→.q-item{display:flex;gap:1rem;padding:1.05rem 0;border-bottom:1px solid var(--line)}
+   293→   293→.q-item:last-child{border-bottom:none}
+   294→   294→.q-item .ic{width:20px;height:20px;color:var(--ok);margin-top:3px}
+   295→   295→.q-item h4{font:700 .98rem var(--sans);margin-bottom:.2rem}
+   296→   296→.q-item p{font-size:.88rem;color:var(--ink-2)}
+   297→   297→@media(max-width:880px){.quality-grid{grid-template-columns:1fr;gap:3rem}}
+   298→   298→
+   299→   299→/* ============ Buyer types ============ */
+   300→   300→.buyer{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--white);margin-bottom:1.4rem}
+   301→   301→.buyer-img{min-height:300px;position:relative}
+   302→   302→.buyer-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+   303→   303→.buyer:nth-child(even) .buyer-img{order:2}
+   304→   304→.buyer-body{padding:2.6rem 2.8rem;display:flex;flex-direction:column;justify-content:center}
+   305→   305→.buyer-body .kicker{font:600 .72rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--caramel-d);margin-bottom:.7rem}
+   306→   306→.buyer-body h3{font-size:1.6rem;margin-bottom:.7rem}
+   307→   307→.buyer-body>p{font-size:.94rem;color:var(--ink-2);margin-bottom:1.2rem;max-width:52ch}
+   308→   308→.buyer-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+   309→   309→.buyer-chips span{font:600 .74rem var(--sans);background:var(--sage-3);color:#3E5A46;border-radius:999px;padding:.4rem .8rem}
+   310→   310→.buyer-body .btn{align-self:flex-start}
+   311→   311→@media(max-width:880px){
+   312→   312→  .buyer{grid-template-columns:1fr!important}
+   313→   313→  .buyer-img{min-height:220px}
+   314→   314→  .buyer:nth-child(even) .buyer-img{order:0}
+   315→   315→  .buyer-body{padding:1.8rem 1.5rem}
+   316→   316→}
+   317→   317→
+   318→   318→/* ============ Testimonials ============ */
+   319→   319→.t-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+   320→   320→.t-arrows{display:flex;gap:.6rem}
+   321→   321→.t-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 26px;scrollbar-width:none;mask-image:linear-gradient(90deg,#000 92%,transparent)}
+   322→   322→.t-track::-webkit-scrollbar{display:none}
+   323→   323→.t-card{flex:0 0 min(400px,86vw);scroll-snap-align:start;background:var(--white);border:1px solid var(--line);border-radius:18px;padding:1.7rem 1.7rem 1.5rem;display:flex;flex-direction:column}
+   324→   324→.t-card .ic{width:26px;height:26px;color:var(--sage);margin-bottom:1rem}
+   325→   325→.t-card blockquote{font-family:var(--serif);font-size:1.06rem;line-height:1.5;color:var(--ink);flex:1}
+   326→   326→.t-who{margin-top:1.4rem;padding-top:1.1rem;border-top:1px dashed var(--line-2);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+   327→   327→.t-who b{display:block;font-size:.9rem}
+   328→   328→.t-who span{font-size:.78rem;color:var(--ink-3)}
+   329→   329→.t-who .loc{font:700 .68rem var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--caramel-d);background:var(--caramel-bg);padding:.35rem .65rem;border-radius:999px;white-space:nowrap}
+   330→   330→
+   331→   331→/* ============ FAQ ============ */
+   332→   332→.faq-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:4rem;align-items:start}
+   333→   333→.faq-left{position:sticky;top:110px}
+   334→   334→.faq-item{border-bottom:1px solid var(--line)}
+   335→   335→.faq-item:first-child{border-top:1px solid var(--line)}
+   336→   336→.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;text-align:left;padding:1.15rem .2rem;font:600 1rem var(--sans);color:var(--ink);transition:color .2s}
+   337→   337→.faq-q:hover{color:var(--green)}
+   338→   338→.faq-q .ic{width:18px;height:18px;color:var(--caramel-d);transition:transform .3s}
+   339→   339→.faq-item.open .faq-q{color:var(--green)}
+   340→   340→.faq-item.open .faq-q .ic{transform:rotate(180deg)}
+   341→   341→.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .38s ease}
+   342→   342→.faq-item.open .faq-a{grid-template-rows:1fr}
+   343→   343→.faq-a-in{overflow:hidden}
+   344→   344→.faq-a p{padding:0 .2rem 1.2rem;font-size:.92rem;color:var(--ink-2);max-width:64ch}
+   345→   345→@media(max-width:880px){.faq-grid{grid-template-columns:1fr;gap:2rem}.faq-left{position:static}}
+   346→   346→
+   347→   347→/* ============ Forms ============ */
+   348→   348→.cta-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;border-radius:22px;overflow:hidden;border:1px solid var(--line-2);background:var(--white)}
+   349→   349→.cta-left{background:var(--green-deep);color:#C6D1C3;padding:3rem 2.8rem;display:flex;flex-direction:column}
+   350→   350→.cta-left h2{color:#F2EEE0;font-size:clamp(1.7rem,2.6vw,2.3rem);margin-bottom:1rem}
+   351→   351→.cta-left .eyebrow{color:var(--sage)}
+   352→   352→.cta-list{margin:1.4rem 0 2rem;display:flex;flex-direction:column;gap:.7rem}
+   353→   353→.cta-list span{display:flex;gap:.65rem;align-items:flex-start;font-size:.9rem}
+   354→   354→.cta-list .ic{width:17px;height:17px;color:var(--sage);margin-top:3px}
+   355→   355→.cta-left .btn{margin-top:auto}
+   356→   356→.cta-right{padding:3rem 2.8rem}
+   357→   357→@media(max-width:880px){.cta-grid{grid-template-columns:1fr}.cta-left,.cta-right{padding:2rem 1.5rem}}
+   358→   358→.frow{display:grid;gap:1rem;margin-bottom:1rem}
+   359→   359→.frow.two{grid-template-columns:1fr 1fr}
+   360→   360→@media(max-width:640px){.frow.two{grid-template-columns:1fr}}
+   361→   361→.field{margin-bottom:1rem}
+   362→   362→.field label{display:block;font:600 .78rem var(--sans);letter-spacing:.03em;color:var(--ink);margin-bottom:.4rem}
+   363→   363→.field input,.field select,.field textarea{width:100%;padding:.78rem .95rem;border:1px solid var(--line-2);border-radius:10px;background:var(--paper);font:400 .93rem var(--sans);color:var(--ink);transition:.2s}
+   364→   364→.field textarea{resize:vertical}
+   365→   365→.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--sage);box-shadow:0 0 0 3px rgba(155,180,162,.28)}
+   366→   366→.field.err input,.field.err select,.field.err textarea{border-color:#B4482E;box-shadow:0 0 0 3px rgba(180,72,46,.14)}
+   367→   367→.form-note{font-size:.78rem;color:var(--ink-3);margin-top:.9rem;text-align:center}
+   368→   368→.chips-quick{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:.7rem}
+   369→   369→.chips-quick button{font:600 .74rem var(--sans);border:1px solid var(--line-2);border-radius:999px;padding:.35rem .75rem;color:var(--ink-2);transition:.2s}
+   370→   370→.chips-quick button:hover{background:var(--sage-3);border-color:var(--sage);color:var(--green)}
+   371→   371→.form-success{text-align:center;padding:3rem 1rem}
+   372→   372→.form-success .ic{width:52px;height:52px;color:var(--ok);margin:0 auto 1.2rem}
+   373→   373→.form-success h3{font-size:1.5rem;margin-bottom:.6rem}
+   374→   374→.form-success p{color:var(--ink-2);max-width:44ch;margin:0 auto 1.6rem}
+   375→   375→
+   376→   376→/* ============ Catalog ============ */
+   377→   377→.page-head{padding:64px 0 0}
+   378→   378→.crumb{display:flex;align-items:center;gap:.5rem;font:600 .76rem var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:1.4rem}
+   379→   379→.crumb a:hover{color:var(--green)}
+   380→   380→.crumb .ic{width:12px;height:12px}
+   381→   381→.page-head h1{font-size:clamp(2.1rem,4vw,3.1rem);margin-bottom:1rem}
+   382→   382→.filters{display:flex;flex-direction:column;gap:.9rem;margin:2.2rem 0 1.6rem}
+   383→   383→.search{position:relative;max-width:380px}
+   384→   384→.search .ic{position:absolute;left:.9rem;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--ink-3)}
+   385→   385→.search input{width:100%;padding:.75rem 1rem .75rem 2.5rem;border:1px solid var(--line-2);border-radius:999px;background:var(--white);font:inherit}
+   386→   386→.search input:focus{outline:none;border-color:var(--sage);box-shadow:0 0 0 3px rgba(155,180,162,.28)}
+   387→   387→.fchips{display:flex;flex-wrap:wrap;gap:.5rem}
+   388→   388→.fchips button{font:600 .8rem var(--sans);border:1px solid var(--line-2);background:var(--white);border-radius:999px;padding:.45rem .9rem;color:var(--ink-2);transition:.2s}
+   389→   389→.fchips button:hover{border-color:var(--sage);color:var(--green)}
+   390→   390→.fchips button.on{background:var(--green);border-color:var(--green);color:#F1EDDD}
+   391→   391→.count-line{font:600 .8rem var(--sans);letter-spacing:.05em;color:var(--ink-3);margin-bottom:1.4rem}
+   392→   392→.empty{grid-column:1/-1;text-align:center;padding:4rem 1rem;border:1px dashed var(--line-2);border-radius:var(--r)}
+   393→   393→.empty h3{font-size:1.3rem;margin-bottom:.4rem}
+   394→   394→.empty p{color:var(--ink-2);margin-bottom:1.2rem}
+   395→   395→
+   396→   396→/* ============ Resources ============ */
+   397→   397→.feat-art{display:grid;grid-template-columns:1.1fr 1fr;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--white);margin-bottom:2.4rem;transition:box-shadow .3s,transform .3s}
+   398→   398→.feat-art:hover{transform:translateY(-3px);box-shadow:var(--sh)}
+   399→   399→.feat-art .fa-img{position:relative;min-height:300px}
+   400→   400→.feat-art .fa-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+   401→   401→.feat-art .fa-body{padding:2.6rem;display:flex;flex-direction:column;justify-content:center}
+   402→   402→.art-row{display:grid;grid-template-columns:130px 1fr auto;gap:1.6rem;align-items:center;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+   403→   403→.art-row:first-of-type{border-top:1px solid var(--line)}
+   404→   404→.art-row .meta{font:600 .74rem var(--sans);color:var(--ink-3);letter-spacing:.04em}
+   405→   405→.art-row .meta em{display:inline-block;font-style:normal;color:var(--caramel-d);background:var(--caramel-bg);border-radius:999px;padding:.25rem .6rem;margin-top:.4rem}
+   406→   406→.art-row h3{font-size:1.22rem;margin-bottom:.3rem}
+   407→   407→.art-row p{font-size:.87rem;color:var(--ink-2)}
+   408→   408→.art-row .go{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(23,59,44,.3);display:flex;align-items:center;justify-content:center;color:var(--green);transition:.2s}
+   409→   409→.art-row:hover .go{background:var(--green);color:#F1EDDD}
+   410→   410→@media(max-width:880px){.feat-art{grid-template-columns:1fr}.art-row{grid-template-columns:1fr;gap:.6rem}.art-row .go{display:none}}
+   411→   411→.article-body{max-width:720px;margin:0 auto}
+   412→   412→.article-body h2{font-size:1.7rem;margin:2.2rem 0 .8rem}
+   413→   413→.article-body h3{font-size:1.25rem;margin:1.8rem 0 .6rem}
+   414→   414→.article-body p{margin-bottom:1rem;color:var(--ink-2)}
+   415→   415→.article-body ul,.article-body ol{margin:0 0 1.2rem 1.3rem;color:var(--ink-2)}
+   416→   416→.article-body li{margin-bottom:.45rem}
+   417→   417→.art-cta{margin-top:3rem;background:var(--sage-3);border:1px solid var(--line-2);border-radius:var(--r);padding:1.8rem;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+   418→   418→.art-cta h3{margin:0 0 .3rem;font-size:1.3rem}
+   419→   419→.art-cta p{margin:0;color:var(--ink-2);font-size:.9rem}
+   420→   420→.art-nav{display:flex;justify-content:space-between;gap:1rem;margin-top:2.4rem;max-width:720px;margin-inline:auto}
+   421→   421→.art-nav a{font:600 .88rem var(--sans);color:var(--green);display:inline-flex;gap:.5rem;align-items:center}
+   422→   422→.art-nav a:hover{text-decoration:underline}
+   423→   423→
+   424→   424→/* ============ About ============ */
+   425→   425→.about-cols{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-bottom:5rem}
+   426→   426→.about-cols img{border-radius:20px;border:1px solid var(--line-2);box-shadow:var(--sh)}
+   427→   427→.about-cols h2{font-size:clamp(1.7rem,2.8vw,2.3rem);margin-bottom:1rem}
+   428→   428→.about-cols p{color:var(--ink-2);margin-bottom:1rem}
+   429→   429→.about-cols p:last-child{margin-bottom:0}
+   430→   430→.mission{max-width:820px;margin:0 auto 5rem;text-align:center}
+   431→   431→.mission blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.35;color:var(--green)}
+   432→   432→.mission .eyebrow{justify-content:center}
+   433→   433→.mission .eyebrow::after{content:'';width:26px;height:2px;background:var(--caramel)}
+   434→   434→.principles{max-width:820px;margin:0 auto}
+   435→   435→.principle{display:grid;grid-template-columns:70px 1fr;gap:1.3rem;padding:1.4rem 0;border-top:1px solid var(--line)}
+   436→   436→.principle:last-child{border-bottom:1px solid var(--line)}
+   437→   437→.principle .num{font-family:var(--serif);font-style:italic;font-size:1.8rem;color:var(--caramel)}
+   438→   438→.principle h3{font-size:1.25rem;margin-bottom:.3rem}
+   439→   439→.principle p{font-size:.92rem;color:var(--ink-2)}
+   440→   440→.photo-strip{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;margin-top:5rem}
+   441→   441→.photo-strip img{width:100%;height:300px;object-fit:cover;border-radius:18px;border:1px solid var(--line-2)}
+   442→   442→.photo-strip img:first-child{height:380px}
+   443→   443→@media(max-width:880px){.about-cols{grid-template-columns:1fr;gap:2.4rem}.photo-strip{grid-template-columns:1fr}.photo-strip img:first-child{height:280px}}
+   444→   444→
+   445→   445→/* ============ Contact ============ */
+   446→   446→.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:3.5rem;align-items:start}
+   447→   447→.c-item{display:flex;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--line)}
+   448→   448→.c-item .ic{width:20px;height:20px;color:var(--green);margin-top:3px}
+   449→   449→.c-item b{display:block;font-size:.95rem}
+   450→   450→.c-item span{font-size:.88rem;color:var(--ink-2)}
+   451→   451→.c-item a:hover{text-decoration:underline}
+   452→   452→.socials{display:flex;gap:.6rem;margin-top:1.4rem}
+   453→   453→.map{margin-top:2rem;border-radius:16px;overflow:hidden;border:1px solid var(--line-2);filter:grayscale(.35) sepia(.12)}
+   454→   454→.map iframe{display:block;width:100%;height:240px;border:0}
+   455→   455→@media(max-width:880px){.contact-grid{grid-template-columns:1fr;gap:2.5rem}}
+   456→   456→
+   457→   457→/* ============ Admin ============ */
+   458→   458→.admin-card{max-width:440px;margin:5rem auto;background:var(--white);border:1px solid var(--line);border-radius:20px;padding:2.4rem;text-align:center}
+   459→   459→.admin-card .ic{width:34px;height:34px;color:var(--green);margin:0 auto 1rem}
+   460→   460→.admin-card h2{margin-bottom:.5rem}
+   461→   461→.admin-card p{color:var(--ink-2);font-size:.9rem;margin-bottom:1.4rem}
+   462→   462→.admin-card input{text-align:center}
+   463→   463→.hint{font:600 .74rem var(--sans);color:var(--caramel-d);background:var(--caramel-bg);border-radius:8px;padding:.5rem .8rem;display:inline-block;margin-top:1rem}
+   464→   464→.admin-dash{padding:48px 0 80px}
+   465→   465→.ad-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.6rem}
+   466→   466→.ad-stats{display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:1.8rem}
+   467→   467→.ad-stat{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:.8rem 1.2rem;font-size:.82rem;color:var(--ink-2)}
+   468→   468→.ad-stat b{display:block;font-family:var(--serif);font-size:1.5rem;color:var(--green);font-weight:500}
+   469→   469→.panel{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:1.6rem;margin-bottom:1.6rem}
+   470→   470→.panel h3{font-size:1.2rem;margin-bottom:1rem}
+   471→   471→.tbl-wrap{overflow-x:auto}
+   472→   472→table{width:100%;border-collapse:collapse;min-width:900px}
+   473→   473→th{font:700 .68rem var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:.6rem .5rem;border-bottom:1px solid var(--line)}
+   474→   474→td{padding:.55rem .5rem;border-bottom:1px solid var(--line);font-size:.85rem;vertical-align:middle}
+   475→   475→td img{width:44px;height:44px;border-radius:8px;object-fit:cover}
+   476→   476→td input,td select{padding:.42rem .55rem;border:1px solid var(--line-2);border-radius:8px;font:400 .82rem var(--sans);width:100%;min-width:70px;background:var(--paper)}
+   477→   477→td .nm{min-width:200px}
+   478→   478→td .cat{min-width:110px}
+   479→   479→td input[type=number]{min-width:64px}
+   480→   480→td input[type=checkbox]{width:16px;height:16px;accent-color:var(--green)}
+   481→   481→.danger-btn{font:700 .74rem var(--sans);color:#A8402A;border:1px solid #E4C4B8;border-radius:999px;padding:.35rem .75rem;transition:.2s;white-space:nowrap}
+   482→   482→.danger-btn:hover,.danger-btn.arm{background:#A8402A;color:#fff;border-color:#A8402A}
+   483→   483→.ghint{font-size:.78rem;color:var(--ink-3);margin-top:.8rem}
+   484→   484→.add-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin-bottom:1rem}
+   485→   485→.add-grid .field{margin:0}
+   486→   486→@media(max-width:720px){.add-grid{grid-template-columns:1fr}}
+   487→   487→
+   488→   488→/* ============ Footer ============ */
+   489→   489→footer{background:var(--green-deep);color:#AEBDA9;margin-top:96px}
+   490→   490→.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:3rem;padding:4.5rem 0 3rem}
+   491→   491→.foot-grid h4{font:700 .74rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#8FA391;margin-bottom:1.1rem}
+   492→   492→.foot-grid ul{list-style:none}
+   493→   493→.foot-grid li{margin-bottom:.55rem}
+   494→   494→.foot-grid a:hover{color:#EDE9DA}
+   495→   495→.foot-brand .logo-word{color:#F2EEE0}
+   496→   496→.foot-brand .logo-word small{color:#8FA391}
+   497→   497→.foot-brand p{font-size:.88rem;margin:1rem 0 1.4rem;max-width:34ch}
+   498→   498→.news-form{display:flex;gap:.5rem;margin-bottom:.7rem}
+   499→   499→.news-form input{flex:1;padding:.72rem .95rem;border:1px solid rgba(255,255,255,.22);border-radius:10px;background:rgba(255,255,255,.07);color:#EDE9DA;font:400 .88rem var(--sans)}
+   500→   500→.news-form input::placeholder{color:#8FA391}
+   501→   501→.news-form input:focus{outline:none;border-color:var(--sage)}
+   502→   502→.news-form button{border-radius:10px}
+   503→   503→.foot-note{font-size:.74rem;color:#7E9280}
+   504→   504→.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:1.6rem 0 2rem;font-size:.78rem;color:#7E9280}
+   505→   505→.foot-bottom .wrap{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+   506→   506→.foot-bottom a{text-decoration:underline}
+   507→   507→@media(max-width:880px){.foot-grid{grid-template-columns:1fr 1fr}}
+   508→   508→@media(max-width:600px){.foot-grid{grid-template-columns:1fr}}
+   509→   509→
+   510→   510→/* ============ WhatsApp float / toasts / modal ============ */
+   511→   511→#waFloat{position:fixed;right:22px;bottom:22px;z-index:65;width:56px;height:56px;border-radius:50%;background:var(--green);color:#F1EDDD;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh);transition:transform .2s}
+   512→   512→#waFloat:hover{transform:scale(1.08)}
+   513→   513→#waFloat::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:1.5px solid var(--sage);animation:ring 2.6s ease-out infinite}
+   514→   514→@keyframes ring{0%{transform:scale(.8);opacity:.9}70%,100%{transform:scale(1.35);opacity:0}}
+   515→   515→#waFloat .ic{width:24px;height:24px}
+   516→   516→#toasts{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);z-index:90;display:flex;flex-direction:column;gap:.6rem;align-items:center;pointer-events:none}
+   517→   517→.toast{background:var(--green-deep);color:#EDE9DA;border-radius:12px;padding:.85rem 1.3rem;font:500 .88rem var(--sans);display:flex;gap:.6rem;align-items:center;box-shadow:var(--sh);animation:tin .35s ease}
+   518→   518→.toast .ic{width:17px;height:17px;color:var(--sage)}
+   519→   519→@keyframes tin{from{opacity:0;transform:translateY(12px)}}
+   520→   520→#modal{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;padding:1.2rem}
+   521→   521→#modal.open{display:flex}
+   522→   522→.modal-bg{position:absolute;inset:0;background:rgba(14,42,30,.55)}
+   523→   523→.modal-card{position:relative;background:var(--white);border-radius:20px;width:min(520px,100%);max-height:92vh;overflow-y:auto;padding:1.9rem;animation:mup .35s cubic-bezier(.2,.9,.3,1.2)}
+   524→   524→@keyframes mup{from{opacity:0;transform:translateY(24px) scale(.97)}}
+   525→   525→.modal-close{position:absolute;top:1rem;right:1rem;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--ink-2)}
+   526→   526→.modal-close:hover{background:var(--cream-2)}
+   527→   527→.modal-prod{display:flex;gap:1rem;align-items:center;background:var(--cream);border-radius:14px;padding:.9rem;margin-bottom:1.4rem}
+   528→   528→.modal-prod img{width:64px;height:64px;border-radius:10px;object-fit:cover}
+   529→   529→.modal-prod b{font-family:var(--serif);font-weight:500;font-size:1.02rem;display:block}
+   530→   530→.modal-prod span{font-size:.78rem;color:var(--ink-2)}
+   531→   531→
+   532→   532→/* ============ Pages & reveal ============ */
+   533→   533→.page{display:none}
+   534→   534→.page.active{display:block}
+   535→   535→.reveal{opacity:0;transform:translateY(20px)}
+   536→   536→.reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease;transition-delay:var(--d,0s)}
+   537→   537→@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+   538→   538→</style>
+   539→   539→</head>
+   540→   540→<body>
+   541→   541→
+   542→   542→<!-- Icon sprite -->
+   543→   543→<svg style="display:none" aria-hidden="true">
+   544→   544→  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+   545→   545→  <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
+   546→   546→  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+   547→   547→  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+   548→   548→  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+   549→   549→  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+   550→   550→  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+   551→   551→  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+   552→   552→  <symbol id="i-check-c" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+   553→   553→  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+   554→   554→  <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><path d="M16 13H8M16 17H8M10 9H8"/></symbol>
+   555→   555→  <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
+   556→   556→  <symbol id="i-thermo" viewBox="0 0 24 24"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></symbol>
+   557→   557→  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></symbol>
+   558→   558→  <symbol id="i-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+   559→   559→  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+   560→   560→  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+   561→   561→  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+   562→   562→  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+   563→   563→  <symbol id="i-arr" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+   564→   564→  <symbol id="i-arr-l" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+   565→   565→  <symbol id="i-arr-ur" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+   566→   566→  <symbol id="i-quote" viewBox="0 0 24 24"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></symbol>
+   567→   567→  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+   568→   568→  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+   569→   569→  <symbol id="i-tk" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+   570→   570→  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+   571→   571→  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+   572→   572→  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M14 2v6a2 2 0 0 0 .24.95l5.51 10.09A2 2 0 0 1 17.98 22H6.02a2 2 0 0 1-1.77-2.96L9.76 8.95A2 2 0 0 0 10 8V2"/><path d="M6.5 2h11"/><path d="M8.5 16h7"/></symbol>
+   573→   573→  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r="1"/></symbol>
+   574→   574→  <symbol id="i-dl" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+   575→   575→  <symbol id="i-rot" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+   576→   576→  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+   577→   577→  <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+   578→   578→  <symbol id="i-clip" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+   579→   579→</svg>
+   580→   580→
+   581→   581→<!-- Header -->
+   582→   582→<header id="hdr">
+   583→   583→  <div class="wrap hdr-in">
+   584→   584→    <a class="logo" href="#/home" aria-label="Nursery Supply home">
+   585→   585→      <img class="logo-mark" src="images/logo.png" alt="Logo Nursery Supply" width="38" height="38" onerror="this.style.display='none'">
+   586→   586→      <span class="logo-word">Nursery Supply<small>Rare Plant Exports</small></span>
+   587→   587→    </a>
+   588→   588→    <nav class="nav" aria-label="Primary">
+   589→   589→      <a href="#/catalog" data-nav="catalog">Wholesale Catalog</a>
+   590→   590→      <a href="#/about" data-nav="about">About</a>
+   591→   591→      <a href="#/resources" data-nav="resources">Resources</a>
+   592→   592→      <a href="#/contact" data-nav="contact">Contact</a>
+   593→   593→    </nav>
+   594→   594→    <div class="hdr-acts">
+   595→   595→      <a class="icon-btn" href="tel:+66815552143" aria-label="Call our sales desk"><svg class="ic"><use href="#i-phone"/></svg></a>
+   596→   596→      <a class="icon-btn" href="https://wa.me/66815552143?text=Hello%20Nursery%20Supply%20—%20I'd%20like%20the%20wholesale%20price%20list." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="ic"><use href="#i-chat"/></svg></a>
+   597→   597→      <button class="btn btn-p btn-sm" data-cta-price>Request Wholesale Price List</button>
+   598→   598→      <button class="icon-btn" id="menuBtn" aria-label="Open menu"><svg class="ic"><use href="#i-menu"/></svg></button>
+   599→   599→    </div>
+   600→   600→  </div>
+   601→   601→</header>
+   602→   602→
+   603→   603→<!-- Mobile nav -->
+   604→   604→<div id="mnav" aria-hidden="true">
+   605→   605→  <div class="mnav-top">
+   606→   606→    <span class="logo-word" style="color:#F2EEE0">Nursery Supply</span>
+   607→   607→    <button class="icon-btn xbtn" id="mnavClose" aria-label="Close menu"><svg class="ic"><use href="#i-x"/></svg></button>
+   608→   608→  </div>
+   609→   609→  <a class="mlink" href="#/home">Home</a>
+   610→   610→  <a class="mlink" href="#/catalog">Wholesale Catalog</a>
+   611→   611→  <a class="mlink" href="#/about">About</a>
+   612→   612→  <a class="mlink" href="#/resources">Resources</a>
+   613→   613→  <a class="mlink" href="#/contact">Contact</a>
+   614→   614→  <div class="mnav-foot">
+   615→   615→    <a class="btn btn-cream" href="https://wa.me/66815552143" target="_blank" rel="noopener"><svg class="ic"><use href="#i-chat"/></svg> WhatsApp</a>
+   616→   616→    <button class="btn btn-p" style="background:#F1EDDD;color:var(--green)" data-cta-price>Request Price List</button>
+   617→   617→  </div>
+   618→   618→</div>
+   619→   619→
+   620→   620→<main>
+   621→   621→<!-- ================= HOME ================= -->
+   622→   622→<div class="page" data-page="home">
+   623→   623→
+   624→   624→  <section class="hero" id="hero">
+   625→   625→    <div class="wrap hero-grid">
+   626→   626→      <div class="reveal in">
+   627→   627→        <span class="eyebrow">Tissue-Culture Export · U.S. Wholesale</span>
+   628→   628→        <h1>Rare Tissue-Culture Plants for <em>U.S. Retailers</em> and Growers</h1>
+   629→   629→        <p class="lead">Wholesale Monstera, Philodendron, Alocasia, Anthurium, and rare foliage plants—with export documentation and secure packaging.</p>
+   630→   630→        <div class="hero-ctas">
+   631→   631→          <button class="btn btn-p" data-cta-price>Request Price List <svg class="ic"><use href="#i-arr"/></svg></button>
+   632→   632→          <a class="btn btn-o" href="#/catalog">Browse Wholesale Catalog</a>
+   633→   633→        </div>
+   634→   634→        <div class="hero-trust">
+   635→   635→          <span><svg class="ic"><use href="#i-check"/></svg> Phytosanitary certificate with every shipment</span>
+   636→   636→          <span><svg class="ic"><use href="#i-check"/></svg> MOQ from 20 plants per variety — mixed orders welcome</span>
+   637→   637→          <span><svg class="ic"><use href="#i-check"/></svg> Weekly U.S.-bound air freight with full tracking</span>
+   638→   638→        </div>
+   639→   639→      </div>
+   640→   640→      <div class="hero-visual px" data-depth="5" aria-hidden="true">
+   641→   641→        <div class="hero-frame"><img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b1ec3d8a0a49.jpg" alt="Tissue-culture plantlets hardening off in a shaded greenhouse" width="900" height="1100"></div>
+   642→   642→        <svg class="hero-leaf px" data-depth="12" viewBox="0 0 340 420" fill="none">
+   643→   643→          <g class="sway">
+   644→   644→            <path d="M262 408 C236 352 224 300 214 246" stroke="#173B2C" stroke-width="3" stroke-linecap="round" class="draw d4"/>
+   645→   645→            <path d="M214 246 C186 262 148 258 122 232 C100 210 96 182 110 162 C86 148 78 116 94 94 C88 72 100 50 124 46 C126 24 148 10 172 16 C186 2 214 4 226 20 C250 12 274 24 278 48 C300 58 308 84 296 104 C316 120 318 148 302 164 C316 184 312 212 292 222 C304 244 296 268 272 272 C252 276 230 262 214 246 Z" stroke="#173B2C" stroke-width="3" stroke-linejoin="round" class="draw"/>
+   646→   646→            <path d="M214 244 C204 190 202 120 214 58" stroke="#173B2C" stroke-width="2.2" stroke-linecap="round" class="draw d2"/>
+   647→   647→            <path d="M208 196 C182 192 158 178 142 156" stroke="#4C7A5E" stroke-width="1.8" class="draw d3"/>
+   648→   648→            <path d="M206 150 C186 144 164 128 152 108" stroke="#4C7A5E" stroke-width="1.8" class="draw d3"/>
+   649→   649→            <path d="M210 104 C226 96 244 96 258 104" stroke="#4C7A5E" stroke-width="1.8" class="draw d3"/>
+   650→   650→            <path d="M208 210 C232 206 252 192 262 172" stroke="#4C7A5E" stroke-width="1.8" class="draw d3"/>
+   651→   651→            <path d="M108 168 C130 176 148 192 158 212" stroke="#B0763A" stroke-width="1.8" class="draw d4"/>
+   652→   652→            <path d="M96 108 C120 114 140 130 150 150" stroke="#B0763A" stroke-width="1.8" class="draw d4"/>
+   653→   653→            <path d="M172 24 C176 52 176 80 170 104" stroke="#B0763A" stroke-width="1.8" class="draw d4"/>
+   654→   654→            <path d="M292 110 C268 118 250 132 240 152" stroke="#B0763A" stroke-width="1.8" class="draw d4"/>
+   655→   655→            <path d="M298 170 C274 176 258 188 250 204" stroke="#B0763A" stroke-width="1.8" class="draw d4"/>
+   656→   656→          </g>
+   657→   657→        </svg>
+   658→   658→        <div class="chip chip-1 px" data-depth="16">
+   659→   659→          <svg class="ic"><use href="#i-check-c"/></svg>
+   660→   660→          <div><strong>Lot #A-2417 · QC passed</strong><span>Roots verified · ready to fly</span></div>
+   661→   661→        </div>
+   662→   662→        <div class="chip chip-2 px" data-depth="9">
+   663→   663→          <svg class="ic"><use href="#i-plane"/></svg>
+   664→   664→          <div><strong>MIA · 9-day door delivery</strong><span>Phyto cert included</span></div>
+   665→   665→        </div>
+   666→   666→      </div>
+   667→   667→    </div>
+   668→   668→  </section>
+   669→   669→
+   670→   670→  <div class="ticker" aria-label="Wholesale assurances">
+   671→   671→    <div class="ticker-track" id="tickerTrack">
+   672→   672→      <span><svg class="ic"><use href="#i-sprout"/></svg> U.S.-Focused Export Support</span>
+   673→   673→      <span><svg class="ic"><use href="#i-file"/></svg> Phytosanitary Certification</span>
+   674→   674→      <span><svg class="ic"><use href="#i-box"/></svg> Secure Live-Plant Packaging</span>
+   675→   675→      <span><svg class="ic"><use href="#i-tag"/></svg> Wholesale MOQ Available</span>
+   676→   676→      <span><svg class="ic"><use href="#i-leaf"/></svg> New Arrivals Every Week</span>
+   677→   677→    </div>
+   678→   678→  </div>
+   679→   679→
+   680→   680→  <!-- Categories -->
+   681→   681→  <section class="sec">
+   682→   682→    <div class="wrap">
+   683→   683→      <div class="sec-head reveal">
+   684→   684→        <div>
+   685→   685→          <span class="eyebrow">Product Categories</span>
+   686→   686→          <h2 class="h2">Shop by genus</h2>
+   687→   687→          <p class="lead">Eight curated families of tissue-culture foliage, sized and priced for U.S. wholesale programs.</p>
+   688→   688→        </div>
+   689→   689→        <a class="btn btn-o" href="#/catalog">Full catalog <svg class="ic"><use href="#i-arr"/></svg></a>
+   690→   690→      </div>
+   691→   691→      <div class="cat-grid" id="catGrid"></div>
+   692→   692→    </div>
+   693→   693→  </section>
+   694→   694→
+   695→   695→  <!-- Hot products -->
+   696→   696→  <section class="sec-tight" id="hot">
+   697→   697→    <div class="wrap">
+   698→   698→      <div class="sec-head reveal">
+   699→   699→        <div>
+   700→   700→          <span class="eyebrow">Hot Sellers</span>
+   701→   701→          <h2 class="h2">This season's best movers</h2>
+   702→   702→          <p class="lead">Updated weekly as lab batches harden off. Availability changes fast — quotes lock allocation.</p>
+   703→   703→        </div>
+   704→   704→        <a class="btn btn-o" href="#/catalog">All varieties <svg class="ic"><use href="#i-arr"/></svg></a>
+   705→   705→      </div>
+   706→   706→      <div class="p-grid" id="homeProducts"></div>
+   707→   707→    </div>
+   708→   708→  </section>
+   709→   709→
+   710→   710→  <!-- Why buy -->
+   711→   711→  <section class="sec dark">
+   712→   712→    <svg class="dark-leafbg" viewBox="0 0 340 420" fill="none" aria-hidden="true"><path d="M214 246 C186 262 148 258 122 232 C100 210 96 182 110 162 C86 148 78 116 94 94 C88 72 100 50 124 46 C126 24 148 10 172 16 C186 2 214 4 226 20 C250 12 274 24 278 48 C300 58 308 84 296 104 C316 120 318 148 302 164 C316 184 312 212 292 222 C304 244 296 268 272 272 C252 276 230 262 214 246 Z" stroke="#fff" stroke-width="2"/></svg>
+   713→   713→    <div class="wrap">
+   714→   714→      <div class="why-grid">
+   715→   715→        <div class="why-left reveal">
+   716→   716→          <span class="eyebrow">Why Buy From Us</span>
+   717→   717→          <h2 class="h2">A supplier that behaves like a partner</h2>
+   718→   718→          <p>We built Nursery Supply around one observation: U.S. buyers don't lose money on rare plants — they lose money on surprises. So we removed the surprises.</p>
+   719→   719→        </div>
+   720→   720→        <div>
+   721→   721→          <div class="benefit reveal"><span class="num">01</span><div><h3>U.S.-focused export experience</h3><p>We ship to the United States every week. Our team knows the paperwork, the plant inspection stations, and the seasonal pitfalls — so your first order feels like your tenth.</p></div></div>
+   722→   722→          <div class="benefit reveal" style="--d:.05s"><span class="num">02</span><div><h3>Tissue-culture consistency, true to type</h3><p>Every lot comes from indexed mother stock in the lab. The variegation you approve is the variegation that arrives — across hundreds of plantlets, not just the display tray.</p></div></div>
+   723→   723→          <div class="benefit reveal" style="--d:.1s"><span class="num">03</span><div><h3>Rare and high-demand varieties</h3><p>From albo Monsteras to Frydek Variegata, we track U.S. demand signals and keep the varieties your customers actually ask for in continuous production.</p></div></div>
+   724→   724→          <div class="benefit reveal" style="--d:.15s"><span class="num">04</span><div><h3>Professional phytosanitary documentation</h3><p>Certificates, invoices, and packing lists prepared correctly the first time, with direct support for your customs broker when questions come up.</p></div></div>
+   725→   725→          <div class="benefit reveal" style="--d:.2s"><span class="num">05</span><div><h3>Secure moisture-controlled packaging</h3><p>Insulated boxes, sterile hydrated media, barrier film, and winter heat packs — a system designed and tested for 10+ days of international live-plant transit.</p></div></div>
+   726→   726→          <div class="benefit reveal" style="--d:.25s"><span class="num">06</span><div><h3>Flexible quantities and repeat-order support</h3><p>Start at MOQ and scale by season. Your account manager tracks your sell-through and reserves production slots before you run out.</p></div></div>
+   727→   727→        </div>
+   728→   728→      </div>
+   729→   729→      <div class="stats reveal">
+   730→   730→        <div class="stat"><b><span data-count="9">0</span>+</b><span>Years in propagation &amp; export</span></div>
+   731→   731→        <div class="stat"><b><span data-count="140">0</span>+</b><span>Varieties in production</span></div>
+   732→   732→        <div class="stat"><b><span data-count="38">0</span></b><span>U.S. states served</span></div>
+   733→   733→        <div class="stat"><b><span data-count="98.6" data-dec="1">0</span>%</b><span>Arrival viability, trailing 12 mo.</span></div>
+   734→   734→      </div>
+   735→   735→    </div>
+   736→   736→  </section>
+   737→   737→
+   738→   738→  <!-- Process -->
+   739→   739→  <section class="sec">
+   740→   740→    <div class="wrap">
+   741→   741→      <div class="sec-head reveal">
+   742→   742→        <div>
+   743→   743→          <span class="eyebrow">Import Process</span>
+   744→   744→          <h2 class="h2">From our greenhouse to your shelf, in six steps</h2>
+   745→   745→        </div>
+   746→   746→      </div>
+   747→   747→      <div class="route reveal">
+   748→   748→        <span class="route-line"></span><span class="route-dot"></span>
+   749→   749→        <article class="step"><div class="s-node">1</div><div class="s-body"><h4>Browse &amp; shortlist</h4><p>Explore the catalog or request the full price list with current availability.</p></div></article>
+   750→   750→        <article class="step"><div class="s-node">2</div><div class="s-body"><h4>Send your list</h4><p>Submit target varieties, quantities, and your destination state.</p></div></article>
+   751→   751→        <article class="step"><div class="s-node">3</div><div class="s-body"><h4>Quote in 48 hours</h4><p>Receive quotation, availability, MOQ, and lead time — in writing.</p></div></article>
+   752→   752→        <article class="step"><div class="s-node">4</div><div class="s-body"><h4>Confirm the order</h4><p>Lock varieties and production slots with clear payment terms.</p></div></article>
+   753→   753→        <article class="step"><div class="s-node">5</div><div class="s-body"><h4>Inspect &amp; pack</h4><p>Plants are QC-inspected, packed, and prepared with export documentation.</p></div></article>
+   754→   754→        <article class="step"><div class="s-node">6</div><div class="s-body"><h4>Fly &amp; clear customs</h4><p>Air freight is arranged with tracking, plus customs and import guidance.</p></div></article>
+   755→   755→      </div>
+   756→   756→      <div class="compliance reveal">
+   757→   757→        <svg class="ic"><use href="#i-shield"/></svg>
+   758→   758→        <div>
+   759→   759→          <strong>Compliance note</strong>
+   760→   760→          <p>“We provide phytosanitary certificates, packing lists, invoices, and supporting export documents. Buyers are responsible for confirming current USDA/APHIS and state-level import requirements before ordering.”</p>
+   761→   761→        </div>
+   762→   762→      </div>
+   763→   763→    </div>
+   764→   764→  </section>
+   765→   765→
+   766→   766→  <!-- Quality -->
+   767→   767→  <section class="sec" style="background:var(--cream-2)">
+   768→   768→    <div class="wrap quality-grid">
+   769→   769→      <div class="q-photo reveal">
+   770→   770→        <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9cd6bc0d2641.jpg" alt="Quality inspection of tissue-culture plantlets before export" loading="lazy" width="760" height="820">
+   771→   771→        <div class="q-tag"><svg class="ic"><use href="#i-flask"/></svg> Every lot lab-traced &amp; inspected</div>
+   772→   772→      </div>
+   773→   773→      <div class="reveal" style="--d:.1s">
+   774→   774→        <span class="eyebrow">Quality Standards</span>
+   775→   775→        <h2 class="h2">What “export grade” actually means here</h2>
+   776→   776→        <div class="q-list">
+   777→   777→          <div class="q-item"><svg class="ic"><use href="#i-sprout"/></svg><div><h4>Healthy root development before dispatch</h4><p>Plantlets stay in community trays until roots fully fill the plug. We never rush bare-root stock out the door to hit a date.</p></div></div>
+   778→   778→          <div class="q-item"><svg class="ic"><use href="#i-thermo"/></svg><div><h4>Acclimatization &amp; pre-shipment preparation</h4><p>Every batch is hardened in shade houses for 2–3 weeks with gradually reduced humidity, so plantlets survive real-world conditions — not just the lab.</p></div></div>
+   779→   779→          <div class="q-item"><svg class="ic"><use href="#i-search"/></svg><div><h4>Pest &amp; disease inspection</h4><p>100% visual inspection plus laboratory spot checks. Any batch with flagged material is held back and re-grown, not shipped.</p></div></div>
+   780→   780→          <div class="q-item"><svg class="ic"><use href="#i-box"/></svg><div><h4>Packaging built for international live transit</h4><p>Sterile plug media, moisture barrier film, insulated liners, seasonal heat packs, and ventilated export boxes tested against 10-day scenarios.</p></div></div>
+   781→   781→          <div class="q-item"><svg class="ic"><use href="#i-tag"/></svg><div><h4>Clear labeling &amp; variety identification</h4><p>Every tray and box carries botanical name, cultivar, lot number, and count — so customs clearance and your inventory intake are both painless.</p></div></div>
+   782→   782→        </div>
+   783→   783→      </div>
+   784→   784→    </div>
+   785→   785→  </section>
+   786→   786→
+   787→   787→  <!-- Buyer types -->
+   788→   788→  <section class="sec">
+   789→   789→    <div class="wrap">
+   790→   790→      <div class="sec-head reveal">
+   791→   791→        <div>
+   792→   792→          <span class="eyebrow">Who We Supply</span>
+   793→   793→          <h2 class="h2">Built for three kinds of buyers</h2>
+   794→   794→        </div>
+   795→   795→      </div>
+   796→   796→
+   797→   797→      <article class="buyer reveal">
+   798→   798→        <div class="buyer-img"><img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9bacffe6eb50.jpg" alt="Independent plant shop shelves with rare foliage" loading="lazy" width="800" height="560"></div>
+   799→   799→        <div class="buyer-body">
+   800→   800→          <span class="kicker">For retail plant shops</span>
+
+[showing lines 1-800 of 1827; use offset=801 with limit to continue reading]

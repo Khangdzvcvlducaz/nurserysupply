@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nursery Supply — Wholesale Tissue-Culture Plants for U.S. Retailers & Growers</title>
+<meta name="description" content="Wholesale supplier of rare tissue-culture plants to the USA: variegated Monstera, Philodendron, Alocasia, Anthurium and rare aroids. Phytosanitary certification, secure live-plant export packaging, MOQ from 20 plants. Request the wholesale price list.">
+<meta property="og:title" content="Nursery Supply — Rare Tissue-Culture Plants for U.S. Retailers">
+<meta property="og:description" content="Wholesale Monstera, Philodendron, Alocasia, Anthurium and rare foliage plants — with export documentation and secure packaging.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Schema: Organization -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Nursery Supply","logo":"https://nurserysupply.com/images/logo.png","description":"Wholesale exporter of rare tissue-culture foliage plants to the United States.","email":"sales@nurserysupply.com","telephone":"+66-81-555-2143","sameAs":["https://instagram.com/nurserysupply","https://facebook.com/nurserysupply","https://tiktok.com/@nurserysupply"],"contactPoint":[{"@type":"ContactPoint","contactType":"sales","availableLanguage":["English"]}]}
+</script>
+<!-- Schema: FAQ -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Do you ship directly to the United States?","acceptedAnswer":{"@type":"Answer","text":"Yes. Weekly air freight to major U.S. plant inspection airports including Miami, New York and Los Angeles, with delivery coordination to all 50 states."}},
+{"@type":"Question","name":"What documents are included with each shipment?","acceptedAnswer":{"@type":"Answer","text":"A phytosanitary certificate, commercial invoice, packing list and airway bill with every shipment; certificates of origin and fumigation records on request."}},
+{"@type":"Question","name":"Do I need an import permit?","acceptedAnswer":{"@type":"Answer","text":"It depends on the genera and destination state. Buyers are responsible for confirming current USDA/APHIS and state-level requirements; we flag issues at the quotation stage."}},
+{"@type":"Question","name":"What is the minimum order quantity?","acceptedAnswer":{"@type":"Answer","text":"Typically 20–50 plantlets per variety with a 100-plantlet minimum per shipment. Varieties can be mixed within one order."}},
+{"@type":"Question","name":"How are plants packaged for international shipping?","acceptedAnswer":{"@type":"Answer","text":"Roots in sterile moisture-controlled media, sealed with barrier film, cushioned in insulated ventilated export boxes with heat packs in winter."}},
+{"@type":"Question","name":"What happens if plants arrive damaged?","acceptedAnswer":{"@type":"Answer","text":"Document with photos within 48 hours. Our live-arrival guarantee covers transit failures with replacement plants or credit on the next order."}},
+{"@type":"Question","name":"What are your payment terms?","acceptedAnswer":{"@type":"Answer","text":"50% deposit to reserve stock or production slots, balance before dispatch, via bank transfer or Wise. Recurring schedules for established accounts."}},
+{"@type":"Question","name":"Can I order mixed varieties in one shipment?","acceptedAnswer":{"@type":"Answer","text":"Yes — mixed orders are standard. Combine varieties across genera as long as each meets its MOQ."}}
+]}
+</script>
+<!-- Schema: Products -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ItemList","itemListElement":[
+{"@type":"Product","position":1,"name":"Monstera deliciosa 'Cream Brulee' Tissue-Culture Plantlet","description":"Rare variegated Monstera with cream and caramel-yellow marbling.","offers":{"@type":"Offer","priceCurrency":"USD","price":"14.50","availability":"https://schema.org/LimitedAvailability"}},
+{"@type":"Product","position":2,"name":"Monstera deliciosa 'Thai Constellation' Tissue-Culture Plantlet","description":"Stable cream-speckled variegation from certified culture.","offers":{"@type":"Offer","priceCurrency":"USD","price":"9.80","availability":"https://schema.org/InStock"}},
+{"@type":"Product","position":3,"name":"Philodendron 'White Wizard' Tissue-Culture Plantlet","description":"Pure white sectoral variegation, acclimatizes fast.","offers":{"@type":"Offer","priceCurrency":"USD","price":"11.00","availability":"https://schema.org/InStock"}},
+{"@type":"Product","position":4,"name":"Alocasia micholitziana 'Frydek Variegata' Tissue-Culture Plantlet","description":"White blotch variegation on velvet green foliage.","offers":{"@type":"Offer","priceCurrency":"USD","price":"16.00","availability":"https://schema.org/LimitedAvailability"}}
+]}
+</script>
+<!-- Schema: Breadcrumbs -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://nurserysupply.com/"},
+{"@type":"ListItem","position":2,"name":"Wholesale Catalog","item":"https://nurserysupply.com/#/catalog"},
+{"@type":"ListItem","position":3,"name":"Resources","item":"https://nurserysupply.com/#/resources"}]}
+</script>
+
+<style>
+/* ============ Tokens ============ */
+:root{
+  --cream:#F6F3EA; --cream-2:#EFEBDD; --paper:#FDFCF7; --white:#FFFFFF;
+  --ink:#1C231D; --ink-2:#4C564C; --ink-3:#79816F;
+  --green:#173B2C; --green-deep:#0E2A1E; --green-soft:#245040;
+  --sage:#9BB4A2; --sage-2:#C9D6C6; --sage-3:#E7EBDC;
+  --line:#E2DECE; --line-2:#D6D2C0;
+  --caramel:#B0763A; --caramel-d:#8F5C26; --caramel-bg:#F5E9D7;
+  --ok:#2E7D4F; --ok-bg:#E8F2E9;
+  --serif:'Fraunces',Georgia,serif; --sans:'Archivo',sans-serif;
+  --r:16px; --sh:0 22px 44px -24px rgba(23,59,44,.28);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font:400 16px/1.6 var(--sans);color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;background:none;border:none;color:inherit}
+.ic{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.sec{padding:96px 0}
+.sec-tight{padding:72px 0}
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.12}
+::selection{background:var(--sage-2)}
+:focus-visible{outline:2px solid var(--caramel);outline-offset:2px}
+
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font:600 .72rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#5E7A66;margin-bottom:1.1rem}
+.eyebrow::before{content:'';width:26px;height:2px;background:var(--caramel)}
+.h2{font-size:clamp(1.9rem,3.6vw,2.7rem);color:var(--ink)}
+.lead{color:var(--ink-2);max-width:56ch}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:3rem;flex-wrap:wrap}
+.sec-head p{margin-top:.9rem}
+
+/* ============ Buttons ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font:600 .92rem var(--sans);padding:.85rem 1.45rem;border-radius:999px;border:1.5px solid transparent;transition:all .22s ease;white-space:nowrap}
+.btn .ic{width:16px;height:16px;transition:transform .22s}
+.btn:hover .ic{transform:translateX(3px)}
+.btn-p{background:var(--green);color:#F4F1E4}
+.btn-p:hover{background:var(--green-deep);transform:translateY(-1px)}
+.btn-o{border-color:rgba(23,59,44,.45);color:var(--green)}
+.btn-o:hover{background:var(--green);color:#F4F1E4;border-color:var(--green)}
+.btn-cream{background:#F4F1E4;color:var(--green)}
+.btn-cream:hover{background:#fff}
+.btn-wide{width:100%}
+.btn-sm{padding:.55rem 1rem;font-size:.82rem}
+
+/* ============ Header ============ */
+#hdr{position:sticky;top:0;z-index:60;background:rgba(246,243,234,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+#hdr.scrolled{box-shadow:0 10px 30px -18px rgba(23,59,44,.25)}
+.hdr-in{display:flex;align-items:center;gap:1.6rem;height:74px}
+.logo{display:flex;align-items:center;gap:.65rem;margin-right:auto}
+.logo-mark{width:56px;height:56px;flex:none;object-fit:contain}
+.logo-word{font-family:var(--serif);font-weight:600;font-size:1.22rem;line-height:1.05;color:var(--green)}
+.logo-word small{display:block;font:600 .56rem var(--sans);letter-spacing:.24em;color:#5E7A66;text-transform:uppercase;margin-top:2px}
+.nav{display:flex;gap:1.7rem}
+.nav a{font:500 .92rem var(--sans);color:var(--ink-2);position:relative;padding:.3rem 0}
+.nav a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--caramel);transition:width .25s}
+.nav a:hover,.nav a.on{color:var(--ink)}
+.nav a.on::after,.nav a:hover::after{width:100%}
+.hdr-acts{display:flex;align-items:center;gap:.55rem}
+.icon-btn{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(23,59,44,.3);display:inline-flex;align-items:center;justify-content:center;color:var(--green);transition:.2s}
+.icon-btn:hover{background:var(--green);color:#F4F1E4;border-color:var(--green)}
+#menuBtn{display:none}
+@media(max-width:1020px){.nav{display:none}#menuBtn{display:inline-flex}.hdr-acts .btn{display:none}}
+
+/* Mobile nav */
+#mnav{position:fixed;inset:0;z-index:70;background:var(--green-deep);color:#EFEAD9;display:flex;flex-direction:column;padding:1.4rem 1.6rem 2.4rem;transform:translateY(-102%);transition:transform .45s cubic-bezier(.7,0,.2,1)}
+#mnav.open{transform:none}
+.mnav-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:2.5rem}
+#mnav a.mlink{font-family:var(--serif);font-size:2rem;padding:.65rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
+#mnav a.mlink:hover{color:var(--sage)}
+.mnav-foot{margin-top:auto;display:flex;gap:.7rem;flex-wrap:wrap}
+.mnav-foot .btn{flex:1}
+.xbtn{color:#EFEAD9;border-color:rgba(255,255,255,.35)}
+.xbtn:hover{background:rgba(255,255,255,.12)}
+
+/* ============ Hero ============ */
+.hero{padding:64px 0 84px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,4.6vw,3.85rem);color:var(--ink);margin-bottom:1.2rem}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--green)}
+.hero .lead{font-size:1.08rem;margin-bottom:2rem}
+.hero-ctas{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:2.2rem}
+.hero-trust{display:flex;flex-direction:column;gap:.55rem}
+.hero-trust span{display:flex;gap:.6rem;align-items:center;font-size:.9rem;color:var(--ink-2)}
+.hero-trust .ic{width:15px;height:15px;color:var(--ok)}
+.hero-visual{position:relative;min-height:520px}
+.hero-frame{position:absolute;right:0;top:0;width:78%;height:100%;border-radius:22px;overflow:hidden;border:1px solid var(--line-2);box-shadow:var(--sh)}
+.hero-frame img{width:100%;height:100%;object-fit:cover}
+.hero-leaf{position:absolute;left:-2%;bottom:-3%;width:58%;filter:drop-shadow(0 14px 20px rgba(23,59,44,.12))}
+.hero-leaf .draw{stroke-dasharray:1500;stroke-dashoffset:1500;animation:draw 2.4s ease forwards}
+.hero-leaf .d2{animation-delay:.5s}.hero-leaf .d3{animation-delay:1s}.hero-leaf .d4{animation-delay:1.4s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.sway{transform-origin:230px 400px;animation:sway 7s ease-in-out 3s infinite alternate}
+@keyframes sway{from{transform:rotate(-1.2deg)}to{transform:rotate(1.4deg)}}
+.chip{position:absolute;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:.7rem .95rem;display:flex;gap:.7rem;align-items:center;box-shadow:0 16px 34px -18px rgba(23,59,44,.35);animation:bob 5.5s ease-in-out infinite}
+.chip .ic{width:20px;height:20px;color:var(--green)}
+.chip strong{display:block;font:700 .82rem var(--sans)}
+.chip span{font-size:.72rem;color:var(--ink-3)}
+.chip-1{top:6%;left:2%}
+.chip-2{bottom:10%;right:4%;animation-delay:1.6s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media(max-width:920px){
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .hero-visual{min-height:400px;max-width:560px}
+  .hero-frame{width:88%}
+}
+
+/* ============ Ticker ============ */
+.ticker{background:var(--green-deep);color:#E9E4D2;overflow:hidden;padding:.85rem 0;border-block:1px solid var(--green-deep)}
+.ticker-track{display:flex;width:max-content;animation:tick 30s linear infinite}
+.ticker span{display:inline-flex;align-items:center;gap:2rem;padding-right:2rem;font:600 .8rem var(--sans);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.ticker .ic{width:13px;height:13px;color:var(--sage)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ============ Categories mosaic ============ */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:255px;gap:18px}
+.cat-card{position:relative;background:var(--white);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.cat-card:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.cat-media{flex:1;min-height:0;position:relative;overflow:hidden}
+.cat-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.cat-card:hover .cat-media img{transform:scale(1.06)}
+.cat-body{padding:1.1rem 1.2rem 1.2rem;background:var(--white);flex:none}
+.cat-body h3{font-size:1.12rem;color:var(--ink)}
+.cat-body p{font-size:.82rem;color:var(--ink-2);margin:.35rem 0 .6rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.cat-meta{display:flex;gap:.9rem;font:600 .7rem var(--sans);letter-spacing:.05em;text-transform:uppercase;color:#5E7A66;margin-bottom:.55rem}
+.cat-link{display:inline-flex;align-items:center;gap:.4rem;font:700 .82rem var(--sans);color:var(--green)}
+.cat-link .ic{width:14px;height:14px;transition:transform .2s}
+.cat-card:hover .cat-link .ic{transform:translateX(4px)}
+.cat-card.big{grid-column:span 2;grid-row:span 2;flex-direction:row}
+.cat-card.big .cat-media{width:52%}
+.cat-card.big .cat-body{width:48%;display:flex;flex-direction:column;justify-content:center;padding:1.6rem}
+.cat-card.big .cat-body h3{font-size:1.7rem;margin-bottom:.4rem}
+.cat-card.big .cat-body p{-webkit-line-clamp:4;font-size:.92rem}
+/* Leaf cursor-follow accent — transparent PNG of the genus's own leaf, follows the cursor.
+   mix-blend-mode:multiply hides any white background (in case the PNG wasn't saved with alpha).
+   drop-shadow is omitted because it would render a rectangular shadow if the PNG has white bg. */
+.cat-leaf{position:absolute;left:50%;top:50%;width:140px;height:140px;mix-blend-mode:multiply;opacity:0;transform:translate(-50%,-50%) scale(.5);pointer-events:none;z-index:5;will-change:transform,opacity}
+.cat-card.big .cat-leaf{width:172px;height:172px}
+.cat-card.wide .cat-leaf{width:158px;height:158px}
+@media(max-width:600px){.cat-leaf{width:96px;height:96px}.cat-card.big .cat-leaf,.cat-card.wide .cat-leaf{width:118px;height:118px}}
+@media(prefers-reduced-motion:reduce){.cat-leaf{opacity:0;transform:translate(-50%,-50%) scale(1)}.cat-card:hover .cat-leaf{opacity:1}}
+.cat-card.wide{grid-column:span 2;flex-direction:row}
+.cat-card.wide .cat-media{width:42%}
+.cat-card.wide .cat-body{width:58%;display:flex;flex-direction:column;justify-content:center}
+@media(max-width:1019px){
+  .cat-grid{grid-template-columns:1fr 1fr;grid-auto-rows:270px}
+  .cat-card.big{grid-column:1/-1;grid-row:span 1;height:300px}
+  .cat-card.wide{grid-column:1/-1}
+}
+@media(max-width:600px){
+  .cat-grid{grid-template-columns:1fr;grid-auto-rows:auto}
+  .cat-card.big,.cat-card.wide{flex-direction:column;height:auto}
+  .cat-card.big .cat-media,.cat-card.wide .cat-media,.cat-card.big .cat-body,.cat-card.wide .cat-body{width:100%}
+  .cat-card:not(.big):not(.wide) .cat-media{aspect-ratio:16/10}
+  .cat-card.big .cat-media{aspect-ratio:16/10}
+}
+
+/* ============ Product cards ============ */
+.p-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:1019px){.p-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.p-grid{grid-template-columns:1fr}}
+.p-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.p-card:hover{transform:translateY(-5px);box-shadow:var(--sh)}
+.p-media{aspect-ratio:4/3;position:relative;overflow:hidden;background:var(--sage-3)}
+.p-media img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.p-card:hover .p-media img{transform:scale(1.07)}
+.pill{position:absolute;display:inline-flex;align-items:center;gap:.4rem;font:700 .68rem var(--sans);letter-spacing:.06em;text-transform:uppercase;padding:.38rem .7rem;border-radius:999px;background:var(--white);border:1px solid var(--line)}
+.pill .dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+.st-in{color:var(--ok);background:var(--ok-bg);border-color:transparent}
+.st-lim{color:var(--caramel-d);background:var(--caramel-bg);border-color:transparent}
+.st-pre{color:#4A544B;background:#ECEDE4;border-color:transparent}
+.pill-new{top:12px;right:12px;background:var(--green);color:#F1EDDD;border-color:transparent}
+.st-pill{top:12px;left:12px}
+.p-body{padding:1.15rem 1.2rem 1.25rem;display:flex;flex-direction:column;flex:1}
+.p-name{font-size:1.06rem;line-height:1.25}
+.p-name em{display:block;font-size:.76rem;font-weight:400;color:var(--ink-3);letter-spacing:.04em;margin-top:2px}
+.p-var{font:600 .74rem var(--sans);color:var(--caramel-d);margin:.5rem 0 .4rem}
+.p-desc{font-size:.84rem;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:.9rem}
+.p-specs{display:flex;flex-wrap:wrap;gap:.35rem .9rem;align-items:center;font:600 .76rem var(--sans);color:var(--ink-2);padding-top:.7rem;border-top:1px dashed var(--line-2);margin-bottom:.95rem}
+.p-specs span{display:inline-flex;align-items:center;gap:.35rem}
+.p-specs .ic{width:13px;height:13px;color:#5E7A66}
+.p-price{color:var(--green);font-weight:700;margin-left:auto;font-size:.86rem}
+.p-body .btn{margin-top:auto}
+
+/* ============ Dark section (why us) ============ */
+.dark{background:var(--green-deep);color:#C6D1C3;position:relative;overflow:hidden}
+.dark .h2,.dark h3{color:#F2EEE0}
+.dark-leafbg{position:absolute;right:-90px;top:-60px;width:480px;opacity:.055;pointer-events:none}
+.why-grid{display:grid;grid-template-columns:1fr 1.35fr;gap:4.5rem;align-items:start}
+.why-left{position:sticky;top:110px}
+.why-left .eyebrow{color:var(--sage)}
+.why-left p{margin-top:1rem;max-width:42ch}
+.benefit{display:grid;grid-template-columns:78px 1fr;gap:1.4rem;padding:1.5rem 0;border-bottom:1px solid rgba(255,255,255,.13)}
+.benefit:first-child{padding-top:0}
+.benefit .num{font-family:var(--serif);font-style:italic;font-size:2rem;color:var(--sage);line-height:1}
+.benefit h3{font-size:1.22rem;margin-bottom:.4rem}
+.benefit p{font-size:.92rem}
+@media(max-width:880px){.why-grid{grid-template-columns:1fr;gap:2.5rem}.why-left{position:static}.benefit{grid-template-columns:52px 1fr}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:4.5rem;border-top:1px solid rgba(255,255,255,.14)}
+.stat{padding:2rem 1.5rem 0;border-left:1px solid rgba(255,255,255,.14)}
+.stat:first-child{border-left:none;padding-left:0}
+.stat b{font-family:var(--serif);font-weight:500;font-size:2.5rem;color:#F2EEE0;display:block;line-height:1}
+.stat span{font:600 .74rem var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--sage);display:block;margin-top:.5rem}
+@media(max-width:880px){.stats{grid-template-columns:1fr 1fr;gap:1.5rem 0}.stat:nth-child(3){border-left:none;padding-left:0}}
+
+/* ============ Process route ============ */
+.route{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:22px;margin:3.5rem 0}
+.route-line,.route-dot{position:absolute;top:23px}
+.route-line{left:23px;right:23px;height:2px;background:repeating-linear-gradient(90deg,var(--sage) 0 9px,transparent 9px 18px);animation:march 1s linear infinite}
+@keyframes march{to{background-position:18px 0}}
+.route-dot{left:23px;width:10px;height:10px;border-radius:50%;background:var(--caramel);animation:travel 14s linear infinite;z-index:2}
+@keyframes travel{0%{left:23px;opacity:0}6%{opacity:1}94%{opacity:1}100%{left:calc(100% - 33px);opacity:0}}
+.step{display:flex;flex-direction:column}
+.s-node{width:46px;height:46px;border-radius:50%;background:var(--green);color:#F1EDDD;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.05rem;position:relative;z-index:2;box-shadow:0 0 0 6px var(--cream)}
+.step:nth-of-type(even) .s-body{margin-top:26px}
+.s-body{padding-top:1rem}
+.s-body h4{font-family:var(--serif);font-weight:500;font-size:1.08rem;margin-bottom:.35rem}
+.s-body p{font-size:.82rem;color:var(--ink-2)}
+.compliance{display:flex;gap:1rem;align-items:flex-start;background:var(--sage-3);border:1px solid var(--line-2);border-radius:var(--r);padding:1.4rem 1.6rem;max-width:840px}
+.compliance .ic{width:22px;height:22px;color:var(--green);margin-top:2px}
+.compliance strong{display:block;font:700 .8rem var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:.25rem}
+.compliance p{font-size:.88rem;color:var(--ink-2)}
+@media(max-width:880px){
+  .route{grid-template-columns:1fr;gap:0;margin-left:6px}
+  .route-line{left:23px;top:23px;bottom:10px;right:auto;width:2px;height:auto;background:repeating-linear-gradient(180deg,var(--sage) 0 9px,transparent 9px 18px);animation-name:marchv}
+  @keyframes marchv{to{background-position:0 18px}}
+  .route-dot{display:none}
+  .step{flex-direction:row;gap:1.2rem;padding-bottom:1.8rem}
+  .s-node{flex:none}
+  .step:nth-of-type(even) .s-body{margin-top:0}
+  .s-body{padding-top:.35rem}
+}
+
+/* ============ Quality ============ */
+.quality-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:4rem;align-items:center}
+.q-photo{position:relative}
+.q-photo img{border-radius:20px;border:1px solid var(--line-2);box-shadow:var(--sh)}
+.q-tag{position:absolute;bottom:-16px;left:22px;background:var(--green);color:#F1EDDD;border-radius:12px;padding:.75rem 1.1rem;font:600 .78rem var(--sans);display:flex;gap:.55rem;align-items:center;box-shadow:var(--sh)}
+.q-tag .ic{width:16px;height:16px;color:var(--sage)}
+.q-list{margin-top:2rem}
+.q-item{display:flex;gap:1rem;padding:1.05rem 0;border-bottom:1px solid var(--line)}
+.q-item:last-child{border-bottom:none}
+.q-item .ic{width:20px;height:20px;color:var(--ok);margin-top:3px}
+.q-item h4{font:700 .98rem var(--sans);margin-bottom:.2rem}
+.q-item p{font-size:.88rem;color:var(--ink-2)}
+@media(max-width:880px){.quality-grid{grid-template-columns:1fr;gap:3rem}}
+
+/* ============ Buyer types ============ */
+.buyer{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--white);margin-bottom:1.4rem}
+.buyer-img{min-height:300px;position:relative}
+.buyer-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.buyer:nth-child(even) .buyer-img{order:2}
+.buyer-body{padding:2.6rem 2.8rem;display:flex;flex-direction:column;justify-content:center}
+.buyer-body .kicker{font:600 .72rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--caramel-d);margin-bottom:.7rem}
+.buyer-body h3{font-size:1.6rem;margin-bottom:.7rem}
+.buyer-body>p{font-size:.94rem;color:var(--ink-2);margin-bottom:1.2rem;max-width:52ch}
+.buyer-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.buyer-chips span{font:600 .74rem var(--sans);background:var(--sage-3);color:#3E5A46;border-radius:999px;padding:.4rem .8rem}
+.buyer-body .btn{align-self:flex-start}
+@media(max-width:880px){
+  .buyer{grid-template-columns:1fr!important}
+  .buyer-img{min-height:220px}
+  .buyer:nth-child(even) .buyer-img{order:0}
+  .buyer-body{padding:1.8rem 1.5rem}
+}
+
+/* ============ Testimonials ============ */
+.t-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.t-arrows{display:flex;gap:.6rem}
+.t-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 26px;scrollbar-width:none;mask-image:linear-gradient(90deg,#000 92%,transparent)}
+.t-track::-webkit-scrollbar{display:none}
+.t-card{flex:0 0 min(400px,86vw);scroll-snap-align:start;background:var(--white);border:1px solid var(--line);border-radius:18px;padding:1.7rem 1.7rem 1.5rem;display:flex;flex-direction:column}
+.t-card .ic{width:26px;height:26px;color:var(--sage);margin-bottom:1rem}
+.t-card blockquote{font-family:var(--serif);font-size:1.06rem;line-height:1.5;color:var(--ink);flex:1}
+.t-who{margin-top:1.4rem;padding-top:1.1rem;border-top:1px dashed var(--line-2);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.t-who b{display:block;font-size:.9rem}
+.t-who span{font-size:.78rem;color:var(--ink-3)}
+.t-who .loc{font:700 .68rem var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--caramel-d);background:var(--caramel-bg);padding:.35rem .65rem;border-radius:999px;white-space:nowrap}
+
+/* ============ FAQ ============ */
+.faq-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:4rem;align-items:start}
+.faq-left{position:sticky;top:110px}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item:first-child{border-top:1px solid var(--line)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;text-align:left;padding:1.15rem .2rem;font:600 1rem var(--sans);color:var(--ink);transition:color .2s}
+.faq-q:hover{color:var(--green)}
+.faq-q .ic{width:18px;height:18px;color:var(--caramel-d);transition:transform .3s}
+.faq-item.open .faq-q{color:var(--green)}
+.faq-item.open .faq-q .ic{transform:rotate(180deg)}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .38s ease}
+.faq-item.open .faq-a{grid-template-rows:1fr}
+.faq-a-in{overflow:hidden}
+.faq-a p{padding:0 .2rem 1.2rem;font-size:.92rem;color:var(--ink-2);max-width:64ch}
+@media(max-width:880px){.faq-grid{grid-template-columns:1fr;gap:2rem}.faq-left{position:static}}
+
+/* ============ Forms ============ */
+.cta-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;border-radius:22px;overflow:hidden;border:1px solid var(--line-2);background:var(--white)}
+.cta-left{background:var(--green-deep);color:#C6D1C3;padding:3rem 2.8rem;display:flex;flex-direction:column}
+.cta-left h2{color:#F2EEE0;font-size:clamp(1.7rem,2.6vw,2.3rem);margin-bottom:1rem}
+.cta-left .eyebrow{color:var(--sage)}
+.cta-list{margin:1.4rem 0 2rem;display:flex;flex-direction:column;gap:.7rem}
+.cta-list span{display:flex;gap:.65rem;align-items:flex-start;font-size:.9rem}
+.cta-list .ic{width:17px;height:17px;color:var(--sage);margin-top:3px}
+.cta-left .btn{margin-top:auto}
+.cta-right{padding:3rem 2.8rem}
+@media(max-width:880px){.cta-grid{grid-template-columns:1fr}.cta-left,.cta-right{padding:2rem 1.5rem}}
+.frow{display:grid;gap:1rem;margin-bottom:1rem}
+.frow.two{grid-template-columns:1fr 1fr}
+@media(max-width:640px){.frow.two{grid-template-columns:1fr}}
+.field{margin-bottom:1rem}
+.field label{display:block;font:600 .78rem var(--sans);letter-spacing:.03em;color:var(--ink);margin-bottom:.4rem}
+.field input,.field select,.field textarea{width:100%;padding:.78rem .95rem;border:1px solid var(--line-2);border-radius:10px;background:var(--paper);font:400 .93rem var(--sans);color:var(--ink);transition:.2s}
+.field textarea{resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--sage);box-shadow:0 0 0 3px rgba(155,180,162,.28)}
+.field.err input,.field.err select,.field.err textarea{border-color:#B4482E;box-shadow:0 0 0 3px rgba(180,72,46,.14)}
+.form-note{font-size:.78rem;color:var(--ink-3);margin-top:.9rem;text-align:center}
+.chips-quick{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:.7rem}
+.chips-quick button{font:600 .74rem var(--sans);border:1px solid var(--line-2);border-radius:999px;padding:.35rem .75rem;color:var(--ink-2);transition:.2s}
+.chips-quick button:hover{background:var(--sage-3);border-color:var(--sage);color:var(--green)}
+.form-success{text-align:center;padding:3rem 1rem}
+.form-success .ic{width:52px;height:52px;color:var(--ok);margin:0 auto 1.2rem}
+.form-success h3{font-size:1.5rem;margin-bottom:.6rem}
+.form-success p{color:var(--ink-2);max-width:44ch;margin:0 auto 1.6rem}
+
+/* ============ Catalog ============ */
+.page-head{padding:64px 0 0}
+.crumb{display:flex;align-items:center;gap:.5rem;font:600 .76rem var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:1.4rem}
+.crumb a:hover{color:var(--green)}
+.crumb .ic{width:12px;height:12px}
+.page-head h1{font-size:clamp(2.1rem,4vw,3.1rem);margin-bottom:1rem}
+.filters{display:flex;flex-direction:column;gap:.9rem;margin:2.2rem 0 1.6rem}
+.search{position:relative;max-width:380px}
+.search .ic{position:absolute;left:.9rem;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--ink-3)}
+.search input{width:100%;padding:.75rem 1rem .75rem 2.5rem;border:1px solid var(--line-2);border-radius:999px;background:var(--white);font:inherit}
+.search input:focus{outline:none;border-color:var(--sage);box-shadow:0 0 0 3px rgba(155,180,162,.28)}
+.fchips{display:flex;flex-wrap:wrap;gap:.5rem}
+.fchips button{font:600 .8rem var(--sans);border:1px solid var(--line-2);background:var(--white);border-radius:999px;padding:.45rem .9rem;color:var(--ink-2);transition:.2s}
+.fchips button:hover{border-color:var(--sage);color:var(--green)}
+.fchips button.on{background:var(--green);border-color:var(--green);color:#F1EDDD}
+.count-line{font:600 .8rem var(--sans);letter-spacing:.05em;color:var(--ink-3);margin-bottom:1.4rem}
+.empty{grid-column:1/-1;text-align:center;padding:4rem 1rem;border:1px dashed var(--line-2);border-radius:var(--r)}
+.empty h3{font-size:1.3rem;margin-bottom:.4rem}
+.empty p{color:var(--ink-2);margin-bottom:1.2rem}
+
+/* ============ Resources ============ */
+.feat-art{display:grid;grid-template-columns:1.1fr 1fr;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--white);margin-bottom:2.4rem;transition:box-shadow .3s,transform .3s}
+.feat-art:hover{transform:translateY(-3px);box-shadow:var(--sh)}
+.feat-art .fa-img{position:relative;min-height:300px}
+.feat-art .fa-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.feat-art .fa-body{padding:2.6rem;display:flex;flex-direction:column;justify-content:center}
+.art-row{display:grid;grid-template-columns:130px 1fr auto;gap:1.6rem;align-items:center;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.art-row:first-of-type{border-top:1px solid var(--line)}
+.art-row .meta{font:600 .74rem var(--sans);color:var(--ink-3);letter-spacing:.04em}
+.art-row .meta em{display:inline-block;font-style:normal;color:var(--caramel-d);background:var(--caramel-bg);border-radius:999px;padding:.25rem .6rem;margin-top:.4rem}
+.art-row h3{font-size:1.22rem;margin-bottom:.3rem}
+.art-row p{font-size:.87rem;color:var(--ink-2)}
+.art-row .go{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(23,59,44,.3);display:flex;align-items:center;justify-content:center;color:var(--green);transition:.2s}
+.art-row:hover .go{background:var(--green);color:#F1EDDD}
+@media(max-width:880px){.feat-art{grid-template-columns:1fr}.art-row{grid-template-columns:1fr;gap:.6rem}.art-row .go{display:none}}
+.article-body{max-width:720px;margin:0 auto}
+.article-body h2{font-size:1.7rem;margin:2.2rem 0 .8rem}
+.article-body h3{font-size:1.25rem;margin:1.8rem 0 .6rem}
+.article-body p{margin-bottom:1rem;color:var(--ink-2)}
+.article-body ul,.article-body ol{margin:0 0 1.2rem 1.3rem;color:var(--ink-2)}
+.article-body li{margin-bottom:.45rem}
+.art-cta{margin-top:3rem;background:var(--sage-3);border:1px solid var(--line-2);border-radius:var(--r);padding:1.8rem;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.art-cta h3{margin:0 0 .3rem;font-size:1.3rem}
+.art-cta p{margin:0;color:var(--ink-2);font-size:.9rem}
+.art-nav{display:flex;justify-content:space-between;gap:1rem;margin-top:2.4rem;max-width:720px;margin-inline:auto}
+.art-nav a{font:600 .88rem var(--sans);color:var(--green);display:inline-flex;gap:.5rem;align-items:center}
+.art-nav a:hover{text-decoration:underline}
+
+/* ============ About ============ */
+.about-cols{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-bottom:5rem}
+.about-cols img{border-radius:20px;border:1px solid var(--line-2);box-shadow:var(--sh)}
+.about-cols h2{font-size:clamp(1.7rem,2.8vw,2.3rem);margin-bottom:1rem}
+.about-cols p{color:var(--ink-2);margin-bottom:1rem}
+.about-cols p:last-child{margin-bottom:0}
+.mission{max-width:820px;margin:0 auto 5rem;text-align:center}
+.mission blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.35;color:var(--green)}
+.mission .eyebrow{justify-content:center}
+.mission .eyebrow::after{content:'';width:26px;height:2px;background:var(--caramel)}
+.principles{max-width:820px;margin:0 auto}
+.principle{display:grid;grid-template-columns:70px 1fr;gap:1.3rem;padding:1.4rem 0;border-top:1px solid var(--line)}
+.principle:last-child{border-bottom:1px solid var(--line)}
+.principle .num{font-family:var(--serif);font-style:italic;font-size:1.8rem;color:var(--caramel)}
+.principle h3{font-size:1.25rem;margin-bottom:.3rem}
+.principle p{font-size:.92rem;color:var(--ink-2)}
+.photo-strip{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;margin-top:5rem}
+.photo-strip img{width:100%;height:300px;object-fit:cover;border-radius:18px;border:1px solid var(--line-2)}
+.photo-strip img:first-child{height:380px}
+@media(max-width:880px){.about-cols{grid-template-columns:1fr;gap:2.4rem}.photo-strip{grid-template-columns:1fr}.photo-strip img:first-child{height:280px}}
+
+/* ============ Contact ============ */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:3.5rem;align-items:start}
+.c-item{display:flex;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.c-item .ic{width:20px;height:20px;color:var(--green);margin-top:3px}
+.c-item b{display:block;font-size:.95rem}
+.c-item span{font-size:.88rem;color:var(--ink-2)}
+.c-item a:hover{text-decoration:underline}
+.socials{display:flex;gap:.6rem;margin-top:1.4rem}
+.map{margin-top:2rem;border-radius:16px;overflow:hidden;border:1px solid var(--line-2);filter:grayscale(.35) sepia(.12)}
+.map iframe{display:block;width:100%;height:240px;border:0}
+@media(max-width:880px){.contact-grid{grid-template-columns:1fr;gap:2.5rem}}
+
+/* ============ Admin ============ */
+.admin-card{max-width:440px;margin:5rem auto;background:var(--white);border:1px solid var(--line);border-radius:20px;padding:2.4rem;text-align:center}
+.admin-card .ic{width:34px;height:34px;color:var(--green);margin:0 auto 1rem}
+.admin-card h2{margin-bottom:.5rem}
+.admin-card p{color:var(--ink-2);font-size:.9rem;margin-bottom:1.4rem}
+.admin-card input{text-align:center}
+.hint{font:600 .74rem var(--sans);color:var(--caramel-d);background:var(--caramel-bg);border-radius:8px;padding:.5rem .8rem;display:inline-block;margin-top:1rem}
+.admin-dash{padding:48px 0 80px}
+.ad-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.ad-stats{display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:1.8rem}
+.ad-stat{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:.8rem 1.2rem;font-size:.82rem;color:var(--ink-2)}
+.ad-stat b{display:block;font-family:var(--serif);font-size:1.5rem;color:var(--green);font-weight:500}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:1.6rem;margin-bottom:1.6rem}
+.panel h3{font-size:1.2rem;margin-bottom:1rem}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:900px}
+th{font:700 .68rem var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:.6rem .5rem;border-bottom:1px solid var(--line)}
+td{padding:.55rem .5rem;border-bottom:1px solid var(--line);font-size:.85rem;vertical-align:middle}
+td img{width:44px;height:44px;border-radius:8px;object-fit:cover}
+td input,td select{padding:.42rem .55rem;border:1px solid var(--line-2);border-radius:8px;font:400 .82rem var(--sans);width:100%;min-width:70px;background:var(--paper)}
+td .nm{min-width:200px}
+td .cat{min-width:110px}
+td input[type=number]{min-width:64px}
+td input[type=checkbox]{width:16px;height:16px;accent-color:var(--green)}
+.danger-btn{font:700 .74rem var(--sans);color:#A8402A;border:1px solid #E4C4B8;border-radius:999px;padding:.35rem .75rem;transition:.2s;white-space:nowrap}
+.danger-btn:hover,.danger-btn.arm{background:#A8402A;color:#fff;border-color:#A8402A}
+.ghint{font-size:.78rem;color:var(--ink-3);margin-top:.8rem}
+.add-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin-bottom:1rem}
+.add-grid .field{margin:0}
+@media(max-width:720px){.add-grid{grid-template-columns:1fr}}
+
+/* ============ Footer ============ */
+footer{background:var(--green-deep);color:#AEBDA9;margin-top:96px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:3rem;padding:4.5rem 0 3rem}
+.foot-grid h4{font:700 .74rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#8FA391;margin-bottom:1.1rem}
+.foot-grid ul{list-style:none}
+.foot-grid li{margin-bottom:.55rem}
+.foot-grid a:hover{color:#EDE9DA}
+.foot-brand .logo-word{color:#F2EEE0}
+.foot-brand .logo-word small{color:#8FA391}
+.foot-brand p{font-size:.88rem;margin:1rem 0 1.4rem;max-width:34ch}
+.news-form{display:flex;gap:.5rem;margin-bottom:.7rem}
+.news-form input{flex:1;padding:.72rem .95rem;border:1px solid rgba(255,255,255,.22);border-radius:10px;background:rgba(255,255,255,.07);color:#EDE9DA;font:400 .88rem var(--sans)}
+.news-form input::placeholder{color:#8FA391}
+.news-form input:focus{outline:none;border-color:var(--sage)}
+.news-form button{border-radius:10px}
+.foot-note{font-size:.74rem;color:#7E9280}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:1.6rem 0 2rem;font-size:.78rem;color:#7E9280}
+.foot-bottom .wrap{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+.foot-bottom a{text-decoration:underline}
+@media(max-width:880px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.foot-grid{grid-template-columns:1fr}}
+
+/* ============ WhatsApp float / toasts / modal ============ */
+#waFloat{position:fixed;right:22px;bottom:22px;z-index:65;width:56px;height:56px;border-radius:50%;background:var(--green);color:#F1EDDD;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh);transition:transform .2s}
+#waFloat:hover{transform:scale(1.08)}
+#waFloat::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:1.5px solid var(--sage);animation:ring 2.6s ease-out infinite}
+@keyframes ring{0%{transform:scale(.8);opacity:.9}70%,100%{transform:scale(1.35);opacity:0}}
+#waFloat .ic{width:24px;height:24px}
+#toasts{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);z-index:90;display:flex;flex-direction:column;gap:.6rem;align-items:center;pointer-events:none}
+.toast{background:var(--green-deep);color:#EDE9DA;border-radius:12px;padding:.85rem 1.3rem;font:500 .88rem var(--sans);display:flex;gap:.6rem;align-items:center;box-shadow:var(--sh);animation:tin .35s ease}
+.toast .ic{width:17px;height:17px;color:var(--sage)}
+@keyframes tin{from{opacity:0;transform:translateY(12px)}}
+#modal{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;padding:1.2rem}
+#modal.open{display:flex}
+.modal-bg{position:absolute;inset:0;background:rgba(14,42,30,.55)}
+.modal-card{position:relative;background:var(--white);border-radius:20px;width:min(520px,100%);max-height:92vh;overflow-y:auto;padding:1.9rem;animation:mup .35s cubic-bezier(.2,.9,.3,1.2)}
+@keyframes mup{from{opacity:0;transform:translateY(24px) scale(.97)}}
+.modal-close{position:absolute;top:1rem;right:1rem;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--ink-2)}
+.modal-close:hover{background:var(--cream-2)}
+.modal-prod{display:flex;gap:1rem;align-items:center;background:var(--cream);border-radius:14px;padding:.9rem;margin-bottom:1.4rem}
+.modal-prod img{width:64px;height:64px;border-radius:10px;object-fit:cover}
+.modal-prod b{font-family:var(--serif);font-weight:500;font-size:1.02rem;display:block}
+.modal-prod span{font-size:.78rem;color:var(--ink-2)}
+
+/* ============ Pages & reveal ============ */
+.page{display:none}
+.page.active{display:block}
+.reveal{opacity:0;transform:translateY(20px)}
+.reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease;transition-delay:var(--d,0s)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- Icon sprite -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+  <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-check-c" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h5"/><path d="M16 13H8M16 17H8M10 9H8"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
+  <symbol id="i-thermo" viewBox="0 0 24 24"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-arr" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-arr-l" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+  <symbol id="i-arr-ur" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+  <symbol id="i-tk" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M14 2v6a2 2 0 0 0 .24.95l5.51 10.09A2 2 0 0 1 17.98 22H6.02a2 2 0 0 1-1.77-2.96L9.76 8.95A2 2 0 0 0 10 8V2"/><path d="M6.5 2h11"/><path d="M8.5 16h7"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r="1"/></symbol>
+  <symbol id="i-dl" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+  <symbol id="i-rot" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+</svg>
+
+<!-- Header -->
+<header id="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#/home" aria-label="Nursery Supply home">
+      <img class="logo-mark" src="images/logo.png" alt="Logo Nursery Supply" width="38" height="38" onerror="this.style.display='none'">
+      <span class="logo-word">Nursery Supply<small>Rare Plant Exports</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#/catalog" data-nav="catalog">Wholesale Catalog</a>
+      <a href="#/about" data-nav="about">About</a>
+      <a href="#/resources" data-nav="resources">Resources</a>
+      <a href="#/contact" data-nav="contact">Contact</a>
+    </nav>
+    <div class="hdr-acts">
+      <a class="icon-btn" href="tel:+66815552143" aria-label="Call our sales desk"><svg class="ic"><use href="#i-phone"/></svg></a>
+      <a class="icon-btn" href="https://wa.me/66815552143?text=Hello%20Nursery%20Supply%20—%20I'd%20like%20the%20wholesale%20price%20list." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="ic"><use href="#i-chat"/></svg></a>
+      <button class="btn btn-p btn-sm" data-cta-price>Request Wholesale Price List</button>
+      <button class="icon-btn" id="menuBtn" aria-label="Open menu"><svg class="ic"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<div id="mnav" aria-hidden="true">
+  <div class="mnav-top">
+    <span class="logo-word" style="color:#F2EEE0">Nursery Supply</span>
+    <button class="icon-btn xbtn" id="mnavClose" aria-label="Close menu"><svg class="ic"><use href="#i-x"/></svg></button>
+  </div>
+  <a class="mlink" href="#/home">Home</a>
+  <a class="mlink" href="#/catalog">Wholesale Catalog</a>
+  <a class="mlink" href="#/about">About</a>
+  <a class="mlink" href="#/resources">Resources</a>
+  <a class="mlink" href="#/contact">Contact</a>
+  <div class="mnav-foot">
+    <a class="btn btn-cream" href="https://wa.me/66815552143" target="_blank" rel="noopener"><svg class="ic"><use href="#i-chat"/></svg> WhatsApp</a>
+    <button class="btn btn-p" style="background:#F1EDDD;color:var(--green)" data-cta-price>Request Price List</button>
+  </div>
+</div>
+
+<main>
+<!-- ================= HOME ================= -->
+<div class="page" data-page="home">
+
+  <section class="hero" id="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal in">
+        <span class="eyebrow">Tissue-Culture Export · U.S. Wholesale</span>
+        <h1>Rare Tissue-Culture Plants for <em>U.S. Retailers</em> and Growers</h1>
+        <p class="lead">Wholesale Monstera, Philodendron, Alocasia, Anthurium, and rare foliage plants—with export documentation and secure packaging.</p>
+        <div class="hero-ctas">
+          <button class="btn btn-p" data-cta-price>Request Price List <svg class="ic"><use href="#i-arr"/></svg></button>
+          <a class="btn btn-o" href="#/catalog">Browse Wholesale Catalog</a>
+        </div>
+        <div class="hero-trust">
+          <span><svg class="ic"><use href="#i-check"/></svg> Phytosanitary certificate with every shipment</span>
+          <span><svg class="ic"><use href="#i-check"/></svg> MOQ from 20 plants per variety — mixed orders welcome</span>
+          <span><svg class="ic"><use href="#i-check"/></svg> Weekly U.S.-bound air freight with full tracking</span>
+        </div>
+      </div>
+      <div class="hero-visual px" data-depth="5" aria-hidden="true">
+        <div class="hero-frame"><img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b1ec3d8a0a49.jpg" alt="Tissue-culture plantlets hardening off in a shaded greenhouse" width="900" height="1100"></div>
+        <svg class="hero-leaf px" data-depth="12" viewBox="0 0 340 420" fill="none">
+          <g class="sway">
+            <path d="M262 408 C236 352 224 300 214 246" stroke="#173B2C" stroke-width="3" stroke-linecap="round" class="draw d4"/>
+            <path d="M214 246 C186 262 148 258 122 232 C100 210 96 182 110 162 C86 148 78 116 94 94 C88 72 100 50 124 46 C126 24 148 10 172 16 C186 2 214 4 226 20 C250 12 274 24 278 48 C300 58 308 84 296 104 C316 120 318 148 302 164 C316 184 312 212 292 222 C304 244 296 268 272 272 C252 276 230 262 214 246 Z" stroke="#173B2C" stroke-width="3" stroke-linejoin="round" class="draw"/>
+            <path d="M214 244 C204 190 202 120 214 58" stroke="#173B2C" stroke-width="2.2" stroke-linecap="round" class="draw d2"/>
+            <path d="M208 196 C182 192 158 178 142 156" stroke="#4C7A5E" stroke-width="1.8" class="draw d3"/>
+            <path d="M206 150 C186 144 164 128 152 108" stroke="#4C7A5E" stroke-width="1.8" class="draw d3"/>
+            <path d="M210 104 C226 96 244 96 258 104" stroke="#4C7A5E" stroke-width="1.8" class="draw d3"/>
+            <path d="M208 210 C232 206 252 192 262 172" stroke="#4C7A5E" stroke-width="1.8" class="draw d3"/>
+            <path d="M108 168 C130 176 148 192 158 212" stroke="#B0763A" stroke-width="1.8" class="draw d4"/>
+            <path d="M96 108 C120 114 140 130 150 150" stroke="#B0763A" stroke-width="1.8" class="draw d4"/>
+            <path d="M172 24 C176 52 176 80 170 104" stroke="#B0763A" stroke-width="1.8" class="draw d4"/>
+            <path d="M292 110 C268 118 250 132 240 152" stroke="#B0763A" stroke-width="1.8" class="draw d4"/>
+            <path d="M298 170 C274 176 258 188 250 204" stroke="#B0763A" stroke-width="1.8" class="draw d4"/>
+          </g>
+        </svg>
+        <div class="chip chip-1 px" data-depth="16">
+          <svg class="ic"><use href="#i-check-c"/></svg>
+          <div><strong>Lot #A-2417 · QC passed</strong><span>Roots verified · ready to fly</span></div>
+        </div>
+        <div class="chip chip-2 px" data-depth="9">
+          <svg class="ic"><use href="#i-plane"/></svg>
+          <div><strong>MIA · 9-day door delivery</strong><span>Phyto cert included</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-label="Wholesale assurances">
+    <div class="ticker-track" id="tickerTrack">
+      <span><svg class="ic"><use href="#i-sprout"/></svg> U.S.-Focused Export Support</span>
+      <span><svg class="ic"><use href="#i-file"/></svg> Phytosanitary Certification</span>
+      <span><svg class="ic"><use href="#i-box"/></svg> Secure Live-Plant Packaging</span>
+      <span><svg class="ic"><use href="#i-tag"/></svg> Wholesale MOQ Available</span>
+      <span><svg class="ic"><use href="#i-leaf"/></svg> New Arrivals Every Week</span>
+    </div>
+  </div>
+
+  <!-- Categories -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="eyebrow">Product Categories</span>
+          <h2 class="h2">Shop by genus</h2>
+          <p class="lead">Eight curated families of tissue-culture foliage, sized and priced for U.S. wholesale programs.</p>
+        </div>
+        <a class="btn btn-o" href="#/catalog">Full catalog <svg class="ic"><use href="#i-arr"/></svg></a>
+      </div>
+      <div class="cat-grid" id="catGrid"></div>
+    </div>
+  </section>
+
+  <!-- Hot products -->
+  <section class="sec-tight" id="hot">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="eyebrow">Hot Sellers</span>
+          <h2 class="h2">This season's best movers</h2>
+          <p class="lead">Updated weekly as lab batches harden off. Availability changes fast — quotes lock allocation.</p>
+        </div>
+        <a class="btn btn-o" href="#/catalog">All varieties <svg class="ic"><use href="#i-arr"/></svg></a>
+      </div>
+      <div class="p-grid" id="homeProducts"></div>
+    </div>
+  </section>
+
+  <!-- Why buy -->
+  <section class="sec dark">
+    <svg class="dark-leafbg" viewBox="0 0 340 420" fill="none" aria-hidden="true"><path d="M214 246 C186 262 148 258 122 232 C100 210 96 182 110 162 C86 148 78 116 94 94 C88 72 100 50 124 46 C126 24 148 10 172 16 C186 2 214 4 226 20 C250 12 274 24 278 48 C300 58 308 84 296 104 C316 120 318 148 302 164 C316 184 312 212 292 222 C304 244 296 268 272 272 C252 276 230 262 214 246 Z" stroke="#fff" stroke-width="2"/></svg>
+    <div class="wrap">
+      <div class="why-grid">
+        <div class="why-left reveal">
+          <span class="eyebrow">Why Buy From Us</span>
+          <h2 class="h2">A supplier that behaves like a partner</h2>
+          <p>We built Nursery Supply around one observation: U.S. buyers don't lose money on rare plants — they lose money on surprises. So we removed the surprises.</p>
+        </div>
+        <div>
+          <div class="benefit reveal"><span class="num">01</span><div><h3>U.S.-focused export experience</h3><p>We ship to the United States every week. Our team knows the paperwork, the plant inspection stations, and the seasonal pitfalls — so your first order feels like your tenth.</p></div></div>
+          <div class="benefit reveal" style="--d:.05s"><span class="num">02</span><div><h3>Tissue-culture consistency, true to type</h3><p>Every lot comes from indexed mother stock in the lab. The variegation you approve is the variegation that arrives — across hundreds of plantlets, not just the display tray.</p></div></div>
+          <div class="benefit reveal" style="--d:.1s"><span class="num">03</span><div><h3>Rare and high-demand varieties</h3><p>From albo Monsteras to Frydek Variegata, we track U.S. demand signals and keep the varieties your customers actually ask for in continuous production.</p></div></div>
+          <div class="benefit reveal" style="--d:.15s"><span class="num">04</span><div><h3>Professional phytosanitary documentation</h3><p>Certificates, invoices, and packing lists prepared correctly the first time, with direct support for your customs broker when questions come up.</p></div></div>
+          <div class="benefit reveal" style="--d:.2s"><span class="num">05</span><div><h3>Secure moisture-controlled packaging</h3><p>Insulated boxes, sterile hydrated media, barrier film, and winter heat packs — a system designed and tested for 10+ days of international live-plant transit.</p></div></div>
+          <div class="benefit reveal" style="--d:.25s"><span class="num">06</span><div><h3>Flexible quantities and repeat-order support</h3><p>Start at MOQ and scale by season. Your account manager tracks your sell-through and reserves production slots before you run out.</p></div></div>
+        </div>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><b><span data-count="9">0</span>+</b><span>Years in propagation &amp; export</span></div>
+        <div class="stat"><b><span data-count="140">0</span>+</b><span>Varieties in production</span></div>
+        <div class="stat"><b><span data-count="38">0</span></b><span>U.S. states served</span></div>
+        <div class="stat"><b><span data-count="98.6" data-dec="1">0</span>%</b><span>Arrival viability, trailing 12 mo.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="eyebrow">Import Process</span>
+          <h2 class="h2">From our greenhouse to your shelf, in six steps</h2>
+        </div>
+      </div>
+      <div class="route reveal">
+        <span class="route-line"></span><span class="route-dot"></span>
+        <article class="step"><div class="s-node">1</div><div class="s-body"><h4>Browse &amp; shortlist</h4><p>Explore the catalog or request the full price list with current availability.</p></div></article>
+        <article class="step"><div class="s-node">2</div><div class="s-body"><h4>Send your list</h4><p>Submit target varieties, quantities, and your destination state.</p></div></article>
+        <article class="step"><div class="s-node">3</div><div class="s-body"><h4>Quote in 48 hours</h4><p>Receive quotation, availability, MOQ, and lead time — in writing.</p></div></article>
+        <article class="step"><div class="s-node">4</div><div class="s-body"><h4>Confirm the order</h4><p>Lock varieties and production slots with clear payment terms.</p></div></article>
+        <article class="step"><div class="s-node">5</div><div class="s-body"><h4>Inspect &amp; pack</h4><p>Plants are QC-inspected, packed, and prepared with export documentation.</p></div></article>
+        <article class="step"><div class="s-node">6</div><div class="s-body"><h4>Fly &amp; clear customs</h4><p>Air freight is arranged with tracking, plus customs and import guidance.</p></div></article>
+      </div>
+      <div class="compliance reveal">
+        <svg class="ic"><use href="#i-shield"/></svg>
+        <div>
+          <strong>Compliance note</strong>
+          <p>“We provide phytosanitary certificates, packing lists, invoices, and supporting export documents. Buyers are responsible for confirming current USDA/APHIS and state-level import requirements before ordering.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality -->
+  <section class="sec" style="background:var(--cream-2)">
+    <div class="wrap quality-grid">
+      <div class="q-photo reveal">
+        <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9cd6bc0d2641.jpg" alt="Quality inspection of tissue-culture plantlets before export" loading="lazy" width="760" height="820">
+        <div class="q-tag"><svg class="ic"><use href="#i-flask"/></svg> Every lot lab-traced &amp; inspected</div>
+      </div>
+      <div class="reveal" style="--d:.1s">
+        <span class="eyebrow">Quality Standards</span>
+        <h2 class="h2">What “export grade” actually means here</h2>
+        <div class="q-list">
+          <div class="q-item"><svg class="ic"><use href="#i-sprout"/></svg><div><h4>Healthy root development before dispatch</h4><p>Plantlets stay in community trays until roots fully fill the plug. We never rush bare-root stock out the door to hit a date.</p></div></div>
+          <div class="q-item"><svg class="ic"><use href="#i-thermo"/></svg><div><h4>Acclimatization &amp; pre-shipment preparation</h4><p>Every batch is hardened in shade houses for 2–3 weeks with gradually reduced humidity, so plantlets survive real-world conditions — not just the lab.</p></div></div>
+          <div class="q-item"><svg class="ic"><use href="#i-search"/></svg><div><h4>Pest &amp; disease inspection</h4><p>100% visual inspection plus laboratory spot checks. Any batch with flagged material is held back and re-grown, not shipped.</p></div></div>
+          <div class="q-item"><svg class="ic"><use href="#i-box"/></svg><div><h4>Packaging built for international live transit</h4><p>Sterile plug media, moisture barrier film, insulated liners, seasonal heat packs, and ventilated export boxes tested against 10-day scenarios.</p></div></div>
+          <div class="q-item"><svg class="ic"><use href="#i-tag"/></svg><div><h4>Clear labeling &amp; variety identification</h4><p>Every tray and box carries botanical name, cultivar, lot number, and count — so customs clearance and your inventory intake are both painless.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buyer types -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="eyebrow">Who We Supply</span>
+          <h2 class="h2">Built for three kinds of buyers</h2>
+        </div>
+      </div>
+
+      <article class="buyer reveal">
+        <div class="buyer-img"><img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9bacffe6eb50.jpg" alt="Independent plant shop shelves with rare foliage" loading="lazy" width="800" height="560"></div>
+        <div class="buyer-body">
+          <span class="kicker">For retail plant shops</span>
+          <h3>Trending rare varieties, retail-ready</h3>
+          <p>Small-to-medium mixed orders across genera — plantlets that acclimate fast and look shelf-ready within two weeks, so your display case never sits half-empty.</p>
+          <div class="buyer-chips"><span>Mixed-variety pallets</span><span>MOQ from 20 / variety</span><span>Retail-ready sizing</span><span>Pre-shipment photos</span></div>
+          <button class="btn btn-o" data-btype="Retail plant shop">Start a retail order <svg class="ic"><use href="#i-arr"/></svg></button>
+        </div>
+      </article>
+
+      <article class="buyer reveal">
+        <div class="buyer-img"><img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1081569f1bf8.jpg" alt="Online plant seller packing orders" loading="lazy" width="800" height="560"></div>
+        <div class="buyer-body">
+          <span class="kicker">For online plant sellers</span>
+          <h3>Collector plants with stable restocking</h3>
+          <p>High-demand varieties on a predictable restock calendar, with detailed specs, photos, and sizing data you can drop straight into your listings.</p>
+          <div class="buyer-chips"><span>Restock calendar</span><span>Listing-ready data</span><span>Pre-order slots</span><span>Live-arrival guarantee</span></div>
+          <button class="btn btn-o" data-btype="Online plant seller">Set up restocking <svg class="ic"><use href="#i-arr"/></svg></button>
+        </div>
+      </article>
+
+      <article class="buyer reveal">
+        <div class="buyer-img"><img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b6297019e838.jpg" alt="Wholesale distribution of boxed plantlets" loading="lazy" width="800" height="560"></div>
+        <div class="buyer-body">
+          <span class="kicker">For wholesale distributors</span>
+          <h3>Volume lots and reserved production</h3>
+          <p>Larger volume orders, recurring supply agreements, and custom variety planning with lab production reserved for the lines your network needs.</p>
+          <div class="buyer-chips"><span>Volume pricing tiers</span><span>Reserved production</span><span>Quarterly planning</span><span>Dedicated account manager</span></div>
+          <button class="btn btn-o" data-btype="Wholesale distributor">Plan volume supply <svg class="ic"><use href="#i-arr"/></svg></button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="sec-tight">
+    <div class="wrap">
+      <div class="t-head reveal">
+        <div>
+          <span class="eyebrow">Buyer Stories</span>
+          <h2 class="h2">What U.S. buyers say after the box opens</h2>
+        </div>
+        <div class="t-arrows">
+          <button class="icon-btn" id="tPrev" aria-label="Previous testimonials"><svg class="ic"><use href="#i-arr-l"/></svg></button>
+          <button class="icon-btn" id="tNext" aria-label="Next testimonials"><svg class="ic"><use href="#i-arr"/></svg></button>
+        </div>
+      </div>
+      <div class="t-track reveal" id="tTrack">
+        <article class="t-card"><svg class="ic"><use href="#i-quote"/></svg><blockquote>“First order of Thai Constellation and White Wizard arrived in nine days — zero losses, and every plantlet true to the listing photos. The phytosanitary paperwork cleared customs without a single question.”</blockquote><div class="t-who"><div><b>Dana R.</b><span>Owner, Fern &amp; Frond Plant Co.</span></div><span class="loc">Portland, OR</span></div></article>
+        <article class="t-card"><svg class="ic"><use href="#i-quote"/></svg><blockquote>“Variegation accuracy is what keeps me reordering. With Nursery Supply I don't gamble — I get forty-five stable albo plants, not a lottery ticket.”</blockquote><div class="t-who"><div><b>Marcus T.</b><span>Founder, TerraNova Plants (online)</span></div><span class="loc">Austin, TX</span></div></article>
+        <article class="t-card"><svg class="ic"><use href="#i-quote"/></svg><blockquote>“They walked our customs broker through every document. And the packing — moisture film, insulated liners, winter heat packs — is the best we've seen from any overseas supplier.”</blockquote><div class="t-who"><div><b>Elena V.</b><span>Buying Manager, Evergreen Garden Centers</span></div><span class="loc">Columbus, OH</span></div></article>
+        <article class="t-card"><svg class="ic"><use href="#i-quote"/></svg><blockquote>“Communication is fast and specific: photos of the actual plants before dispatch, tracking within hours of the flight, and honest answers about what's really in stock.”</blockquote><div class="t-who"><div><b>Priya S.</b><span>Founder, LeafHouse Studio</span></div><span class="loc">Los Angeles, CA</span></div></article>
+        <article class="t-card"><svg class="ic"><use href="#i-quote"/></svg><blockquote>“We plan quarterly restocks around their production calendar. Lead times quoted are lead times kept — which is rarer in this industry than any plant we buy.”</blockquote><div class="t-who"><div><b>Tom W.</b><span>Distributor, GreenAisle Distribution</span></div><span class="loc">Miami, FL</span></div></article>
+        <article class="t-card"><svg class="ic"><use href="#i-quote"/></svg><blockquote>“Our collector customers notice the difference immediately — plantlets sized accurately, labeled correctly, and acclimating within a week of arrival.”</blockquote><div class="t-who"><div><b>Jess &amp; Omar L.</b><span>Owners, Rare Plant Room</span></div><span class="loc">Chicago, IL</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq">
+    <div class="wrap faq-grid">
+      <div class="faq-left reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2 class="h2">Answers before you wire a deposit</h2>
+        <p class="lead" style="margin-top:1rem">Everything first-time importers ask us. Something missing? Our desk replies within one business day.</p>
+        <a class="btn btn-o" style="margin-top:1.6rem" href="#/contact">Ask us directly <svg class="ic"><use href="#i-arr"/></svg></a>
+      </div>
+      <div class="reveal" style="--d:.1s">
+        <div class="faq-item"><button class="faq-q">Do you ship directly to the United States?<svg class="ic"><use href="#i-chev"/></svg></button><div class="faq-a"><div class="faq-a-in"><p>Yes. We ship weekly via air freight to major U.S. plant inspection airports — including Miami, New York, and Los Angeles — and coordinate onward delivery to all 50 states. Most customers receive plants 7–14 days from dispatch confirmation.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q">What documents are included with each shipment?<svg class="ic"><use href="#i-chev"/></svg></button><div class="faq-a"><div class="faq-a-in"><p>Every shipment includes a phytosanitary certificate issued by the national plant protection organization of origin, a commercial invoice, a packing list, and the airway bill. Certificates of origin and fumigation records can be prepared when your state or broker requires them.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q">Do I need an import permit?<svg class="ic"><use href="#i-chev"/></svg></button><div class="faq-a"><div class="faq-a-in"><p>It depends on the genera you're importing and your destination state. Many ornamental aroids are broadly admissible, but plants for planting generally require USDA/APHIS authorization, and states like Florida, California, and Arizona add their own rules. We flag anything unusual at the quotation stage — but the buyer is responsible for confirming current federal and state requirements.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q">What is the minimum order quantity?<svg class="ic"><use href="#i-chev"/></svg></button><div class="faq-a"><div class="faq-a-in"><p>MOQ is typically 20–50 plantlets per variety depending on the crop, with a 100-plantlet minimum per shipment. Varieties can be mixed within one box, so a single order can combine 6–10 different lines.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q">What are your payment terms?<svg class="ic"><use href="#i-chev"/></svg></button><div class="faq-a"><div class="faq-a-in"><p>Standard terms are 50% deposit to reserve stock or production slots, with the balance due before dispatch. We accept bank transfer (T/T) and Wise. Established accounts can set up recurring-order schedules after a positive order history.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q">How long does production and shipping take?<svg class="ic"><use href="#i-chev"/></svg></button><div class="faq-a"><div class="faq-a-in"><p>In-stock varieties are prepared and dispatched within 5–7 business days of payment. Pre-order and lab-produced lots typically take 4–8 weeks depending on batch timing. Air transit adds 3–7 days, plus customs clearance at the port of entry.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q">How are plants packaged for international shipping?<svg class="ic"><use href="#i-chev"/></svg></button><div class="faq-a"><div class="faq-a-in"><p>Roots travel in sterile, moisture-controlled media sealed with barrier film; plantlets are cushioned in insulated, ventilated export boxes. Winter shipments include approved heat packs, and every box is labeled with variety, lot number, and quantity.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q">Can I order mixed varieties in one shipment?<svg class="ic"><use href="#i-chev"/></svg></button><div class="faq-a"><div class="faq-a-in"><p>Yes — mixed orders are our standard. Combine varieties across genera as long as each meets its MOQ. If availability shifts before dispatch, our team will suggest close substitutes for your approval before anything changes.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q">Do you offer pre-orders for rare plants?<svg class="ic"><use href="#i-chev"/></svg></button><div class="faq-a"><div class="faq-a-in"><p>Yes. Pre-orders reserve plantlets from upcoming lab batches with a deposit. You'll receive photos of the actual lot before dispatch, and pre-order customers get first allocation on limited new arrivals.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q">What happens if plants arrive damaged?<svg class="ic"><use href="#i-chev"/></svg></button><div class="faq-a"><div class="faq-a-in"><p>Document the condition with photos within 48 hours of arrival. Our live-arrival guarantee covers plantlets that fail due to packaging or carrier delays — we replace the affected plants or issue credit toward your next order.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q">Can you support private-label or custom packaging?<svg class="ic"><use href="#i-chev"/></svg></button><div class="faq-a"><div class="faq-a-in"><p>Yes, on qualifying volumes. We can print branded care cards, sleeves, and labels with your logo, and pack in retail-ready counts so plants move from box to bench to shelf faster.</p></div></div></div>
+        <div class="faq-item"><button class="faq-q">Do you sell to individual collectors or only wholesale buyers?<svg class="ic"><use href="#i-chev"/></svg></button><div class="faq-a"><div class="faq-a-in"><p>We're a wholesale-first operation. Collectors running a resale business — online shops, market stalls, local sales — are welcome to apply under our collector-reseller category. We don't sell single plants for personal collections.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote form -->
+  <section class="sec-tight" id="quote">
+    <div class="wrap">
+      <div class="cta-grid reveal">
+        <div class="cta-left">
+          <span class="eyebrow">Price List &amp; Quotes</span>
+          <h2>Request the wholesale price list</h2>
+          <p>You'll receive our current FOB price list, live availability, and MOQ &amp; lead-time sheet — no obligation.</p>
+          <div class="cta-list">
+            <span><svg class="ic"><use href="#i-check"/></svg> Current availability across 140+ varieties</span>
+            <span><svg class="ic"><use href="#i-check"/></svg> FOB pricing by plantlet size tier</span>
+            <span><svg class="ic"><use href="#i-check"/></svg> MOQ and lead-time sheet per crop</span>
+            <span><svg class="ic"><use href="#i-check"/></svg> New-arrival alerts before public listing</span>
+          </div>
+          <a class="btn btn-cream" href="https://wa.me/66815552143?text=Hello%20—%20I'd%20like%20the%20wholesale%20price%20list." target="_blank" rel="noopener"><svg class="ic"><use href="#i-chat"/></svg> Faster? WhatsApp our desk</a>
+        </div>
+        <div class="cta-right" id="quoteSlot"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CATALOG ================= -->
+<div class="page" data-page="catalog">
+  <section class="page-head sec-tight">
+    <div class="wrap">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="#/home">Home</a><svg class="ic"><use href="#i-arr"/></svg><span>Wholesale Catalog</span></nav>
+      <span class="eyebrow">Wholesale Catalog</span>
+      <h1>Rare tissue-culture plantlets, ready for U.S. programs</h1>
+      <p class="lead">Live availability, indicative FOB pricing per plantlet, and MOQs for every variety. Request a quote to lock allocation and confirm the current batch.</p>
+      <div class="filters">
+        <div class="search"><svg class="ic"><use href="#i-search"/></svg><input id="searchInput" type="search" placeholder="Search varieties, e.g. “albo”, “Jacklyn”…" aria-label="Search catalog"></div>
+        <div class="fchips" id="catChips" role="group" aria-label="Filter by genus"></div>
+        <div class="fchips" id="stChips" role="group" aria-label="Filter by availability"></div>
+      </div>
+      <p class="count-line" id="prodCount"></p>
+      <div class="p-grid" id="catalogGrid"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<div class="page" data-page="about">
+  <section class="page-head sec-tight">
+    <div class="wrap">
+      <nav class="crumb"><a href="#/home">Home</a><svg class="ic"><use href="#i-arr"/></svg><span>About</span></nav>
+      <span class="eyebrow">About Nursery Supply</span>
+      <h1>Grown in the lab.<br>Trusted on the shelf.</h1>
+      <p class="lead" style="margin-top:1.2rem">We're a propagation and export company dedicated to one thing: making genuinely rare foliage a dependable, repeatable part of U.S. plant retail.</p>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <div class="about-cols">
+        <div class="reveal"><img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9cd6bc0d2641.jpg" alt="Tissue-culture laboratory production" loading="lazy" width="760" height="560"></div>
+        <div class="reveal" style="--d:.1s">
+          <h2>Rooted in propagation since 2016</h2>
+          <p>Nursery Supply started as a two-person tissue-culture lab outside Bangkok, supplying variegated aroids to Southeast Asian nurseries. When U.S. demand for rare foliage exploded, we saw the same problem everywhere: collectors could find rare plants, but shops couldn't find them <em>reliably</em>.</p>
+          <p>So we rebuilt the business around wholesale export — a central laboratory, a network of eight partner greenhouses across Thailand and Indonesia, and a U.S.-focused support desk in Miami that works your business hours, not ours.</p>
+          <p>Today we supply independent plant shops, online sellers, garden-center chains, and distributors in 38 states — many of them on quarterly restock schedules we plan together.</p>
+        </div>
+      </div>
+      <div class="about-cols">
+        <div class="reveal">
+          <h2>Rare by discipline, not by accident</h2>
+          <p>Every variety we sell starts as indexed mother stock in culture — verified for variegation stability, growth habit, and trueness to type before it enters production. If a batch drifts, it doesn't ship.</p>
+          <p>Our team includes former nursery operators, so we think in sell-through, not just in plantlets. When we recommend a variety for your market, it's based on what's moving in U.S. shops right now.</p>
+        </div>
+        <div class="reveal" style="--d:.1s"><img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/403bca5cc7bb.jpg" alt="Partner greenhouse growing rare aroids" loading="lazy" width="760" height="560"></div>
+      </div>
+      <div class="mission reveal">
+        <span class="eyebrow">Our Mission</span>
+        <blockquote>“Make genuinely rare plants a dependable, repeatable part of U.S. retail — not a lottery ticket.”</blockquote>
+      </div>
+      <div class="principles">
+        <div class="principle reveal"><span class="num">01</span><div><h3>True-to-type, or it doesn't ship</h3><p>Variegation and growth habit are verified against the indexed clone before any batch leaves our network.</p></div></div>
+        <div class="principle reveal"><span class="num">02</span><div><h3>Documents done right the first time</h3><p>Clean paperwork is a feature of the product, not an afterthought. Our rejection rate at U.S. ports reflects that.</p></div></div>
+        <div class="principle reveal"><span class="num">03</span><div><h3>Long-term accounts, not one-off sales</h3><p>We'd rather plan your fourth quarter with you than win your first order with a discount.</p></div></div>
+      </div>
+      <div class="photo-strip reveal">
+        <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/972c93550cf6.jpg" alt="Export packaging line for live plants" loading="lazy" width="900" height="620">
+        <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/81ef277c529e.jpg" alt="Healthy root development on hardened plantlets" loading="lazy" width="700" height="620">
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= RESOURCES ================= -->
+<div class="page" data-page="resources">
+  <section class="page-head sec-tight">
+    <div class="wrap">
+      <nav class="crumb"><a href="#/home">Home</a><svg class="ic"><use href="#i-arr"/></svg><span>Resources</span></nav>
+      <span class="eyebrow">Guides &amp; Insights</span>
+      <h1>Resources for wholesale plant buyers</h1>
+      <p class="lead">Practical guides on importing, compliance, acclimation, and buying strategy — written for shops and sellers, not lawyers.</p>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <a class="feat-art reveal" id="featArticle" href="#/resources"></a>
+      <div id="resList"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= ARTICLE ================= -->
+<div class="page" data-page="article">
+  <section class="page-head sec-tight">
+    <div class="wrap">
+      <nav class="crumb"><a href="#/home">Home</a><svg class="ic"><use href="#i-arr"/></svg><a href="#/resources">Resources</a><svg class="ic"><use href="#i-arr"/></svg><span id="artCrumb">Article</span></nav>
+      <article class="article-body">
+        <span class="eyebrow" id="artTag"></span>
+        <h1 id="artTitle" style="font-size:clamp(1.9rem,3.6vw,2.7rem);margin-bottom:.8rem"></h1>
+        <p style="font:600 .8rem var(--sans);color:var(--ink-3);margin-bottom:2rem" id="artMeta"></p>
+        <div id="artBody"></div>
+        <div class="art-cta">
+          <div><h3>Importing for the first time?</h3><p>Our desk walks new importers through documents, permits, and port selection — free, no obligation.</p></div>
+          <button class="btn btn-p" data-cta-price>Request Price List <svg class="ic"><use href="#i-arr"/></svg></button>
+        </div>
+      </article>
+      <div class="art-nav" id="artNav"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<div class="page" data-page="contact">
+  <section class="page-head sec-tight">
+    <div class="wrap">
+      <nav class="crumb"><a href="#/home">Home</a><svg class="ic"><use href="#i-arr"/></svg><span>Contact</span></nav>
+      <span class="eyebrow">Contact</span>
+      <h1>Talk to the wholesale desk</h1>
+      <p class="lead">Price lists, availability checks, document questions, restock planning — we answer everything within one business day.</p>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <div class="c-item"><svg class="ic"><use href="#i-chat"/></svg><div><b>WhatsApp — fastest</b><span><a href="https://wa.me/66815552143" target="_blank" rel="noopener">+66 81 555 2143</a> · live replies until 10 PM ET</span></div></div>
+        <div class="c-item"><svg class="ic"><use href="#i-mail"/></svg><div><b>Email</b><span><a href="mailto:sales@nurserysupply.com">sales@nurserysupply.com</a> · documents &amp; quotes</span></div></div>
+        <div class="c-item"><svg class="ic"><use href="#i-clock"/></svg><div><b>Wholesale desk hours</b><span>Mon–Fri, 8:00 AM – 8:00 PM ET · cargo coordination overnight on air-freight days</span></div></div>
+        <div class="c-item"><svg class="ic"><use href="#i-pin"/></svg><div><b>Locations</b><span>Export operations: Bangkok, Thailand · U.S. support desk: Miami, FL</span></div></div>
+        <div class="socials">
+          <a class="icon-btn" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#i-ig"/></svg></a>
+          <a class="icon-btn" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a>
+          <a class="icon-btn" href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><svg class="ic"><use href="#i-tk"/></svg></a>
+        </div>
+        <div class="map"><iframe title="U.S. support desk location — Miami, FL" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-80.2100%2C25.7200%2C-80.1300%2C25.7900&amp;layer=mapnik&amp;marker=25.7555%2C-80.1700"></iframe></div>
+      </div>
+      <div class="reveal" style="--d:.1s">
+        <div style="background:var(--white);border:1px solid var(--line);border-radius:22px;padding:2.4rem">
+          <h2 style="font-size:1.6rem;margin-bottom:.4rem">Send a message</h2>
+          <p style="color:var(--ink-2);font-size:.92rem;margin-bottom:1.6rem">For the full price list and quotes, use the <a href="#/home" data-goto-quote style="color:var(--green);font-weight:600;text-decoration:underline">wholesale request form</a> — it reaches the same desk with more detail.</p>
+          <form id="contactForm" novalidate>
+            <div class="frow two">
+              <div class="field"><label>Contact name *</label><input name="name" required placeholder="Jane Rivera"></div>
+              <div class="field"><label>Email *</label><input type="email" name="email" required placeholder="orders@yourshop.com"></div>
+            </div>
+            <div class="frow two">
+              <div class="field"><label>Phone / WhatsApp</label><input name="phone" placeholder="+1 305 555 0148"></div>
+              <div class="field"><label>Topic *</label><select name="topic" required><option value="">Select…</option><option>Price list request</option><option>Existing order</option><option>Import documents</option><option>Private-label / custom pack</option><option>Partnership</option><option>Other</option></select></div>
+            </div>
+            <div class="field"><label>Message *</label><textarea name="msg" rows="5" required placeholder="Tell us about your business and what you need…"></textarea></div>
+            <button class="btn btn-p btn-wide" type="submit">Send Message <svg class="ic"><use href="#i-send"/></svg></button>
+          </form>
+          <div class="form-success" id="contactSuccess" hidden>
+            <svg class="ic"><use href="#i-check-c"/></svg>
+            <h3 class="serif">Message sent.</h3>
+            <p>Our wholesale desk will reply within one business day. Urgent? WhatsApp us any time.</p>
+            <a class="btn btn-o" href="https://wa.me/66815552143" target="_blank" rel="noopener"><svg class="ic"><use href="#i-chat"/></svg> Open WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= ADMIN ================= -->
+<div class="page" data-page="admin">
+  <section class="sec-tight">
+    <div class="wrap">
+      <div class="admin-card" id="adminLogin">
+        <svg class="ic"><use href="#i-lock"/></svg>
+        <h2>Inventory console</h2>
+        <p>Update stock status, prices, MOQ, and new arrivals. Changes apply instantly across the catalog.</p>
+        <div class="field"><input id="passInput" type="password" placeholder="Enter passcode" aria-label="Admin passcode"></div>
+        <button class="btn btn-p btn-wide" id="loginBtn">Unlock Console</button>
+        <p class="hint">Demo passcode: NS-2025 · data persists in this browser only</p>
+      </div>
+      <div class="admin-dash" id="adminDash" hidden>
+        <div class="ad-top">
+          <div><span class="eyebrow" style="margin-bottom:.4rem">Inventory Console</span><h2 class="serif" style="font-size:1.8rem">Stock, pricing &amp; arrivals</h2></div>
+          <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+            <button class="btn btn-o btn-sm" id="exportBtn"><svg class="ic"><use href="#i-dl"/></svg> Export JSON</button>
+            <button class="btn btn-o btn-sm" id="resetBtn"><svg class="ic"><use href="#i-rot"/></svg> Reset demo data</button>
+            <button class="btn btn-p btn-sm" id="logoutBtn">Log out</button>
+          </div>
+        </div>
+        <div class="ad-stats" id="adStats"></div>
+        <div class="panel">
+          <h3 class="serif">Product inventory</h3>
+          <p class="ghint" style="margin:0 0 1rem">Edits save automatically and sync to the live catalog view.</p>
+          <div class="tbl-wrap"><table><thead><tr><th></th><th>Name</th><th>Category</th><th>Size</th><th>MOQ</th><th>Price $</th><th>Status</th><th>New</th><th></th></tr></thead><tbody id="adminRows"></tbody></table></div>
+        </div>
+        <div class="panel">
+          <h3 class="serif">Add a new arrival</h3>
+          <form id="addForm">
+            <div class="add-grid">
+              <div class="field"><label>Product name *</label><input name="name" required placeholder="Monstera 'Aurea Variegata'"></div>
+              <div class="field"><label>Category *</label><select name="cat" required><option value="monstera">monstera</option><option value="philodendron">philodendron</option><option value="alocasia">alocasia</option><option value="anthurium">anthurium</option><option value="syngonium">syngonium</option><option value="caladium">caladium</option><option value="aglaonema">aglaonema</option><option value="other">other</option></select></div>
+              <div class="field"><label>Plantlet size *</label><input name="size" required placeholder="4–6 cm"></div>
+              <div class="field"><label>MOQ *</label><input name="moq" type="number" min="1" required placeholder="20"></div>
+              <div class="field"><label>Price (USD) *</label><input name="price" type="number" step="0.01" min="0" required placeholder="12.50"></div>
+              <div class="field"><label>Status</label><select name="status"><option value="in-stock">In stock</option><option value="limited">Limited stock</option><option value="pre-order">Pre-order</option></select></div>
+            </div>
+            <div class="field"><label>Short description *</label><textarea name="desc" rows="2" required placeholder="One benefit-focused sentence for buyers…"></textarea></div>
+            <button class="btn btn-p" type="submit">Add product <svg class="ic"><use href="#i-arr"/></svg></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <span class="logo-word">Nursery Supply<small>Rare Plant Exports</small></span>
+      <p>“Rare Foliage Plants. Reliable U.S. Supply.” Tissue-culture plantlets for U.S. retailers, sellers, and distributors — with documentation and packaging you can trust.</p>
+      <div class="socials">
+        <a class="icon-btn xbtn" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#i-ig"/></svg></a>
+        <a class="icon-btn xbtn" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a>
+        <a class="icon-btn xbtn" href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><svg class="ic"><use href="#i-tk"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="#/catalog" data-cat-link="monstera">Variegated Monstera</a></li>
+        <li><a href="#/catalog" data-cat-link="philodendron">Philodendron</a></li>
+        <li><a href="#/catalog" data-cat-link="alocasia">Alocasia</a></li>
+        <li><a href="#/catalog" data-cat-link="anthurium">Anthurium</a></li>
+        <li><a href="#/catalog" data-cat-link="syngonium">Syngonium &amp; Scindapsus</a></li>
+        <li><a href="#/catalog" data-cat-link="caladium">Caladium</a></li>
+        <li><a href="#/catalog" data-cat-link="aglaonema">Aglaonema</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#/catalog">Wholesale Catalog</a></li>
+        <li><a href="#/home" data-goto-quote>Request Price List</a></li>
+        <li><a href="#/home" data-scroll="#faq">Import Process &amp; FAQ</a></li>
+        <li><a href="#/resources">Resources</a></li>
+        <li><a href="#/about">About</a></li>
+        <li><a href="#/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>New Arrivals Letter</h4>
+      <p style="font-size:.86rem;margin-bottom:1rem">Get new arrivals, restocks, and wholesale offers — one email a week, no noise.</p>
+      <form class="news-form" id="newsForm">
+        <input type="email" placeholder="you@yourshop.com" aria-label="Email address" required>
+        <button class="btn btn-cream btn-sm" type="submit"><svg class="ic"><use href="#i-send"/></svg></button>
+      </form>
+      <p class="foot-note">Restock alerts go out every Friday, 9 AM ET.</p>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div class="wrap">
+      <span>© <span id="yr"></span> Nursery Supply. All rights reserved. Plants supplied as living nursery stock for commercial import; buyers are responsible for confirming current USDA/APHIS and state-level import requirements. Guidance on this site is not legal advice.</span>
+      <span>Wholesale desk: <a href="mailto:sales@nurserysupply.com">sales@nurserysupply.com</a> · <a href="tel:+66815552143">+66 81 555 2143</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp float -->
+<a id="waFloat" href="https://wa.me/66815552143?text=Hello%20Nursery%20Supply%20—%20wholesale%20inquiry" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg class="ic"><use href="#i-chat"/></svg></a>
+
+<!-- Quote modal -->
+<div id="modal" role="dialog" aria-modal="true" aria-label="Request a wholesale quote">
+  <div class="modal-bg" data-close></div>
+  <div class="modal-card">
+    <button class="modal-close" data-close aria-label="Close"><svg class="ic"><use href="#i-x"/></svg></button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<div id="toasts" aria-live="polite"></div>
+
+<script>
+/* ================= Data ================= */
+const CAT_NAMES = {monstera:'Variegated Monstera', philodendron:'Philodendron', alocasia:'Alocasia', anthurium:'Anthurium', syngonium:'Syngonium & Scindapsus', caladium:'Caladium', aglaonema:'Aglaonema', other:'Other Rare Foliage'};
+const STATUS = {'in-stock':{label:'In stock',cls:'in'}, 'limited':{label:'Limited stock',cls:'lim'}, 'pre-order':{label:'Pre-order',cls:'pre'}};
+
+const DEFAULT_PRODUCTS = [
+ {id:'m-cream',name:"Monstera deliciosa 'Cream Brulee'",variety:"Cream & caramel marbling",cat:'monstera',size:'3–5 cm',moq:20,price:14.50,status:'limited',seed:'monstera-cream1',featured:true,isNew:true,desc:"A rare variegated Monstera with cream and caramel-yellow marbling, suitable for premium indoor plant retailers and collectors."},
+ {id:'m-albo',name:"Monstera deliciosa 'Albo Variegata'",variety:"Sectoral white variegation",cat:'monstera',size:'5–8 cm',moq:20,price:22.00,status:'pre-order',seed:'monstera-albo2',desc:"The benchmark white variegated Monstera — lab-indexed mother stock keeps sectoring consistent across the whole batch."},
+ {id:'m-thai',name:"Monstera deliciosa 'Thai Constellation'",variety:"Cream speckle & splash",cat:'monstera',size:'5–7 cm',moq:50,price:9.80,status:'in-stock',seed:'monstera-thai3',featured:true,desc:"Stable speckled variegation from certified culture — the most reliable volume seller for U.S. retail shelves."},
+ {id:'m-ada',name:"Monstera adansonii 'Variegated'",variety:"Mint-cream fenestrated form",cat:'monstera',size:'4–6 cm',moq:20,price:12.50,status:'in-stock',seed:'monstera-ada4',isNew:true,desc:"Fast-growing trailing variety with mint variegation — strong retail margin and quick restock cycles."},
+ {id:'p-wizard',name:"Philodendron 'White Wizard'",variety:"Pure white sectoral blocks",cat:'philodendron',size:'5–7 cm',moq:25,price:11.00,status:'in-stock',seed:'philo-wizard5',featured:true,desc:"Green-and-white variegation on self-heading stock — ships well and acclimatizes fast for online sellers."},
+ {id:'p-pink',name:"Philodendron 'Pink Princess'",variety:"Pink splash on near-black foliage",cat:'philodendron',size:'4–6 cm',moq:25,price:8.60,status:'in-stock',seed:'philo-pink6',featured:true,desc:"Dark leaves with pink variegation — evergreen U.S. demand backed by dependable tissue-culture supply."},
+ {id:'p-glor',name:"Philodendron gloriosum 'Dark Form'",variety:"Velvet leaves, pale veins",cat:'philodendron',size:'2-leaf plantlet',moq:20,price:13.00,status:'limited',seed:'philo-glor7',desc:"Creeping velvet-leaf collector favorite — sourced from a single indexed clone for perfectly uniform batches."},
+ {id:'a-frydek',name:"Alocasia micholitziana 'Frydek Variegata'",variety:"White blotch on velvet green",cat:'alocasia',size:'3–5 cm',moq:25,price:16.00,status:'limited',seed:'alocasia-fry8',featured:true,isNew:true,desc:"High-velocity variegated Alocasia — pre-hardened in community trays to handle shipping stress."},
+ {id:'a-jack',name:"Alocasia 'Jacklyn'",variety:"Lacy reticulate foliage",cat:'alocasia',size:'4–6 cm',moq:25,price:10.50,status:'in-stock',seed:'alocasia-jack9',desc:"The breakout collector Alocasia of recent seasons — true-to-type from tissue culture, with zero seedling variation."},
+ {id:'an-crys',name:"Anthurium crystallinum 'Silver Blush'",variety:"Silver veining on blush juveniles",cat:'anthurium',size:'3–4 cm',moq:20,price:15.00,status:'pre-order',seed:'anthurium-cry10',featured:true,desc:"Premium veining and blush tone on every plantlet — a reliable anchor for high-end collector listings."},
+ {id:'an-waro',name:"Anthurium warocqueanum",variety:"Queen Anthurium, velvet strap leaves",cat:'anthurium',size:'3–5 cm',moq:15,price:18.00,status:'limited',seed:'anthurium-war11',desc:"The velvet queen of aroids — grown under strict humidity protocol and packed in moisture-controlled boxes."},
+ {id:'s-albo',name:"Syngonium podophyllum 'Albo Variegata'",variety:"White splash on arrow foliage",cat:'syngonium',size:'4–6 cm',moq:50,price:6.20,status:'in-stock',seed:'syngonium-alb12',featured:true,desc:"An affordable entry point into variegated plants — a high-turnover staple with excellent survival rates."},
+ {id:'sc-exo',name:"Scindapsus pictus 'Exotica'",variety:"Silver-splashed satin leaves",cat:'syngonium',size:'4–6 cm',moq:50,price:5.40,status:'in-stock',seed:'scindapsus-ex13',desc:"Slow-but-steady seller with forgiving care needs — ideal for mixed pallets and starter collections."},
+ {id:'c-white',name:"Caladium 'White Christmas'",variety:"White leaf, fine green veins",cat:'caladium',size:'5–8 cm / No.1 tuber',moq:100,price:2.90,status:'pre-order',seed:'caladium-whi14',desc:"Seasonal volume item for spring — book early. Dormancy-managed tubers and plantlets available by window."},
+ {id:'ag-tri',name:"Aglaonema pictum 'Tricolor'",variety:"Camouflage green-cream pattern",cat:'aglaonema',size:'5–8 cm',moq:30,price:12.00,status:'limited',seed:'aglaonema-tr15',featured:true,isNew:true,desc:"Military-camo foliage with no two leaves alike — a conversation piece for shop displays and social content."},
+ {id:'h-krim',name:"Hoya carnosa 'Krimson Queen'",variety:"Cream-margined wax foliage",cat:'other',size:'5–8 cm',moq:50,price:4.80,status:'in-stock',seed:'hoya-krim16',desc:"A forgiving hanging staple with tricolor foliage — rounds out mixed pallets with a proven seller."}
+];
+const CATS = [
+ {slug:'monstera',big:true, seed:'cat-monstera21', size:'3–8 cm', moq:'20–50', desc:"Albo, Thai Constellation, Cream Brulee, mint and aurea lines — stable variegation from indexed cultures, the anchor of any rare-plant program."},
+ {slug:'philodendron', seed:'cat-philo22', size:'4–7 cm', moq:'20–25', desc:"Pink Princess, White Wizard, gloriosum forms and collector hybrids with dependable variegation."},
+ {slug:'alocasia', seed:'cat-aloc23', size:'3–6 cm', moq:'25–30', desc:"Frydek Variegata, Jacklyn, cuprea and dragon-scale types from vetted laboratories."},
+ {slug:'anthurium', seed:'cat-ant24', size:'3–5 cm', moq:'15–20', desc:"Crystallinum silver forms, warocqueanum and papillilaminum crosses for premium shelves."},
+ {slug:'syngonium', seed:'cat-syn25', size:'4–6 cm', moq:'50', desc:"Albo and pink Splash Syngonium plus satin Scindapsus — fast-turn retail staples."},
+ {slug:'caladium', seed:'cat-cal26', size:'5–8 cm', moq:'100', desc:"Fancy- and strap-leaf cultivars, dormancy-managed to hit U.S. spring windows."},
+ {slug:'aglaonema', seed:'cat-agl27', size:'5–8 cm', moq:'30–50', desc:"Pictum Tricolor, Siam lines and rare Chinese breeding stock — tough, colorful, easy retail."},
+ {slug:'other',wide:true, seed:'cat-rare28', size:'3–8 cm', moq:'Varies', desc:"Hoya, Begonia, Amydrium, Rhaphidophora and limited experimental lots — ask what's coming out of the lab this month."}
+];
+
+const ARTICLES = [
+ {slug:'import-tissue-culture-plants-usa',tag:'Import Guide',date:'Jun 12, 2025',min:6,seed:'res-import31',
+  title:'How to Import Tissue-Culture Plants into the United States',
+  excerpt:'A step-by-step walkthrough for shops and sellers importing plants for planting — eligibility, permits, ports, paperwork, and what happens on arrival day.',
+  body:`<p>Importing plants for planting into the U.S. sounds intimidating, but for commercial buyers it is a well-worn path. Most problems we see come from skipped steps — not from the plants themselves. Here is the sequence we walk every first-time customer through.</p><h3>1. Confirm your genera are eligible</h3><p>Most ornamental aroids we trade — Monstera, Philodendron, Alocasia, Anthurium, Syngonium, Aglaonema — are broadly admissible into the United States. Before you order anything, check the genus against the USDA/APHIS plants-for-planting database or ask your supplier to confirm admissibility in writing.</p><h3>2. Check whether you need a permit</h3><p>Many commercial imports of plants for planting require authorization from USDA/APHIS. Apply before you place an order, not after — approvals commonly take around 30 days, and your supplier will need the details for the export file.</p><h3>3. Choose the right port and broker</h3><p>Plants for planting must enter through designated plant inspection stations. Miami, New York, and Los Angeles handle the largest volumes of live foliage and have experienced agricultural inspection teams. A licensed customs broker is worth every dollar on a first shipment.</p><h3>4. Get your documentation package from the supplier</h3><p>At minimum you should receive: a phytosanitary certificate issued by the national plant protection organization of the exporting country, a commercial invoice, and a packing list matching the boxes. Tissue-culture plantlets ex-flask (in sterile media, hardened) and in-vitro cultures are treated differently — make sure your supplier declares exactly what is in the box.</p><h3>5. Plan for arrival and inspection</h3><p>On arrival, CBP and APHIS inspect the consignment. Most shipments clear same-day; occasional holds happen when a box needs manual inspection. Respond quickly if your broker calls — plants waiting in a cool room are plants losing quality.</p><h3>6. Respect state-level rules</h3><p>Florida, California, Arizona, and a few others layer additional requirements on top of federal rules. Tell your supplier your destination state at the quotation stage so nothing surprises you at the port.</p><p><strong>The short version:</strong> eligible genus, permit if required, the right port, clean paperwork, fast follow-up. Do those five things and importing becomes routine.</p>`},
+ {slug:'usda-aphis-plant-import-requirements',tag:'Compliance',date:'May 28, 2025',min:7,seed:'res-aphis32',
+  title:'USDA/APHIS Plant Import Requirements: What Wholesale Buyers Should Know',
+  excerpt:'The regulatory framework behind plants for planting — media rules, inspection stations, CITES considerations, and a pre-order compliance checklist.',
+  body:`<p>Wholesale buyers don't need to be regulators, but knowing the shape of the rules makes every conversation — with suppliers, brokers, and inspectors — faster. Here is the practical map.</p><h3>Plants for planting are a defined category</h3><p>U.S. regulations under 7 CFR 319.37 govern the import of nursery stock, plants, roots, cuttings, and tissue cultures intended for propagation. Admissibility is set at the genus level, with specific extra conditions for certain species. Rare aroids are mostly admissible, but "mostly" is not "always" — verify each genus before you commit.</p><h3>Media matters more than buyers expect</h3><p>Soil is prohibited. Tissue-culture plantlets, however, typically travel in sterile, soilless media — which is a different and much simpler story. In-vitro cultures in sealed sterile flasks enjoy the cleanest treatment; ex-flask hardened plantlets in sterile sphagnum or plugs are the wholesale norm and clear routinely with correct declaration.</p><h3>CITES: rarely an issue, occasionally critical</h3><p>Most Monstera, Philodendron, and Alocasia species are not CITES-listed. But the trade includes plants that are, and rules change. A responsible supplier confirms the CITES status of anything unusual before quoting it to you.</p><h3>What happens at the plant inspection station</h3><p>Consignments are inspected by CBP agriculture specialists and APHIS plant health officials. They check documents against contents, look for pests and prohibited material, and release, treat, hold, or (rarely) re-export. Shipments with clean phytosanitary certificates and accurate packing lists overwhelmingly clear without incident.</p><h3>A pre-order compliance checklist</h3><ul><li>Genus and species confirmed admissible in writing</li><li>Import permit secured if required for your case</li><li>Destination state's agriculture department rules checked</li><li>Supplier committed to a full document package</li><li>Broker briefed with the packing list before the flight</li></ul><p>Requirements evolve. Always verify current federal and state rules before ordering — and treat a supplier who volunteers that advice as a supplier worth keeping.</p>`},
+ {slug:'best-rare-monstera-varieties',tag:'Market Guide',date:'May 5, 2025',min:5,seed:'res-monst33',
+  title:'Best Rare Monstera Varieties for U.S. Plant Shops',
+  excerpt:'Which Monsteras actually move at U.S. retail right now — volume anchors, margin makers, and traffic drivers — and how to stock all three.',
+  body:`<p>Every shop owner asks us the same question: "Which Monsteras should I actually bring in?" The answer depends on the role each variety plays in your assortment. We think in three tiers.</p><h3>Volume anchors</h3><p><strong>Thai Constellation</strong> is the reliable workhorse. Wholesale pricing has normalized, but velocity remains high and customer recognition is instant. Stock it continuously; it rarely sits.</p><h3>Margin makers</h3><p><strong>Albo Variegata</strong> carries the highest margin in the genus — and the highest expectations. Buy from suppliers who guarantee stable sectoring from indexed cultures, and buy in smaller, more frequent lots rather than one large gamble.</p><p><strong>Mint Monstera</strong> is the collector darling of the moment: cooler-toned variegation, tight supply, premium pricing. Limited allocations reward shops that plan with their supplier ahead of the batch.</p><h3>Traffic drivers</h3><p><strong>adansonii 'Variegated'</strong> hits an accessible price point that turns quickly and introduces new customers to variegated plants. <strong>'Cream Brulee'</strong> photographs beautifully — cream and caramel marbling — which makes it a social-content asset as much as a SKU.</p><h3>One caution: Obliqua</h3><p>True M. obliqua is slow in tissue culture, expensive, and surrounded by counterfeit listings. If a supplier offers it at a price that seems too good, it is. Buy only with documented provenance.</p><h3>The winning mix</h3><p>A shelf with one volume anchor, two margin makers, and one traffic driver covers most U.S. retail contexts. Ask your supplier which varieties are coming out of production in the next 60 days — that answer tells you more than any trend report.</p>`},
+ {slug:'acclimate-tissue-culture-plantlets',tag:'Care Guide',date:'Apr 18, 2025',min:6,seed:'res-accl34',
+  title:'How to Acclimate Tissue-Culture Plantlets After Arrival',
+  excerpt:'Day-zero handling, humidity tapering, light levels, and the four mistakes that kill otherwise-healthy plantlets in their first two weeks.',
+  body:`<p>Tissue-culture plantlets arrive primed to grow — if you give them a gentle bridge from box to bench. Most losses we hear about trace back to a handful of preventable errors.</p><h3>Day zero: unpack immediately</h3><p>Open the box the moment it arrives, even if you planned to pot later. Photograph anything concerning within 48 hours for any guarantee claim. Unwrap gently, inspect roots, and let the plants breathe while you prep trays.</p><h3>Pot into sterile, airy media</h3><p>A fine, well-draining mix — plug trays or small cells for 3–6 cm plantlets — beats big pots. Wet media around tiny roots is the fastest route to rot. Pre-moisten the mix so it is damp, never soggy.</p><h3>Humidity: high first, then taper</h3><p>Start at 80–90% relative humidity (a clear dome or plastic tent works). After 5–7 days, begin venting for increasing periods daily. Full ambient humidity by week three. The taper is the acclimation — skipping straight to open air desiccates leaves that grew in a flask.</p><h3>Light and temperature</h3><p>Low light for the first week — roughly 1,500–2,500 lux — then step up gradually. Keep temperatures steady at 22–27 °C and away from cold windows and heat vents alike.</p><h3>Water and feeding</h3><p>Keep media evenly moist week one, then let the surface begin to dry between waterings. Begin feeding at quarter strength around week three. A preventive fungicide drench at potting is cheap insurance in humid climates.</p><h3>The four classic mistakes</h3><ul><li>Potting into huge containers with waterlogged media</li><li>Full sun "to help them grow" — it cooks flask-grown leaves</li><li>Pulling the humidity dome off on day one</li><li>Heavy fertilizing before roots establish</li></ul><p>Follow the taper and most quality plantlets — including everything we ship — establish fully within two to three weeks.</p>`},
+ {slug:'wholesale-buying-guide-rare-aroids',tag:'Buying Guide',date:'Mar 30, 2025',min:8,seed:'res-guide35',
+  title:'Wholesale Buying Guide for Rare Aroids',
+  excerpt:'How to vet suppliers, understand pricing tiers, structure MOQs, and build a restocking rhythm that keeps rare foliage profitable.',
+  body:`<p>The rare-plant wholesale market rewards disciplined buyers. Whether you're opening your first account or restructuring an established program, these are the levers that matter.</p><h3>Vet the supplier, not the price list</h3><p>Anyone can assemble a beautiful catalog. Before committing volume, ask for: photos of the <em>actual</em> lots in production (not marketing renders), lot traceability back to mother stock, and references from buyers in your market. A serious supplier answers all three without hesitation.</p><h3>Understand what drives price</h3><p>Three factors set wholesale pricing: plantlet size, variegation stability, and scarcity of the production batch. A 7–8 cm albo costs more than a 4 cm one for good reason — it survives transit better and reaches sellable size sooner. Price per plantlet matters less than cost per <em>sellable</em> plant.</p><h3>Structure MOQs around mixed pallets</h3><p>Per-variety MOQs of 20–50 plantlets look high until you realize they exist so suppliers can mix 6–10 varieties per shipment. The mixed pallet is your friend: it spreads risk across crops, keeps your assortment fresh, and hits freight minimums efficiently.</p><h3>Plan around production, not around stock</h3><p>Tissue culture runs in batches. The best accounts book production slots weeks ahead — especially for variegated lines where allocations are limited. Pre-orders with deposits beat spot-buying on both price and quality.</p><h3>Your documentation checklist</h3><ul><li>Phytosanitary certificate matching the packing list exactly</li><li>Commercial invoice with correct botanical names</li><li>Declared media type for each product form</li><li>Airway bill shared within hours of dispatch</li></ul><h3>Build the relationship</h3><p>Suppliers give their best allocations, earliest alerts, and most flexible terms to accounts that reorder predictably and communicate honestly. In a market where supply of the good stuff is always tighter than demand, being a good account is a competitive advantage.</p>`}
+];
+
+/* ================= Store ================= */
+/* Real-plant image map (replaces placeholder URLs) */
+const SEED_IMAGES = {
+  'nursery-greenhouse7': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b1ec3d8a0a49.jpg",
+  'nursery-qc-lab3': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9cd6bc0d2641.jpg",
+  'nursery-lab9': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9cd6bc0d2641.jpg",
+  'nursery-farm4': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/403bca5cc7bb.jpg",
+  'nursery-pack1': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/972c93550cf6.jpg",
+  'nursery-roots6': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/81ef277c529e.jpg",
+  'nursery-shop2': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9bacffe6eb50.jpg",
+  'nursery-online5': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1081569f1bf8.jpg",
+  'nursery-wholesale8': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b6297019e838.jpg",
+  'cat-monstera21': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/57e903ca3e0f.jpg",
+  'cat-philo22': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e44e9e3db623.jpg",
+  'cat-aloc23': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ca27bab679be.jpg",
+  'cat-ant24': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0ce104af6ef0.jpg",
+  'cat-syn25': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3c1275262dc1.jpg",
+  'cat-cal26': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d2a8e99635b9.jpg",
+  'cat-agl27': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a9dc6c937398.jpg",
+  'cat-rare28': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e9a33928bd82.jpg",
+  'monstera-cream1': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ca601fef3e71.jpg",
+  'monstera-albo2': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6a88815a0fad.jpg",
+  'monstera-thai3': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/750e39fd8e20.jpg",
+  'monstera-ada4': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6bc78cea0b8d.png",
+  'philo-wizard5': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b523973032ef.jpg",
+  'philo-pink6': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c227a5eee176.jpg",
+  'philo-glor7': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b2c0a63c4d08.png",
+  'alocasia-fry8': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1544695fef31.jpg",
+  'alocasia-jack9': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e1fd32c47ff6.jpg",
+  'anthurium-cry10': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/428e8711c464.jpg",
+  'anthurium-war11': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1eb52f31f90d.jpg",
+  'syngonium-alb12': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7d7cbab82cf8.jpeg",
+  'scindapsus-ex13': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b563e876ef56.jpg",
+  'caladium-whi14': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/75c80edbaa79.jpg",
+  'aglaonema-tr15': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/231524670898.jpg",
+  'hoya-krim16': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4e3486bee175.jpg",
+  'res-import31': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a75f7d5c9e40.jpg",
+  'res-aphis32': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/88357733c6a1.jpg",
+  'res-monst33': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ddad89f99a44.jpg",
+  'res-accl34': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c93beae854ea.jpg",
+  'res-guide35': "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d2e03f8fe44c.jpg",
+  __fallback: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e9a33928bd82.jpg"
+};
+const imgFor = (seed) => SEED_IMAGES[seed] || SEED_IMAGES.__fallback;
+const LS_KEY = 'ns_products_v1';
+let PRODUCTS;
+try { const s = localStorage.getItem(LS_KEY); PRODUCTS = s ? JSON.parse(s) : JSON.parse(JSON.stringify(DEFAULT_PRODUCTS)); }
+catch(e){ PRODUCTS = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS)); }
+function persist(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(PRODUCTS)); }catch(e){} }
+const money = n => '$' + (+n).toFixed(2);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* ================= Tiny helpers ================= */
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+function toast(msg, icon='i-check-c'){
+  const t = document.createElement('div');
+  t.className = 'toast';
+  t.innerHTML = `<svg class="ic"><use href="#${icon}"/></svg><span>${msg}</span>`;
+  $('#toasts').appendChild(t);
+  setTimeout(()=>{ t.style.transition='opacity .4s'; t.style.opacity='0'; setTimeout(()=>t.remove(),400); }, 3400);
+}
+
+/* ================= Reveal on scroll ================= */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+}), {threshold:.1, rootMargin:'0px 0px -40px 0px'});
+function watch(){ $$('.reveal:not(.in)').forEach(el => io.observe(el)); }
+
+/* ================= Product cards ================= */
+function cardHTML(p){
+  const st = STATUS[p.status] || STATUS['in-stock'];
+  return `<article class="p-card reveal">
+    <div class="p-media">
+      <img loading="lazy" src="${imgFor(p.seed)}" alt="${esc(p.name)} tissue-culture plantlet" width="640" height="480">
+      <span class="pill st-pill st-${st.cls}"><i class="dot"></i>${st.label}</span>
+      ${p.isNew ? '<span class="pill pill-new">New lot</span>' : ''}
+    </div>
+    <div class="p-body">
+      <h3 class="p-name serif">${esc(p.name)}<em>Tissue-culture plantlet</em></h3>
+      <p class="p-var">${esc(p.variety)}</p>
+      <p class="p-desc">${esc(p.desc)}</p>
+      <div class="p-specs">
+        <span><svg class="ic"><use href="#i-leaf"/></svg>${esc(p.size)}</span>
+        <span><svg class="ic"><use href="#i-box"/></svg>MOQ ${p.moq}</span>
+        <span class="p-price">From ${money(p.price)}</span>
+      </div>
+      <button class="btn btn-o btn-quote" data-id="${p.id}">Request Quote <svg class="ic"><use href="#i-arr"/></svg></button>
+    </div>
+  </article>`;
+}
+function renderHomeProducts(){
+  $('#homeProducts').innerHTML = PRODUCTS.filter(p=>p.featured).slice(0,8).map(cardHTML).join('');
+  watch();
+}
+
+/* ================= Catalog ================= */
+const filters = { cat:'all', status:'all', q:'' };
+function renderCatChips(){
+  const cats = [['all','All genera'], ...Object.entries(CAT_NAMES)];
+  $('#catChips').innerHTML = cats.map(([k,l])=>`<button class="${filters.cat===k?'on':''}" data-fcat="${k}">${l}</button>`).join('');
+  const sts = [['all','Any status'], ...Object.entries(STATUS).map(([k,v])=>[k,v.label])];
+  $('#stChips').innerHTML = sts.map(([k,l])=>`<button class="${filters.status===k?'on':''}" data-fst="${k}">${l}</button>`).join('');
+}
+function renderCatalog(){
+  const list = PRODUCTS.filter(p =>
+    (filters.cat==='all' || p.cat===filters.cat) &&
+    (filters.status==='all' || p.status===filters.status) &&
+    (!filters.q || (p.name+' '+p.variety+' '+p.desc).toLowerCase().includes(filters.q))
+  );
+  const g = $('#catalogGrid');
+  if(!list.length){
+    g.innerHTML = `<div class="empty"><h3 class="serif">No matches in this view</h3><p>Try clearing filters — or ask us directly about what's in the lab right now.</p><button class="btn btn-o" id="clearFilters">Clear all filters</button></div>`;
+    const b = $('#clearFilters'); if(b) b.onclick = ()=>{ filters.cat='all'; filters.status='all'; filters.q=''; $('#searchInput').value=''; renderCatChips(); renderCatalog(); };
+  } else {
+    g.innerHTML = list.map(cardHTML).join('');
+  }
+  $('#prodCount').textContent = `${list.length} of ${PRODUCTS.length} varieties · availability updated this week`;
+  renderCatChips(); watch();
+}
+document.addEventListener('click', e=>{
+  const fc = e.target.closest('[data-fcat]'); if(fc){ filters.cat = fc.dataset.fcat; renderCatalog(); return; }
+  const fs = e.target.closest('[data-fst]'); if(fs){ filters.status = fs.dataset.fst; renderCatalog(); return; }
+  const cl = e.target.closest('[data-cat-link]'); if(cl){ filters.cat = cl.dataset.catLink; filters.status='all'; }
+});
+
+/* ================= Categories ================= */
+function renderCats(){
+  $('#catGrid').innerHTML = CATS.map(c=>{
+    const cls = c.big ? 'big' : (c.wide ? 'wide' : '');
+    return `<a class="cat-card ${cls} reveal" href="#/catalog" data-cat-link="${c.slug}">
+      <div class="cat-media"><img loading="lazy" src="${imgFor(c.seed)}" alt="${CAT_NAMES[c.slug]}" width="720" height="560"></div>
+      <img class="cat-leaf" src="images/${c.slug}-leaf.png" alt="${CAT_NAMES[c.slug]} leaf close-up" loading="lazy" decoding="async" onerror="var t=this;if(t.dataset.fb){t.remove();return;}t.dataset.fb=1;t.src='images/${c.slug}-leaf.jpg'">
+      <div class="cat-body">
+        <h3>${CAT_NAMES[c.slug]}</h3>
+        <p>${c.desc}</p>
+        <div class="cat-meta"><span>Plantlet ${c.size}</span><span>MOQ ${c.moq}</span></div>
+        <span class="cat-link">View Products <svg class="ic"><use href="#i-arr"/></svg></span>
+      </div>
+    </a>`;
+  }).join('');
+  watch();
+  initLeafFollow();
+}
+
+/* ================= Category leaf cursor-follow ================= */
+let leafRaf=0;
+const leafState=new WeakMap();
+const leafCards=new Set();
+function initLeafFollow(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  // Prune detached cards (in case renderCats replaced innerHTML)
+  for(const c of [...leafCards]){ if(!document.body.contains(c)){ leafCards.delete(c); leafState.delete(c); } }
+  document.querySelectorAll('.cat-card').forEach(card=>{
+    if(!card.querySelector('.cat-leaf')) return;
+    if(leafState.get(card)) return; // already init'd
+    leafState.set(card,{tx:0,ty:0,cx:0,cy:0,op:0,top:0,vel:0});
+    leafCards.add(card);
+    card.addEventListener('mouseenter',()=>{const s=leafState.get(card);if(s)s.top=1;});
+    card.addEventListener('mouseleave',()=>{const s=leafState.get(card);if(s){s.top=0;s.tx=0;s.ty=0;s.vel=0;}});
+    card.addEventListener('mousemove',e=>{
+      const s=leafState.get(card);if(!s)return;
+      const r=card.getBoundingClientRect();
+      const nx=e.clientX-r.left-r.width/2;
+      const ny=e.clientY-r.top-r.height/2;
+      s.vel=nx-s.tx;
+      s.tx=nx;
+      s.ty=ny;
+    });
+    // Touch support: leaf follows finger on touchmove, shows on touchstart, fades on touchend
+    card.addEventListener('touchstart',e=>{
+      const s=leafState.get(card);if(!s)return;
+      s.top=1;
+      const t=e.touches[0];const r=card.getBoundingClientRect();
+      s.tx=t.clientX-r.left-r.width/2;
+      s.ty=t.clientY-r.top-r.height/2;
+    },{passive:true});
+    card.addEventListener('touchmove',e=>{
+      const s=leafState.get(card);if(!s)return;
+      const t=e.touches[0];const r=card.getBoundingClientRect();
+      const nx=t.clientX-r.left-r.width/2;
+      const ny=t.clientY-r.top-r.height/2;
+      s.vel=nx-s.tx;
+      s.tx=nx;
+      s.ty=ny;
+    },{passive:true});
+    card.addEventListener('touchend',()=>{const s=leafState.get(card);if(s){s.top=0;s.tx=0;s.ty=0;s.vel=0;}});
+  });
+  if(!leafRaf){
+    const tick=()=>{
+      leafCards.forEach(card=>{
+        const s=leafState.get(card);
+        if(!s)return;
+        s.cx+=(s.tx-s.cx)*0.16;
+        s.cy+=(s.ty-s.cy)*0.16;
+        s.op+=(s.top-s.op)*0.14;
+        const leaf=card.querySelector('.cat-leaf');
+        if(!leaf)return;
+        if(s.op<0.01&&s.top===0){
+          if(leaf.style.opacity!=='0'){leaf.style.opacity='0';}
+          return;
+        }
+        const scale=(0.5+s.op*0.55).toFixed(3);
+        const rot=Math.max(-12,Math.min(12,(s.vel||0)*0.5))*s.op;
+        leaf.style.transform=`translate(calc(-50% + ${s.cx.toFixed(2)}px), calc(-50% + ${s.cy.toFixed(2)}px)) scale(${scale}) rotate(${rot.toFixed(2)}deg)`;
+        leaf.style.opacity=s.op.toFixed(3);
+      });
+      leafRaf=requestAnimationFrame(tick);
+    };
+    leafRaf=requestAnimationFrame(tick);
+  }
+}
+
+/* ================= Resources ================= */
+function renderResources(){
+  const [a, ...rest] = ARTICLES;
+  $('#featArticle').innerHTML = `
+    <div class="fa-img"><img loading="lazy" src="${imgFor(a.seed)}" alt="" width="800" height="560"></div>
+    <div class="fa-body">
+      <span class="eyebrow">Featured · ${a.tag}</span>
+      <h2 class="h2" style="margin-bottom:.8rem">${a.title}</h2>
+      <p class="lead" style="font-size:.95rem">${a.excerpt}</p>
+      <span class="cat-link" style="margin-top:1.2rem">Read the guide <svg class="ic"><use href="#i-arr"/></svg></span>
+    </div>`;
+  $('#resList').innerHTML = rest.map(x=>`
+    <a class="art-row reveal" href="#/article/${x.slug}">
+      <div class="meta">${x.date}<br><em>${x.tag}</em></div>
+      <div><h3 class="serif">${x.title}</h3><p>${x.excerpt}</p></div>
+      <span class="go"><svg class="ic"><use href="#i-arr-ur"/></svg></span>
+    </a>`).join('');
+  watch();
+}
+function openArticle(slug){
+  const i = ARTICLES.findIndex(a=>a.slug===slug);
+  if(i<0){ location.hash = '#/resources'; return; }
+  const a = ARTICLES[i];
+  $('#artCrumb').textContent = a.tag;
+  $('#artTag').textContent = a.tag + ' · ' + a.min + ' min read';
+  $('#artTitle').textContent = a.title;
+  $('#artMeta').textContent = a.date + ' · Nursery Supply editorial';
+  $('#artBody').innerHTML = a.body;
+  const prev = ARTICLES[i-1], next = ARTICLES[i+1];
+  $('#artNav').innerHTML =
+    (prev ? `<a href="#/article/${prev.slug}"><svg class="ic"><use href="#i-arr-l"/></svg> ${prev.title}</a>` : '<span></span>') +
+    (next ? `<a href="#/article/${next.slug}">${next.title} <svg class="ic"><use href="#i-arr"/></svg></a>` : '<span></span>');
+}
+
+/* ================= Router ================= */
+const TITLES = {
+  home:'Nursery Supply — Wholesale Tissue-Culture Plants for U.S. Retailers & Growers',
+  catalog:'Wholesale Catalog — Rare Aroids & Tissue-Culture Plantlets | Nursery Supply',
+  about:'About — Nursery Supply | Rare Foliage Plants. Reliable U.S. Supply.',
+  resources:'Buyer Guides & Import Resources | Nursery Supply',
+  contact:'Contact the Wholesale Desk | Nursery Supply',
+  admin:'Inventory Console | Nursery Supply',
+  article:'Guide | Nursery Supply Resources'
+};
+let pendingScroll = null, pendingBType = null;
+function route(){
+  const h = location.hash.replace(/^#\/?/, '');
+  const [page, param] = h.split('/');
+  const id = TITLES[page] ? page : 'home';
+  $$('.page').forEach(p => p.classList.toggle('active', p.dataset.page === id));
+  document.title = id==='article' ? (ARTICLES.find(a=>a.slug===param)?.title || TITLES.article) : TITLES[id];
+  $$('.nav a').forEach(a => a.classList.toggle('on', a.dataset.nav === id));
+  if(id === 'catalog') renderCatalog();
+  if(id === 'article') openArticle(param);
+  if(id === 'admin') renderAdminGate();
+  $('#mnav').classList.remove('open');
+  if(pendingScroll){
+    const el = document.querySelector(pendingScroll); pendingScroll = null;
+    if(el) setTimeout(()=> el.scrollIntoView({behavior:'smooth'}), 60);
+  } else if(pendingBType){
+    const el = document.querySelector('#quote'); pendingBType = null;
+    if(el) setTimeout(()=> el.scrollIntoView({behavior:'smooth'}), 60);
+  } else {
+    window.scrollTo({top:0, behavior:'instant' in window ? 'instant' : 'auto'});
+  }
+  watch();
+}
+window.addEventListener('hashchange', route);
+
+/* ================= Quote forms ================= */
+const US_STATES = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
+const QUICK = ['Variegated Monstera','Philodendron','Alocasia','Anthurium','Syngonium','Caladium','Aglaonema','Mixed pallet'];
+function quoteFormHTML(suffix){
+  return `<form class="qform" data-qform novalidate>
+    <div class="frow two">
+      <div class="field"><label>Business name *</label><input name="biz" required placeholder="Fern & Frond Plant Co."></div>
+      <div class="field"><label>Contact name *</label><input name="name" required placeholder="Jane Rivera"></div>
+    </div>
+    <div class="frow two">
+      <div class="field"><label>Email *</label><input type="email" name="email" required placeholder="orders@yourshop.com"></div>
+      <div class="field"><label>Phone / WhatsApp *</label><input name="phone" required placeholder="+1 305 555 0148"></div>
+    </div>
+    <div class="frow two">
+      <div class="field"><label>Business type *</label><select name="btype" required>
+        <option value="">Select…</option>
+        <option>Retail plant shop</option><option>Online plant seller</option><option>Wholesale distributor</option>
+        <option>Nursery / greenhouse</option><option>Interior plantscape</option><option>Collector / reseller</option>
+      </select></div>
+      <div class="field"><label>State *</label><input name="state" required list="us-${suffix}" placeholder="Florida">
+        <datalist id="us-${suffix}">${US_STATES.map(s=>`<option value="${s}">`).join('')}</datalist></div>
+    </div>
+    <div class="field">
+      <label>Products of interest *</label>
+      <div class="chips-quick">${QUICK.map(q=>`<button type="button" data-add="${q}">${q}</button>`).join('')}</div>
+      <textarea name="products" required rows="2" placeholder="e.g. Monstera albo, Philodendron Pink Princess, Alocasia Frydek Variegata…"></textarea>
+    </div>
+    <div class="frow two">
+      <div class="field"><label>Estimated quantity *</label><select name="qty" required>
+        <option value="">Per order…</option><option>20–50 plantlets</option><option>51–100 plantlets</option><option>101–500 plantlets</option><option>500+ plantlets</option><option>Monthly recurring</option>
+      </select></div>
+      <div class="field"><label>Budget range *</label><select name="budget" required>
+        <option value="">Per order…</option><option>Under $500</option><option>$500 – $2,000</option><option>$2,000 – $10,000</option><option>$10,000+</option>
+      </select></div>
+    </div>
+    <div class="field"><label>Message</label><textarea name="msg" rows="3" placeholder="Destination port, target arrival window, private-label needs…"></textarea></div>
+    <button class="btn btn-p btn-wide" type="submit">Request Wholesale Price List <svg class="ic"><use href="#i-arr"/></svg></button>
+    <p class="form-note">We reply within 1 business day. Your details are used only to prepare your quote.</p>
+  </form>
+  <div class="form-success" hidden>
+    <svg class="ic"><use href="#i-check-c"/></svg>
+    <h3 class="serif">Request received.</h3>
+    <p class="ok-msg"></p>
+    <a class="btn btn-o" href="https://wa.me/66815552143" target="_blank" rel="noopener"><svg class="ic"><use href="#i-chat"/></svg> Urgent? WhatsApp us</a>
+  </div>`;
+}
+ $('#quoteSlot').innerHTML = quoteFormHTML('a');
+
+document.addEventListener('click', e=>{
+  const add = e.target.closest('[data-add]');
+  if(add){
+    const ta = add.closest('form').querySelector('textarea[name=products]');
+    const v = add.dataset.add;
+    const cur = ta.value.split(',').map(s=>s.trim()).filter(Boolean);
+    if(!cur.includes(v)) cur.push(v);
+    ta.value = cur.join(', ');
+    ta.closest('.field').classList.remove('err');
+  }
+});
+function validate(form){
+  let ok = true, first = null;
+  form.querySelectorAll('[required]').forEach(el=>{
+    const bad = !el.value.trim() || (el.type==='email' && !/^\S+@\S+\.\S+$/.test(el.value));
+    el.closest('.field').classList.toggle('err', bad);
+    if(bad){ ok = false; first = first || el; }
+  });
+  if(first) first.focus();
+  return ok;
+}
+document.addEventListener('submit', e=>{
+  const f = e.target;
+  if(f.matches('[data-qform]')){
+    e.preventDefault();
+    if(!validate(f)){ toast('Please complete the highlighted fields', 'i-tag'); return; }
+    const box = f.parentElement;
+    f.hidden = true;
+    const s = box.querySelector('.form-success');
+    s.querySelector('.ok-msg').textContent = `Thanks, ${f.name.value.trim()} — the current price list and availability sheet are on their way to ${f.email.value.trim()} within one business day.`;
+    s.hidden = false;
+    toast('Wholesale request sent — check your inbox soon');
+    // Production: POST to your CRM / email endpoint here, e.g.:
+    // fetch('/api/inquiries', {method:'POST', body: JSON.stringify(Object.fromEntries(new FormData(f)))})
+    return;
+  }
+  if(f.id === 'contactForm'){
+    e.preventDefault();
+    if(!validate(f)){ toast('Please complete the highlighted fields', 'i-tag'); return; }
+    f.hidden = true; $('#contactSuccess').hidden = false;
+    toast('Message sent — we reply within one business day');
+    return;
+  }
+  if(f.id === 'newsForm'){
+    e.preventDefault();
+    const em = f.querySelector('input');
+    if(!/^\S+@\S+\.\S+$/.test(em.value)){ em.focus(); em.style.borderColor='#B4482E'; toast('Enter a valid email to subscribe', 'i-tag'); return; }
+    em.style.borderColor=''; em.value = '';
+    toast("You're on the list — first drop lands Friday");
+  }
+});
+
+/* ================= Quote modal ================= */
+const modal = $('#modal');
+document.addEventListener('click', e=>{
+  const btn = e.target.closest('.btn-quote');
+  if(btn){
+    const p = PRODUCTS.find(x=>x.id===btn.dataset.id); if(!p) return;
+    const st = STATUS[p.status] || STATUS['in-stock'];
+    $('#modalBody').innerHTML = `
+      <div class="modal-prod">
+        <img src="${imgFor(p.seed)}" alt="" width="64" height="64">
+        <div><b>${esc(p.name)}</b><span>${esc(p.size)} · MOQ ${p.moq} · From ${money(p.price)} /plant · ${st.label}</span></div>
+      </div>
+      <form id="quoteMini" novalidate>
+        <div class="field"><label>Contact name *</label><input name="name" required placeholder="Jane Rivera"></div>
+        <div class="field"><label>Email *</label><input type="email" name="email" required placeholder="orders@yourshop.com"></div>
+        <div class="frow two">
+          <div class="field"><label>Business name *</label><input name="biz" required placeholder="Your shop"></div>
+          <div class="field"><label>Quantity *</label><input name="qty" type="number" min="1" required placeholder="e.g. ${p.moq * 2}"></div>
+        </div>
+        <div class="field"><label>Message</label><textarea name="msg" rows="3" placeholder="Destination state, timing, other varieties…"></textarea></div>
+        <button class="btn btn-p btn-wide" type="submit">Send Quote Request <svg class="ic"><use href="#i-send"/></svg></button>
+        <p class="form-note">Replies within 1 business day · or WhatsApp <a href="https://wa.me/66815552143" target="_blank" rel="noopener" style="color:var(--green);font-weight:600">+66 81 555 2143</a></p>
+      </form>
+      <div class="form-success" id="miniSuccess" hidden>
+        <svg class="ic"><use href="#i-check-c"/></svg>
+        <h3 class="serif">Quote request sent</h3>
+        <p>We'll confirm availability, freight cost, and total for <strong>${esc(p.name)}</strong> within one business day.</p>
+      </div>`;
+    modal.classList.add('open');
+    setTimeout(()=> $('#modalBody input')?.focus(), 80);
+    return;
+  }
+  if(e.target.closest('[data-close]')) modal.classList.remove('open');
+});
+document.addEventListener('submit', e=>{
+  if(e.target.id === 'quoteMini'){
+    e.preventDefault();
+    const f = e.target;
+    if(!validate(f)){ toast('Please complete the highlighted fields', 'i-tag'); return; }
+    f.hidden = true; $('#miniSuccess').hidden = false;
+    toast(`Quote request sent for ${f.closest('.modal-card').querySelector('.modal-prod b').textContent.slice(0,28)}…`);
+  }
+});
+document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ modal.classList.remove('open'); $('#mnav').classList.remove('open'); }});
+
+/* Header CTA + buyer-type CTAs */
+document.addEventListener('click', e=>{
+  if(e.target.closest('[data-cta-price]')){
+    if($('[data-page=home]').classList.contains('active')){
+      $('#quote').scrollIntoView({behavior:'smooth'});
+    } else { pendingBType = true; location.hash = '#/home'; }
+  }
+  if(e.target.closest('[data-goto-quote]')){ pendingScroll = '#quote'; }
+  const bt = e.target.closest('[data-btype]');
+  if(bt){
+    pendingBType = true;
+    setTimeout(()=>{ $$('select[name=btype]').forEach(s=>{ if([...s.options].some(o=>o.textContent===bt.dataset.btype)) s.value = bt.dataset.btype; }); }, 700);
+    if(!$('[data-page=home]').classList.contains('active')) location.hash = '#/home';
+    else $('#quote').scrollIntoView({behavior:'smooth'});
+  }
+  if(e.target.closest('[data-scroll]')){ pendingScroll = e.target.closest('[data-scroll]').dataset.scroll; }
+});
+
+/* ================= FAQ / testimonials / ticker ================= */
+document.addEventListener('click', e=>{
+  const q = e.target.closest('.faq-q');
+  if(q){
+    const item = q.parentElement, wasOpen = item.classList.contains('open');
+    $$('.faq-item.open').forEach(i=>i.classList.remove('open'));
+    if(!wasOpen) item.classList.add('open');
+  }
+});
+ $('#tPrev').onclick = ()=> $('#tTrack').scrollBy({left:-420, behavior:'smooth'});
+ $('#tNext').onclick = ()=> $('#tTrack').scrollBy({left:420, behavior:'smooth'});
+const tt = $('#tickerTrack'); tt.innerHTML += tt.innerHTML; // seamless loop
+
+/* ================= Hero parallax ================= */
+const hero = $('#hero');
+if(hero && matchMedia('(pointer:fine)').matches){
+  let raf = null;
+  hero.addEventListener('mousemove', e=>{
+    if(raf) return;
+    raf = requestAnimationFrame(()=>{
+      const r = hero.getBoundingClientRect();
+      const x = (e.clientX - r.left)/r.width - .5, y = (e.clientY - r.top)/r.height - .5;
+      $$('#hero .px').forEach(el=>{
+        const d = +el.dataset.depth || 8;
+        el.style.translate = `${(-x*d).toFixed(1)}px ${(-y*d).toFixed(1)}px`;
+      });
+      raf = null;
+    });
+  });
+}
+
+/* ================= Counters ================= */
+const cio = new IntersectionObserver(es=>es.forEach(en=>{
+  if(!en.isIntersecting) return; cio.unobserve(en.target);
+  const el = en.target, end = parseFloat(el.dataset.count), dec = +(el.dataset.dec||0), t0 = performance.now();
+  (function tick(t){
+    const k = Math.min((t - t0)/1400, 1), e = 1 - Math.pow(1-k, 3);
+    el.textContent = (end*e).toFixed(dec);
+    if(k<1) requestAnimationFrame(tick);
+  })(t0);
+}), {threshold:.5});
+ $$('[data-count]').forEach(el=>cio.observe(el));
+
+/* ================= Header / mobile nav ================= */
+addEventListener('scroll', ()=> $('#hdr').classList.toggle('scrolled', scrollY > 8), {passive:true});
+ $('#menuBtn').onclick = ()=> $('#mnav').classList.add('open');
+ $('#mnavClose').onclick = ()=> $('#mnav').classList.remove('open');
+ $('#mnav').addEventListener('click', e=>{ if(e.target.closest('a')) $('#mnav').classList.remove('open'); });
+
+/* ================= Admin ================= */
+let adminOK = () => sessionStorage.getItem('ns_admin') === '1';
+function renderAdminGate(){ $('#adminLogin').hidden = adminOK(); $('#adminDash').hidden = !adminOK(); if(adminOK()) renderAdmin(); }
+ $('#loginBtn').onclick = ()=>{
+  if($('#passInput').value.trim().toUpperCase() === 'NS-2025'){
+    sessionStorage.setItem('ns_admin','1'); renderAdminGate(); toast('Console unlocked');
+  } else toast('Wrong passcode — demo hint below', 'i-lock');
+};
+ $('#passInput').addEventListener('keydown', e=>{ if(e.key==='Enter') $('#loginBtn').click(); });
+ $('#logoutBtn').onclick = ()=>{ sessionStorage.removeItem('ns_admin'); renderAdminGate(); toast('Logged out'); };
+
+function renderAdmin(){
+  const s = k => PRODUCTS.filter(p=>p.status===k).length;
+  $('#adStats').innerHTML = `
+    <div class="ad-stat"><b>${PRODUCTS.length}</b>Total SKUs</div>
+    <div class="ad-stat"><b>${s('in-stock')}</b>In stock</div>
+    <div class="ad-stat"><b>${s('limited')}</b>Limited stock</div>
+    <div class="ad-stat"><b>${s('pre-order')}</b>Pre-order</div>
+    <div class="ad-stat"><b>${PRODUCTS.filter(p=>p.isNew).length}</b>Flagged new</div>`;
+  $('#adminRows').innerHTML = PRODUCTS.map(p=>`
+    <tr data-id="${p.id}">
+      <td><img src="${imgFor(p.seed)}" alt=""></td>
+      <td><input class="nm" data-k="name" value="${esc(p.name)}"></td>
+      <td><input class="cat" data-k="cat" value="${esc(p.cat)}"></td>
+      <td><input data-k="size" value="${esc(p.size)}"></td>
+      <td><input data-k="moq" type="number" min="1" value="${p.moq}"></td>
+      <td><input data-k="price" type="number" step="0.01" min="0" value="${p.price}"></td>
+      <td><select data-k="status">${Object.entries(STATUS).map(([k,v])=>`<option value="${k}" ${p.status===k?'selected':''}>${v.label}</option>`).join('')}</select></td>
+      <td style="text-align:center"><input type="checkbox" data-k="isNew" ${p.isNew?'checked':''} aria-label="Mark as new arrival"></td>
+      <td><button class="danger-btn" data-del="${p.id}">Delete</button></td>
+    </tr>`).join('');
+}
+ $('#adminRows').addEventListener('change', e=>{
+  const inp = e.target.closest('[data-k]'); if(!inp) return;
+  const row = inp.closest('tr'), p = PRODUCTS.find(x=>x.id===row.dataset.id); if(!p) return;
+  const k = inp.dataset.k;
+  p[k] = (k==='moq'||k==='price') ? (+inp.value || 0) : (k==='isNew' ? inp.checked : inp.value);
+  persist(); renderAdminStatsOnly();
+});
+ $('#adminRows').addEventListener('input', e=>{
+  const inp = e.target.closest('[data-k]'); if(!inp || inp.type==='checkbox') return;
+  const row = inp.closest('tr'), p = PRODUCTS.find(x=>x.id===row.dataset.id); if(!p) return;
+  const k = inp.dataset.k;
+  p[k] = (k==='moq'||k==='price') ? (+inp.value || 0) : inp.value;
+});
+ $('#adminRows').addEventListener('focusout', ()=>{ persist(); renderAdminStatsOnly(); });
+function renderAdminStatsOnly(){
+  const s = k => PRODUCTS.filter(p=>p.status===k).length;
+  $('#adStats').innerHTML = `
+    <div class="ad-stat"><b>${PRODUCTS.length}</b>Total SKUs</div>
+    <div class="ad-stat"><b>${s('in-stock')}</b>In stock</div>
+    <div class="ad-stat"><b>${s('limited')}</b>Limited stock</div>
+    <div class="ad-stat"><b>${s('pre-order')}</b>Pre-order</div>
+    <div class="ad-stat"><b>${PRODUCTS.filter(p=>p.isNew).length}</b>Flagged new</div>`;
+}
+ $('#adminRows').addEventListener('click', e=>{
+  const btn = e.target.closest('[data-del]'); if(!btn) return;
+  if(!btn.classList.contains('arm')){
+    btn.classList.add('arm'); btn.textContent = 'Confirm?';
+    setTimeout(()=>{ btn.classList.remove('arm'); btn.textContent='Delete'; }, 3000);
+    return;
+  }
+  PRODUCTS = PRODUCTS.filter(x=>x.id !== btn.dataset.del);
+  persist(); renderAdmin(); toast('Product removed', 'i-x');
+});
+ $('#addForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  if(!validate(e.target)) return;
+  const f = e.target, d = Object.fromEntries(new FormData(f));
+  const id = 'c-' + Date.now().toString(36);
+  PRODUCTS.unshift({
+    id, name:d.name, variety:'New arrival', cat:d.cat, size:d.size,
+    moq:Math.max(1, +d.moq||1), price:Math.max(0, +d.price||0), status:d.status,
+    seed:'custom-'+id, isNew:true, desc:d.desc
+  });
+  persist(); renderAdmin(); f.reset(); toast('Product added — flagged as new arrival');
+});
+ $('#exportBtn').onclick = ()=>{
+  const blob = new Blob([JSON.stringify(PRODUCTS, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'nursery-supply-inventory.json'; a.click();
+  URL.revokeObjectURL(a.href); toast('Inventory exported as JSON');
+};
+ $('#resetBtn').onclick = e=>{
+  const b = e.currentTarget;
+  if(!b.classList.contains('arm')){
+    b.classList.add('arm'); b.innerHTML = '<svg class="ic"><use href="#i-rot"/></svg> Confirm reset?';
+    setTimeout(()=>{ b.classList.remove('arm'); b.innerHTML = '<svg class="ic"><use href="#i-rot"/></svg> Reset demo data'; }, 3000);
+    return;
+  }
+  b.classList.remove('arm'); b.innerHTML = '<svg class="ic"><use href="#i-rot"/></svg> Reset demo data';
+  try{ localStorage.removeItem(LS_KEY); }catch(err){}
+  PRODUCTS = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
+  renderAdmin(); toast('Demo data restored');
+};
+
+/* ================= Init ================= */
+ $('#yr').textContent = new Date().getFullYear();
+renderCats(); renderHomeProducts(); renderResources(); renderCatChips();
+route();
+</script>
+</body>
+</html>

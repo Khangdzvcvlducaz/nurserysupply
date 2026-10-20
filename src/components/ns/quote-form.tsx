@@ -18,9 +18,9 @@ import {
 } from "@/lib/lead-config";
 
 const PERKS = [
-  "Written quote in 24–48 hours from vetted manufacturers",
-  "FOB / CIF / DDP — your terms, your call",
-  "Photo & video QC report before you pay the balance",
+  "Written quote in 24 hours from indexed cultures",
+  "Photo & video QC report before balance payment",
+  "Phytosanitary-certified export — paperwork done right",
   "One English-speaking contact, accountable end-to-end",
 ];
 
@@ -48,10 +48,10 @@ export function QuoteForm() {
     const lines = [
       `Name: ${form.name}`,
       `Country: ${form.country}`,
-      `Product & Quantity: ${form.product}`,
+      `Variety & Quantity: ${form.product}`,
       `WhatsApp: ${form.phone}`,
     ].join("\n");
-    const msg = `Hi Nursery Supply! I'd like a quote.\n${lines}`;
+    const msg = `Hi Nursery Supply! I'd like a wholesale quote for tissue-culture plants.\n${lines}`;
     return `https://wa.me/84981848702?text=${encodeURIComponent(msg)}`;
   }
 
@@ -62,18 +62,17 @@ export function QuoteForm() {
       country: form.country,
       product: form.product,
       phone: form.phone,
-      subject: "Sourcing quote request — Nursery Supply website",
+      subject: "Wholesale plant quote request — Nursery Supply website",
       from_name: "Nursery Supply website",
-      // Honeypot: Web3Forms uses `botcheck`, Formspree uses `_gotcha`.
       botcheck: form.company,
     };
   }
 
   /** Fallback when no provider is configured: open a pre-filled email. */
   function fallbackMailto() {
-    const subject = encodeURIComponent("Sourcing quote request");
+    const subject = encodeURIComponent("Wholesale plant quote request");
     const body = encodeURIComponent(
-      `Name: ${form.name}\nCountry: ${form.country}\nProduct & Quantity: ${form.product}\nWhatsApp: ${form.phone}`,
+      `Name: ${form.name}\nCountry: ${form.country}\nVariety & Quantity: ${form.product}\nWhatsApp: ${form.phone}`,
     );
     window.location.href = `mailto:${LEAD_EMAIL_RECIPIENT}?subject=${subject}&body=${body}`;
   }
@@ -81,7 +80,6 @@ export function QuoteForm() {
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    // Honeypot: if filled, silently drop (bot).
     if (form.company) {
       setSubmitted(true);
       return;
@@ -93,8 +91,6 @@ export function QuoteForm() {
 
     const waUrl = buildWhatsAppUrl();
 
-    // If no provider configured yet, still open WhatsApp (the brief's flow)
-    // and fall back to email so the lead isn't lost.
     if (!isLeadConfigured()) {
       toast("Opening WhatsApp with your details pre-filled.", {
         description:
@@ -112,34 +108,21 @@ export function QuoteForm() {
 
     setSubmitting(true);
     try {
-      // Fire-and-forget the Web3Forms POST — the WhatsApp open is the
-      // primary action. We don't block the user on the network round-trip.
       const payload = { ...buildPayload(), access_key: LEAD_ACCESS_KEY };
       if (LEAD_PROVIDER === "web3forms") {
         void fetch("https://api.web3forms.com/submit", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
           body: JSON.stringify(payload),
-        }).catch(() => {
-          /* silent — WhatsApp open is the primary action */
-        });
+        }).catch(() => {});
       } else {
         void fetch(LEAD_ENDPOINT, {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
           body: JSON.stringify(payload),
-        }).catch(() => {
-          /* silent */
-        });
+        }).catch(() => {});
       }
 
-      // Open WhatsApp in a new tab with the prefilled message
       try {
         window.open(waUrl, "_blank");
       } catch {
@@ -157,16 +140,18 @@ export function QuoteForm() {
   };
 
   return (
-    <section className="ns-sec-tight" id="quote">
+    <section className="ns-sec-tight ns-section-soft" id="quote">
       <div className="ns-wrap">
         <div className="ns-cta-grid ns-reveal">
           <div className="ns-cta-left">
-            <span className="ns-eyebrow caramel">Request a Quote</span>
-            <h2>Tell us what you need — we reply within 24 hours</h2>
+            <span className="ns-eyebrow gold">Request a Quote</span>
+            <h2 className="ns-h2" style={{ marginTop: 14 }}>
+              Tell us what you need — we reply within 24 hours
+            </h2>
             <p>
-              Send us your product, quantity, and destination. We&apos;ll
-              request quotes from 2–3 vetted manufacturers and come back with
-              price, MOQ, and lead time — in writing.
+              Send us your varieties, quantities, and destination. We confirm
+              availability, MOQ, and a written quote — usually same-day on
+              WhatsApp.
             </p>
             <div className="ns-cta-list">
               {PERKS.map((p) => (
@@ -211,7 +196,6 @@ export function QuoteForm() {
                   stores the lead in our inbox so nothing is lost.
                 </p>
 
-                {/* Honeypot — visually hidden, must stay empty */}
                 <input
                   type="text"
                   name="company"
@@ -251,12 +235,14 @@ export function QuoteForm() {
                 </div>
 
                 <div className="ns-field">
-                  <label htmlFor="qf-product">Product &amp; Quantity Needed *</label>
+                  <label htmlFor="qf-product">
+                    Variety &amp; Quantity Needed *
+                  </label>
                   <textarea
                     id="qf-product"
                     rows={4}
                     required
-                    placeholder="e.g. 5,000 6-inch nursery pots, 200 LED grow bars, 1,000 drip kits — ship to Miami"
+                    placeholder="e.g. 100 Monstera 'Thai Constellation', 50 Philodendron 'Pink Princess', 25 Alocasia 'Frydek Variegata' — ship to Miami"
                     value={form.product}
                     onChange={(e) => update("product", e.target.value)}
                   />
@@ -282,6 +268,7 @@ export function QuoteForm() {
                 <button
                   type="submit"
                   className="ns-btn ns-btn-wa"
+                  style={{ width: "100%" }}
                   disabled={submitting}
                 >
                   {submitting ? (

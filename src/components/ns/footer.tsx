@@ -7,18 +7,18 @@ import {
   Mail,
   MessageCircle,
 } from "lucide-react";
+import { CATS, waGenericQuote } from "@/lib/catalog-data";
 
 const NAV = [
-  { label: "What We Do", href: "#what" },
-  { label: "How We Work", href: "#how" },
-  { label: "Products", href: "#products" },
-  { label: "Why Us", href: "#why" },
+  { label: "Home", href: "#top" },
+  { label: "Products", href: "#categories" },
+  { label: "About", href: "#about" },
   { label: "FAQ", href: "#faq" },
+  { label: "Order", href: "#order" },
   { label: "Request a Quote", href: "#quote" },
 ];
 
-const WA_LINK =
-  "https://wa.me/84981848702?text=Hi%20Nursery%20Supply!%20I'd%20like%20a%20quote%20for%20nursery%20%26%20garden%20products.%20Quantity%3A%20___";
+const WA_LINK = waGenericQuote();
 
 export function Footer() {
   return (
@@ -29,20 +29,21 @@ export function Footer() {
             <a href="#top" className="ns-logo" aria-label="Nursery Supply home">
               <span
                 className="ns-logo-mark"
-                style={{ background: "rgba(255,255,255,0.1)" }}
+                style={{ background: "rgba(255,255,255,0.10)" }}
               >
                 <Sprout size={20} strokeWidth={2} />
               </span>
               <span className="ns-logo-word">
                 Nursery Supply
-                <small>Sourcing &amp; Supply Partner</small>
+                <small>Wholesale Tissue Culture Plants</small>
               </span>
             </a>
             <p>
-              Your sourcing &amp; supply partner for nursery and garden
-              products. We work directly with a network of vetted manufacturers
-              across China — one point of contact, QC on every order,
-              accountable end-to-end.
+              Wholesale tissue culture of rare and variegated foliage plants.
+              Stable supply, stable quality, rich varieties — Monstera,
+              Philodendron, Alocasia, Anthurium and other collector genera.
+              Phytosanitary-certified export to 38 U.S. states plus EU &amp;
+              Asia.
             </p>
 
             <div className="ns-foot-contact-row">
@@ -52,6 +53,8 @@ export function Footer() {
                   callmekai@nurserysupply.us
                 </a>
               </span>
+            </div>
+            <div className="ns-foot-contact-row">
               <span>
                 <span className="lbl">WhatsApp:</span>
                 <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
@@ -59,7 +62,6 @@ export function Footer() {
                 </a>
               </span>
             </div>
-
             <div className="ns-foot-contact-row">
               <span>
                 <span className="lbl">Address:</span>
@@ -72,7 +74,7 @@ export function Footer() {
               <span>
                 <span className="lbl">Business License No.:</span>
                 <span className="ns-foot-placeholder">
-                  [NEEDS REAL LICENSE NO.]
+                  [NEEDS REAL BUSINESS LICENSE NO.]
                 </span>
               </span>
             </div>
@@ -100,7 +102,6 @@ export function Footer() {
                 rel="noopener noreferrer"
                 aria-label="TikTok"
               >
-                {/* TikTok isn't in lucide; use a small inline glyph */}
                 <svg
                   width="18"
                   height="18"
@@ -141,16 +142,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h4>What We Source</h4>
+            <h4>Categories</h4>
             <ul>
-              <li>Nursery Pots &amp; Planters</li>
-              <li>Grow Lights &amp; Greenhouse</li>
-              <li>Garden Tools</li>
-              <li>Irrigation &amp; Watering</li>
-              <li>Potting Media &amp; Fertilizer</li>
-              <li>Plant Supports &amp; Trellises</li>
-              <li>Propagation Supplies</li>
-              <li>Labels, Tags &amp; Packaging</li>
+              {CATS.map((c) => (
+                <li key={c.slug}>
+                  <a href="#categories">{c.name}</a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -161,10 +159,10 @@ export function Footer() {
               balance payment · Sample available before bulk order.
             </p>
             <div className="ns-foot-recap">
-              We are not a factory. We are a sourcing &amp; supply partner
-              working with vetted manufacturers in China. Photo placeholders on
-              this site will be replaced with real product photos as orders
-              complete.
+              We work directly with a network of vetted tissue-culture labs and
+              partner greenhouses across our region. Photo placeholders on this
+              site will be replaced with real lab / greenhouse photos as
+              documented batches complete.
             </div>
           </div>
         </div>
@@ -184,8 +182,8 @@ export function Footer() {
         >
           <span>
             © {new Date().getFullYear()} Nursery Supply. All rights reserved.
-            Nursery Supply is a sourcing &amp; supply partner working with
-            vetted manufacturers in China.
+            Wholesale tissue culture of foliage plants — one accountable
+            partner end-to-end.
           </span>
           <span>
             WhatsApp desk:{" "}

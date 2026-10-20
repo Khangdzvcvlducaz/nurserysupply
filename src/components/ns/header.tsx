@@ -2,16 +2,17 @@
 
 import { useState, useEffect } from "react";
 import { MessageCircle, Menu, X, Sprout } from "lucide-react";
+import { waGenericQuote } from "@/lib/catalog-data";
 
 const NAV = [
-  { label: "What We Do", href: "#what" },
-  { label: "How We Work", href: "#how" },
-  { label: "Products", href: "#products" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Home", href: "#top" },
+  { label: "Products", href: "#categories" },
+  { label: "FAQs", href: "#faq" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
 ];
 
-const WA_LINK =
-  "https://wa.me/84981848702?text=Hi%20Nursery%20Supply!%20I'd%20like%20a%20quote%20for%20nursery%20%26%20garden%20products.%20Quantity%3A%20___";
+const WA_LINK = waGenericQuote();
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -33,7 +34,7 @@ export function Header() {
             </span>
             <span className="ns-logo-word">
               Nursery Supply
-              <small>Sourcing &amp; Supply Partner</small>
+              <small>Wholesale Tissue Culture Plants</small>
             </span>
           </a>
 
@@ -61,7 +62,7 @@ export function Header() {
               rel="noopener noreferrer"
               className="ns-btn ns-btn-wa ns-btn-sm"
             >
-              <MessageCircle size={16} /> Get a Quote
+              <MessageCircle size={16} /> Get A Quote
             </a>
             <button
               className="ns-icon-btn ns-menu-btn"
@@ -87,7 +88,7 @@ export function Header() {
             className="ns-icon-btn"
             style={{
               background: "transparent",
-              color: "#f2eee0",
+              color: "#ffffff",
               borderColor: "rgba(255,255,255,0.25)",
             }}
             onClick={() => setOpen(false)}
@@ -96,9 +97,6 @@ export function Header() {
             <X size={20} />
           </button>
         </div>
-        <a className="mlink" href="#top" onClick={() => setOpen(false)}>
-          Home
-        </a>
         {NAV.map((n) => (
           <a
             key={n.label}
@@ -116,7 +114,7 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <MessageCircle size={16} /> WhatsApp
+            <MessageCircle size={16} /> Get A Quote
           </a>
           <a
             href="#quote"

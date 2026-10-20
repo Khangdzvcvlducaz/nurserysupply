@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Sprout,
   Instagram,
   Facebook,
   Mail,
@@ -27,12 +26,13 @@ export function Footer() {
         <div className="ns-foot-grid">
           <div className="ns-foot-brand">
             <a href="#top" className="ns-logo" aria-label="Nursery Supply home">
-              <span
-                className="ns-logo-mark"
-                style={{ background: "rgba(255,255,255,0.10)" }}
-              >
-                <Sprout size={20} strokeWidth={2} />
-              </span>
+              <img
+                src="/logo.png"
+                alt="Nursery Supply logo"
+                className="ns-logo-img"
+                width={44}
+                height={44}
+              />
               <span className="ns-logo-word">
                 Nursery Supply
                 <small>Wholesale Tissue Culture Plants</small>

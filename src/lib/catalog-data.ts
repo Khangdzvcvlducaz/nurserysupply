@@ -35,7 +35,7 @@ export const CATS: PlantCategory[] = [
   {
     slug: "monstera",
     name: "Monstera",
-    image: Z + "57e903ca3e0f.jpg",
+    image: "/images/categories/Monstera.jpg",
     size: "3–8 cm",
     moq: "20–50",
     desc: "Albo, Thai Constellation, Cream Brulee, mint and aurea lines — stable variegation from indexed cultures, the anchor of any rare-plant program.",
@@ -43,7 +43,7 @@ export const CATS: PlantCategory[] = [
   {
     slug: "philodendron",
     name: "Philodendron",
-    image: Z + "e44e9e3db623.jpg",
+    image: "/images/categories/Philodendron.jpg",
     size: "4–7 cm",
     moq: "20–25",
     desc: "Pink Princess, White Wizard, gloriosum forms and collector hybrids with dependable variegation.",
@@ -51,7 +51,7 @@ export const CATS: PlantCategory[] = [
   {
     slug: "alocasia",
     name: "Alocasia",
-    image: Z + "ca27bab679be.jpg",
+    image: "/images/categories/Alocasia.jpg",
     size: "3–6 cm",
     moq: "25–30",
     desc: "Frydek Variegata, Jacklyn, cuprea and dragon-scale types from vetted laboratories.",
@@ -59,7 +59,7 @@ export const CATS: PlantCategory[] = [
   {
     slug: "anthurium",
     name: "Anthurium",
-    image: Z + "0ce104af6ef0.jpg",
+    image: "/images/categories/Anthurium.jpg",
     size: "3–5 cm",
     moq: "15–20",
     desc: "Crystallinum silver forms, warocqueanum and papillilaminum crosses for premium shelves.",
@@ -67,7 +67,7 @@ export const CATS: PlantCategory[] = [
   {
     slug: "syngonium",
     name: "Syngonium",
-    image: Z + "3c1275262dc1.jpg",
+    image: "/images/categories/Syngonium.jpg",
     size: "4–6 cm",
     moq: "50",
     desc: "Albo and pink Splash Syngonium plus satin Scindapsus — fast-turn retail staples.",

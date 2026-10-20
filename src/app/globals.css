@@ -306,6 +306,22 @@
   color: #ffffff;
   flex-shrink: 0;
 }
+.ns-logo-img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+.ns-foot-brand .ns-logo-img {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px;
+  box-sizing: border-box;
+}
+.ns-mnav-top .ns-logo-img {
+  width: 40px;
+  height: 40px;
+}
 .ns-logo-word {
   display: flex;
   flex-direction: column;

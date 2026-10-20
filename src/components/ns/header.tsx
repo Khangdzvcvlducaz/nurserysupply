@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { MessageCircle, Menu, X, Sprout } from "lucide-react";
+import { MessageCircle, Menu, X } from "lucide-react";
 import { waGenericQuote } from "@/lib/catalog-data";
 
 const NAV = [
@@ -29,9 +29,13 @@ export function Header() {
       <header className="ns-hdr">
         <div className="ns-wrap ns-hdr-inner">
           <a href="#top" className="ns-logo" aria-label="Nursery Supply home">
-            <span className="ns-logo-mark" aria-hidden="true">
-              <Sprout size={20} strokeWidth={2} />
-            </span>
+            <img
+              src="/logo.png"
+              alt="Nursery Supply logo"
+              className="ns-logo-img"
+              width={44}
+              height={44}
+            />
             <span className="ns-logo-word">
               Nursery Supply
               <small>Wholesale Tissue Culture Plants</small>
@@ -83,7 +87,13 @@ export function Header() {
         aria-modal="true"
       >
         <div className="ns-mnav-top">
-          <span className="logo-word">Nursery Supply</span>
+          <img
+            src="/logo.png"
+            alt="Nursery Supply logo"
+            className="ns-logo-img"
+            width={40}
+            height={40}
+          />
           <button
             className="ns-icon-btn"
             style={{

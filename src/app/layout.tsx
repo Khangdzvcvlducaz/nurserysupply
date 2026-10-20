@@ -20,36 +20,39 @@ const archivo = Archivo({
 
 export const metadata: Metadata = {
   title:
-    "Nursery Supply — Wholesale Tissue-Culture Plants for U.S. Retailers & Growers",
+    "Nursery Supply — Sourcing & Supply Partner for Nursery & Garden Products",
   description:
-    "Wholesale supplier of rare tissue-culture plants to the USA: variegated Monstera, Philodendron, Alocasia, Anthurium and rare aroids. Phytosanitary certification, secure live-plant export packaging, MOQ from 20 plants. Request the wholesale price list.",
+    "Sourcing & supply partner sourcing nursery & garden products (pots, planters, grow lights, tools, irrigation, potting media, supports, propagation trays, labels & packaging) from vetted manufacturers in China. One point of contact, QC on every order, refund if not as described. Get a quote on WhatsApp.",
   keywords: [
-    "tissue culture plants",
-    "wholesale plants",
-    "Monstera",
-    "Philodendron",
-    "Alocasia",
-    "Anthurium",
-    "rare aroids",
-    "U.S. plant importer",
-    "phytosanitary certificate",
+    "nursery supply",
+    "sourcing partner",
+    "supply partner",
+    "China sourcing",
+    "nursery pots wholesale",
+    "planters wholesale",
+    "grow lights wholesale",
+    "garden tools wholesale",
+    "irrigation supplies wholesale",
+    "potting media wholesale",
+    "FOB CIF DDP",
+    "QC inspection",
   ],
   authors: [{ name: "Nursery Supply" }],
   icons: {
     icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
   },
   openGraph: {
-    title: "Nursery Supply — Rare Tissue-Culture Plants for U.S. Retailers",
+    title: "Nursery Supply — Sourcing & Supply Partner",
     description:
-      "Wholesale Monstera, Philodendron, Alocasia, Anthurium and rare foliage plants — with export documentation and secure packaging.",
+      "Your sourcing partner for nursery & garden products. One contact, vetted factories, QC on every order.",
     siteName: "Nursery Supply",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nursery Supply — Wholesale Tissue-Culture Plants",
+    title: "Nursery Supply — Sourcing & Supply Partner",
     description:
-      "Rare tissue-culture plants for U.S. retailers, sellers, and distributors.",
+      "Sourcing & supply partner for nursery & garden products. Vetted manufacturers in China, QC on every order.",
   },
 };
 

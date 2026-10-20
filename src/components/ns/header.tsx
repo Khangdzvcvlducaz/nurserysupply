@@ -1,14 +1,17 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Phone, MessageCircle, Menu, X, Sprout } from "lucide-react";
+import { MessageCircle, Menu, X, Sprout } from "lucide-react";
 
 const NAV = [
-  { label: "Wholesale Catalog", href: "#catalog" },
-  { label: "About", href: "#about" },
-  { label: "Resources", href: "#resources" },
-  { label: "Contact", href: "#contact" },
+  { label: "What We Do", href: "#what" },
+  { label: "How We Work", href: "#how" },
+  { label: "Products", href: "#products" },
+  { label: "FAQ", href: "#faq" },
 ];
+
+const WA_LINK =
+  "https://wa.me/84981848702?text=Hi%20Nursery%20Supply!%20I'd%20like%20a%20quote%20for%20nursery%20%26%20garden%20products.%20Quantity%3A%20___";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -30,7 +33,7 @@ export function Header() {
             </span>
             <span className="ns-logo-word">
               Nursery Supply
-              <small>Rare Plant Exports</small>
+              <small>Sourcing &amp; Supply Partner</small>
             </span>
           </a>
 
@@ -44,23 +47,21 @@ export function Header() {
 
           <div className="ns-hdr-acts">
             <a
-              className="ns-icon-btn"
-              href="tel:+84981848702"
-              aria-label="Call our sales desk"
-            >
-              <Phone size={18} />
-            </a>
-            <a
               className="ns-icon-btn wa"
-              href="https://wa.me/84981848702?text=Hello%20Nursery%20Supply%20%E2%80%94%20I%27d%20like%20the%20wholesale%20price%20list."
+              href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat on WhatsApp"
             >
               <MessageCircle size={18} />
             </a>
-            <a href="#quote" className="ns-btn ns-btn-primary ns-btn-sm">
-              Request Wholesale Price List
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ns-btn ns-btn-wa ns-btn-sm"
+            >
+              <MessageCircle size={16} /> Get a Quote
             </a>
             <button
               className="ns-icon-btn ns-menu-btn"
@@ -110,8 +111,8 @@ export function Header() {
         ))}
         <div className="ns-mnav-foot">
           <a
-            className="ns-btn ns-btn-cream"
-            href="https://wa.me/84981848702"
+            className="ns-btn ns-btn-wa on-dark"
+            href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -119,10 +120,10 @@ export function Header() {
           </a>
           <a
             href="#quote"
-            className="ns-btn ns-btn-primary"
+            className="ns-btn ns-btn-outline on-dark"
             onClick={() => setOpen(false)}
           >
-            Request Price List
+            Request Free Quotation
           </a>
         </div>
       </div>

@@ -1,60 +1,47 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown, MessageCircle } from "lucide-react";
 
 type QA = { q: string; a: string };
 
 const FAQS: QA[] = [
   {
-    q: "Do you ship directly to the United States?",
-    a: "Yes. We ship weekly via air freight to major U.S. plant inspection airports — including Miami, New York, and Los Angeles — and coordinate onward delivery to all 50 states. Most customers receive plants 7–14 days from dispatch confirmation.",
+    q: "Are you a factory?",
+    a: "We are a sourcing company working directly with a network of vetted manufacturers. For you this means better price negotiation, independent quality checks on every order, and one partner who is accountable end-to-end — something buying direct cannot offer.",
   },
   {
-    q: "What documents are included with each shipment?",
-    a: "Every shipment includes a phytosanitary certificate issued by the national plant protection organization of origin, a commercial invoice, a packing list, and the airway bill. Certificates of origin and fumigation records can be prepared when your state or broker requires them.",
+    q: "What is the minimum order quantity (MOQ)?",
+    a: "MOQ depends on the product and the manufacturer. For common items like nursery pots or grow lights, MOQ can be as low as a few cartons. For custom-molded or branded items, MOQ is higher. We send you the MOQ in writing in your quotation, so you can decide before committing.",
   },
   {
-    q: "Do I need an import permit?",
-    a: "It depends on the genera you're importing and your destination state. Many ornamental aroids are broadly admissible, but plants for planting generally require USDA/APHIS authorization, and states like Florida, California, and Arizona add their own rules. We flag anything unusual at the quotation stage — but the buyer is responsible for confirming current federal and state requirements.",
+    q: "How long is the lead time?",
+    a: "For in-stock products, lead time is typically 7–15 days from deposit to ready-to-ship. For made-to-order or custom-branded items, expect 20–45 days depending on complexity. Air freight adds 3–7 days, sea freight 15–35 days depending on your destination port. We give you a written lead time in the quotation.",
   },
   {
-    q: "What is the minimum order quantity?",
-    a: "MOQ is typically 20–50 plantlets per variety depending on the crop, with a 100-plantlet minimum per shipment. Varieties can be mixed within one box, so a single order can combine 6–10 different lines.",
+    q: "Do I need to pay a sample fee?",
+    a: "Sometimes. Samples from existing stock are usually free — you pay shipping only. Custom samples or samples pulled from a new production run may carry a sample fee, which is refunded against your bulk order if you proceed. We tell you upfront, no surprises.",
   },
   {
     q: "What are your payment terms?",
-    a: "Standard terms are 50% deposit to reserve stock or production slots, with the balance due before dispatch. We accept bank transfer (T/T) and Wise. Established accounts can set up recurring-order schedules after a positive order history.",
+    a: "Standard terms are 30% deposit to start the order, 70% balance before shipment — released only after you approve the photo and video QC report. For established accounts and repeat orders we can discuss NET terms. We accept bank transfer (T/T), Wise, and on larger orders we can arrange L/C.",
   },
   {
-    q: "How long does production and shipping take?",
-    a: "In-stock varieties are prepared and dispatched within 5–7 business days of payment. Pre-order and lab-produced lots typically take 4–8 weeks depending on batch timing. Air transit adds 3–7 days, plus customs clearance at the port of entry.",
+    q: "Can you ship FOB, CIF, or DDP?",
+    a: "Yes — all three. FOB (you take over once goods are loaded at the China port) is the cheapest and most transparent. CIF (we insure and ship to your destination port) is simpler if you don't have a freight forwarder. DDP (we deliver to your door, duties paid) is the most hands-off. Tell us your preference and we'll quote accordingly.",
   },
   {
-    q: "How are plants packaged for international shipping?",
-    a: "Roots travel in sterile, moisture-controlled media sealed with barrier film; plantlets are cushioned in insulated, ventilated export boxes. Winter shipments include approved heat packs, and every box is labeled with variety, lot number, and quantity.",
+    q: "What is your refund policy if goods are not as described?",
+    a: "If the goods you receive differ from what we quoted and you approved in the QC report — wrong material, wrong dimensions, defects beyond the agreed tolerance — we chase the claim with the manufacturer on your behalf. Refunds, replacements, or credit are arranged with us, not by you fighting a factory that ignores your messages. This is what we mean by accountable end-to-end.",
   },
   {
-    q: "Can I order mixed varieties in one shipment?",
-    a: "Yes — mixed orders are our standard. Combine varieties across genera as long as each meets its MOQ. If availability shifts before dispatch, our team will suggest close substitutes for your approval before anything changes.",
-  },
-  {
-    q: "Do you offer pre-orders for rare plants?",
-    a: "Yes. Pre-orders reserve plantlets from upcoming lab batches with a deposit. You'll receive photos of the actual lot before dispatch, and pre-order customers get first allocation on limited new arrivals.",
-  },
-  {
-    q: "What happens if plants arrive damaged?",
-    a: "Document the condition with photos within 48 hours of arrival. Our live-arrival guarantee covers plantlets that fail due to packaging or carrier delays — we replace the affected plants or issue credit toward your next order.",
-  },
-  {
-    q: "Can you support private-label or custom packaging?",
-    a: "Yes, on qualifying volumes. We can print branded care cards, sleeves, and labels with your logo, and pack in retail-ready counts so plants move from box to bench to shelf faster.",
-  },
-  {
-    q: "Do you sell to individual collectors or only wholesale buyers?",
-    a: "We're a wholesale-first operation. Collectors running a resale business — online shops, market stalls, local sales — are welcome to apply under our collector-reseller category. We don't sell single plants for personal collections.",
+    q: "Can I visit the factories you source from?",
+    a: "Yes, with notice. We can arrange a guided visit to vetted manufacturers we work with — captioned as our partner factory in [province], China. Video-call inspections and live QC walkthroughs are also available if you can't fly out. We never misrepresent someone else's facility as our own.",
   },
 ];
+
+const WA_LINK =
+  "https://wa.me/84981848702?text=Hi%20Nursery%20Supply!%20I'd%20like%20a%20quote%20for%20nursery%20%26%20garden%20products.%20Quantity%3A%20___";
 
 export function Faq() {
   const [open, setOpen] = useState<number | null>(0);
@@ -65,14 +52,19 @@ export function Faq() {
         <div className="ns-faq-left ns-reveal">
           <span className="ns-eyebrow">FAQ</span>
           <h2 className="ns-h2" style={{ marginTop: 14 }}>
-            Answers before you wire a deposit
+            Straight answers before you send a deposit
           </h2>
           <p className="ns-lead">
-            Everything first-time importers ask us. Something missing? Our desk
-            replies within one business day.
+            The questions first-time buyers ask us most. Something missing?
+            Ask us directly on WhatsApp — we reply within 24 hours.
           </p>
-          <a href="#contact" className="ns-btn ns-btn-outline">
-            Ask us directly <ArrowRight size={16} />
+          <a
+            href={WA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ns-btn ns-btn-outline"
+          >
+            <MessageCircle size={16} /> Ask us directly <ArrowRight size={16} />
           </a>
         </div>
 

@@ -1,61 +1,82 @@
 "use client";
 
-import { useState, FormEvent } from "react";
-import { Sprout, Instagram, Facebook, Send } from "lucide-react";
-import { toast } from "sonner";
+import {
+  Sprout,
+  Instagram,
+  Facebook,
+  Mail,
+  MessageCircle,
+} from "lucide-react";
 
-const CATS = [
-  "Variegated Monstera",
-  "Philodendron",
-  "Alocasia",
-  "Anthurium",
-  "Syngonium & Scindapsus",
-  "Caladium",
-  "Aglaonema",
+const NAV = [
+  { label: "What We Do", href: "#what" },
+  { label: "How We Work", href: "#how" },
+  { label: "Products", href: "#products" },
+  { label: "Why Us", href: "#why" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Request a Quote", href: "#quote" },
 ];
 
-const QUICK = [
-  "Wholesale Catalog",
-  "Request Price List",
-  "Import Process & FAQ",
-  "Resources",
-  "About",
-  "Contact",
-];
+const WA_LINK =
+  "https://wa.me/84981848702?text=Hi%20Nursery%20Supply!%20I'd%20like%20a%20quote%20for%20nursery%20%26%20garden%20products.%20Quantity%3A%20___";
 
 export function Footer() {
-  const [email, setEmail] = useState("");
-
-  const onSubscribe = (e: FormEvent) => {
-    e.preventDefault();
-    const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if (!ok) {
-      toast.error("Please enter a valid email address.");
-      return;
-    }
-    toast.success("You're on the list — restock alerts arrive Friday 9 AM ET.");
-    setEmail("");
-  };
-
   return (
     <footer className="ns-footer" id="contact">
       <div className="ns-wrap">
         <div className="ns-foot-grid">
           <div className="ns-foot-brand">
             <a href="#top" className="ns-logo" aria-label="Nursery Supply home">
-              <span className="ns-logo-mark" style={{ background: "rgba(255,255,255,0.1)" }}>
+              <span
+                className="ns-logo-mark"
+                style={{ background: "rgba(255,255,255,0.1)" }}
+              >
                 <Sprout size={20} strokeWidth={2} />
               </span>
               <span className="ns-logo-word">
                 Nursery Supply
-                <small>Rare Plant Exports</small>
+                <small>Sourcing &amp; Supply Partner</small>
               </span>
             </a>
             <p>
-              &ldquo;Rare Foliage Plants. Reliable U.S. Supply.&rdquo;
-              Tissue-culture plantlets for U.S. retailers, sellers, and
-              distributors — with documentation and packaging you can trust.
+              Your sourcing &amp; supply partner for nursery and garden
+              products. We work directly with a network of vetted manufacturers
+              across China — one point of contact, QC on every order,
+              accountable end-to-end.
             </p>
+
+            <div className="ns-foot-contact-row">
+              <span>
+                <span className="lbl">Email:</span>
+                <a href="mailto:callmekai@nurserysupply.us">
+                  callmekai@nurserysupply.us
+                </a>
+              </span>
+              <span>
+                <span className="lbl">WhatsApp:</span>
+                <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+                  +84 981848702
+                </a>
+              </span>
+            </div>
+
+            <div className="ns-foot-contact-row">
+              <span>
+                <span className="lbl">Address:</span>
+                <span className="ns-foot-placeholder">
+                  [NEEDS REAL ADDRESS — your company address, city, country]
+                </span>
+              </span>
+            </div>
+            <div className="ns-foot-contact-row">
+              <span>
+                <span className="lbl">Business License No.:</span>
+                <span className="ns-foot-placeholder">
+                  [NEEDS REAL LICENSE NO.]
+                </span>
+              </span>
+            </div>
+
             <div className="ns-socials">
               <a
                 href="https://instagram.com"
@@ -94,72 +115,87 @@ export function Footer() {
                   <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
                 </svg>
               </a>
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle size={18} />
+              </a>
+              <a href="mailto:callmekai@nurserysupply.us" aria-label="Email">
+                <Mail size={18} />
+              </a>
             </div>
           </div>
 
           <div>
-            <h4>Categories</h4>
+            <h4>Explore</h4>
             <ul>
-              {CATS.map((c) => (
-                <li key={c}>
-                  <a href="#catalog">{c}</a>
+              {NAV.map((n) => (
+                <li key={n.label}>
+                  <a href={n.href}>{n.label}</a>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h4>Quick Links</h4>
+            <h4>What We Source</h4>
             <ul>
-              {QUICK.map((q) => (
-                <li key={q}>
-                  <a href={q.includes("FAQ") ? "#faq" : q.includes("Price") ? "#quote" : "#top"}>
-                    {q}
-                  </a>
-                </li>
-              ))}
+              <li>Nursery Pots &amp; Planters</li>
+              <li>Grow Lights &amp; Greenhouse</li>
+              <li>Garden Tools</li>
+              <li>Irrigation &amp; Watering</li>
+              <li>Potting Media &amp; Fertilizer</li>
+              <li>Plant Supports &amp; Trellises</li>
+              <li>Propagation Supplies</li>
+              <li>Labels, Tags &amp; Packaging</li>
             </ul>
           </div>
 
           <div className="ns-news">
-            <h4>New Arrivals Letter</h4>
+            <h4>Policies Recap</h4>
             <p>
-              Get new arrivals, restocks, and wholesale offers — one email a
-              week, no noise.
+              Refund if goods not as described · QC photo/video report before
+              balance payment · Sample available before bulk order.
             </p>
-            <form className="ns-news-form" onSubmit={onSubscribe}>
-              <input
-                type="email"
-                placeholder="you@yourshop.com"
-                aria-label="Email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              <button type="submit" aria-label="Subscribe">
-                <Send size={16} />
-              </button>
-            </form>
-            <p className="ns-foot-note">
-              Restock alerts go out every Friday, 9 AM ET.
-            </p>
+            <div className="ns-foot-recap">
+              We are not a factory. We are a sourcing &amp; supply partner
+              working with vetted manufacturers in China. Photo placeholders on
+              this site will be replaced with real product photos as orders
+              complete.
+            </div>
           </div>
         </div>
       </div>
 
       <div className="ns-foot-bottom">
-        <div className="ns-wrap" style={{ display: "flex", flexWrap: "wrap", gap: 16, alignItems: "center", justifyContent: "space-between", width: "100%" }}>
+        <div
+          className="ns-wrap"
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 16,
+            alignItems: "center",
+            justifyContent: "space-between",
+            width: "100%",
+          }}
+        >
           <span>
             © {new Date().getFullYear()} Nursery Supply. All rights reserved.
-            Plants supplied as living nursery stock for commercial import;
-            buyers are responsible for confirming current USDA/APHIS and
-            state-level import requirements. Guidance on this site is not
-            legal advice.
+            Nursery Supply is a sourcing &amp; supply partner working with
+            vetted manufacturers in China.
           </span>
           <span>
-            Wholesale desk:{" "}
-            <a href="mailto:callmekai@nurserysupply.us">callmekai@nurserysupply.us</a>{" "}
-            · <a href="tel:+84981848702">+84 981848702</a>
+            WhatsApp desk:{" "}
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+              +84 981848702
+            </a>{" "}
+            ·{" "}
+            <a href="mailto:callmekai@nurserysupply.us">
+              callmekai@nurserysupply.us
+            </a>
           </span>
         </div>
       </div>

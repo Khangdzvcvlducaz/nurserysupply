@@ -287,7 +287,7 @@ Work Log:
 - Ran `bun run build` (one-time, dev server stopped first to avoid .next cache contention): ✓ Compiled in 4.6s, route `/` prerendered as `(Static)`. Produced `out/` (1.4 MB total, `index.html` 76.9 KB, CSS+JS chunks under `out/_next/static/`).
 - Served `out/` via `python3 -m http.server 4173` and verified with Agent Browser on the static URL: page renders with correct title, 8 genus cards present, Philodendron card click → Product Detail modal opens with "Philodendron 'White Wizard'", reveal-hidden state correct. Static export is fully functional client-side.
 - Committed: `d73c661 "Switch to static HTML export for Cloudflare Pages hosting"` (4 files: next.config.ts, package.json, .gitignore, deleted api/route.ts). Set local git identity to `Khangdzvcvlducaz <Khangdzvcvlducaz@users.noreply.github.com>`.
-- Push to GitHub FAILED: `remote: Invalid username or token. Password authentication is not supported.` — the PAT the user shared earlier (`github_pat_11A2...`) is now invalid (revoked or expired, as I had recommended). Remote `main` still at `87f7e3c`; local HEAD at `d73c661`. Commit is NOT on GitHub yet.
+- Push to GitHub FAILED: `remote: Invalid username or token. Password authentication is not supported.` — the PAT the user shared earlier (`[FINEGRAINED-PAT-REDACTED]...`) is now invalid (revoked or expired, as I had recommended). Remote `main` still at `87f7e3c`; local HEAD at `d73c661`. Commit is NOT on GitHub yet.
 - Restarted dev server on port 3000 (HTTP 200) so the preview panel keeps working. `out/` folder retained for direct Cloudflare upload.
 
 Stage Summary:
@@ -319,3 +319,126 @@ Stage Summary:
 - The lead form now actually captures leads via Web3Forms (or Formspree). The user must paste a real Web3Forms access key (obtained free at web3forms.com by entering callmekai@nurserysupply.us) into `src/lib/lead-config.ts`, then rebuild + redeploy.
 - Until configured, the form gracefully falls back to opening a pre-filled email (mailto) so it still works.
 - Commit `acbec5c` is local-only; pushing to GitHub needs a fresh PAT.
+
+---
+Task ID: 12
+Agent: orchestrator
+Task: Push the complete, up-to-date project to GitHub (user provided new classic PAT `[PAT-REDACTED]` + repo URL; "cập nhập lại project cho đầy đủ").
+
+Work Log:
+- PAT `[PAT-REDACTED]` (classic) verified working via `git ls-remote`.
+- Discovered branches had DIVERGED: local had 4 commits remote lacked (d73c661 static, b80599f auto, acbec5c lead-form, 8c50299 auto); remote had 2 commits local lacked (6b60a98 "Add files via upload" = user created src/lib/lead-config.ts via GitHub web UI with their REAL Web3Forms key; accf213 "Update lead-config.ts" = user re-pasted the key). So the user had independently added lead-config.ts with the real key `[KEY-REDACTED]` on GitHub.
+- Did NOT force-push (would wipe the user's real key). Instead MERGED remote into local: `git merge ghub/main`. Hit an add/add CONFLICT on src/lib/lead-config.ts (both branches created the file). Resolved by KEEPING THE USER'S REAL KEY `[REDACTED]` + my detailed setup comments. Committed merge as `03a68fd`.
+- Rebuilt static `out/` with the real key; verified `[REDACTED]` is present in the JS bundle (`out/_next/static/chunks/bf5be628fd41dac5.js`).
+- Tried to verify a real form submission in-browser:
+  * Installed a fetch interceptor; submission correctly called `fetch("https://api.web3forms.com/submit")` with the real access_key + all fields.
+  * But the fetch returned `TypeError: Failed to fetch` (network error).
+  * Root-caused: the **sandbox Agent Browser has NO external internet access** — even `fetch("https://api.web3forms.com/", {method:"GET"})` and `fetch("https://www.google.com")` both fail with "Failed to fetch". Meanwhile `curl` (server-side) DOES reach the internet (api.web3forms.com HTTP 403, google.com HTTP 200). Web3Forms itself returns 403 for server-side (curl) with "This method is not allowed. Use our API in client side" — i.e. they only accept browser requests.
+  * Conclusion: the form code is correct (fetch is called with right URL + real key + full payload — proven), and "Failed to fetch" is purely a sandbox-browser network lock, NOT a code bug. On a real Cloudflare Pages deployment a visitor's browser WILL reach api.web3forms.com.
+- Pushed to GitHub: `accf213..03a68fd main -> main` (fast-forward, no force). PAT used one-time, NOT stored in `.git/config` (verified clean).
+- Verified on remote: `next.config.ts` has `output:"export"` + `trailingSlash:true` + `images.unoptimized:true`; `src/lib/lead-config.ts` has the real key `[REDACTED]`; `src/app/api/route.ts` deleted; all 13 ns/ components + product-detail + lightbox present. Remote `main` HEAD = local HEAD = `03a68fd`.
+- `bun run lint` clean. Restarted dev server (HTTP 200) for the preview panel.
+
+Stage Summary:
+- Repo https://github.com/Khangdzvcvlducaz/nurserysupply is now COMPLETE and up-to-date at commit `03a68fd`: full Nursery Supply landing page (redesigned Shop-by-genus, Hot products, Product-detail modal + Lightbox, FAQ, Quote form, footer, WhatsApp float), static-export config for Cloudflare Pages, and the lead form wired to Web3Forms with the user's real access key `[KEY-REDACTED]` (leads emailed to callmekai@nurserysupply.us).
+- The lead form could NOT be end-to-end verified in the sandbox because the Agent Browser has no external internet; this is an environment limitation, not a code defect. The fetch is correctly invoked (URL + key + payload confirmed). User should: (1) click the Web3Forms email verification link if not done, (2) deploy to Cloudflare Pages and submit once from the live site to confirm leads arrive.
+- PAT `[PAT-REDACTED]` was used for one push and is NOT persisted in git config. User should still rotate it if the chat is logged anywhere sensitive.
+
+---
+Task ID: 13 (analysis)
+Agent: orchestrator
+Task: Major repositioning — pivot the entire site from "wholesale tissue-culture plants" to a SOURCING & SUPPLY PARTNER that sources nursery & garden products from vetted Chinese manufacturers. Follow the user's detailed brief exactly (forbidden words, 8-section structure, WhatsApp-first CTAs, 4-field lead form that auto-opens WhatsApp).
+
+KEY CONSTRAINTS FROM THE BRIEF (build agent MUST follow):
+- We are a SOURCING & SUPPLY PARTNER (trading/sourcing company), NOT a factory. Never claim to be.
+- FORBIDDEN phrases about ourselves: "our factory", "our production line", "we manufacture", "manufacturer of", "our plant".
+- USE INSTEAD: "sourcing partner", "supply partner", "we work directly with vetted manufacturers", "one point of contact", "QC on every order", "accountable if something goes wrong".
+- NO fake testimonials, NO fake certifications (CE/ISO). Factory photos (if any) must be captioned "our partner factory in [province], China".
+- Brand stays "Nursery Supply" (domain nurserysupply.us, email callmekai@nurserysupply.us). Product category = nursery & garden supplies (pots, planters, grow lights, tools, irrigation, potting media, supports, propagation trays, labels/packaging) sourced from vetted manufacturers in China.
+- WhatsApp number: +84 981848702 (wa.me/84981848702). Email: callmekai@nurserysupply.us.
+- Conversion goal: customer messages WhatsApp / leaves phone+email / requests quote.
+
+NEW 8-SECTION HOME STRUCTURE (in this exact order):
+1. HERO — headline (Option A: "Your Sourcing Partner for Nursery & Garden Products — One Contact, Vetted Factories, QC on Every Order"), subheadline with 3 benefits, PRIMARY CTA "Get a Quote on WhatsApp" (green WhatsApp button → wa.me prefilled "Hi Nursery Supply! I'd like a quote for nursery & garden products. Quantity: ___"), SECONDARY CTA "Request Free Quotation" (scrolls to #quote form), hero image (real warehouse/product photo).
+2. TRUST BAR (1 line, dark): "Vetted Manufacturers · QC Before Every Shipment · Refund if Not as Described · Fast WhatsApp Support".
+3. WHAT WE DO (4 cards): Sourcing & Price Negotiation / Quality Inspection / Consolidation & Logistics / After-Sales Accountability — each 1 title + 2 sentences.
+4. HOW WE WORK (5-step horizontal timeline, each with a real photo): Share Requirements → Quotation from Multiple Sources (24–48h) → Sample & Quality Check → Packing with Photo/Video Report → Shipping with Live Tracking.
+5. WHY US (2-column comparison table — most important): "Buying Direct from a Random Factory" vs "Working With Us", 5 rows (vetting time, language/accountability, claims handling, QC before packing, consolidation).
+6. PRODUCTS / CATEGORIES (8 categories, real photos, each card has an "Ask Price" button → opens WhatsApp prefilled with that product name).
+7. POLICIES (short strip): "Refund if goods not as described" · "QC photo/video report before balance payment" · "Sample available before bulk order". + a placeholder area for "real packaging photos, tracking screenshots, customer feedback — updated after first orders".
+8. FAQ (≥6 Qs, MUST include "Are you a factory?" verbatim answer + MOQ, lead time, sample fee, payment terms, FOB/CIF/DDP, refund policy).
+9. FINAL CTA + LEAD FORM (≤4 fields): Name | Country | Product & Quantity Needed | WhatsApp Number. Text near submit: "We reply within 24 hours. Your info is never shared." On submit → auto-open WhatsApp link with the form data prefilled (AND optionally POST to Web3Forms via the existing lead-config to store the lead).
+10. FOOTER: company name + [NEEDS REAL ADDRESS] + email callmekai@nurserysupply.us + WhatsApp +84 981848702 + [NEEDS REAL BUSINESS LICENSE NO.] + policies recap.
+11. WhatsApp float button (fixed, green #25D366, prefilled message).
+REMOVE the old testimonials section entirely (brief forbids fake testimonials). The old product-detail modal + lightbox can be dropped or kept minimal — the brief's "Ask Price" CTAs should open WhatsApp directly with a prefilled message (simpler, matches the brief). Keep the redesigned Shop-by-genus hover aesthetic but repurpose it for the Products section.
+
+REAL PHOTOS FETCHED (via image-search skill, OSS-hosted, embeddable) — use these as TEMPORARY placeholders, each marked with a "[📷 Needs your real photo]" badge so the user swaps them later:
+- hero: https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9016edf06c9f.jpg (alt: https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/95913766d96c.jpg)
+- step1 (Share Requirements): https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/afe1ee60b44f.webp
+- step2 (Quotation): https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a18f9923a2fa.jpg
+- step3 (Sample & QC): https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bf8ef776a1a7.jpg
+- step4 (Packing): https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/295045ecbaaf.jpg
+- step5 (Shipping): https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c4d63f575503.jpg
+- prod-pots: https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8154c61356b0.jpg
+- prod-lights: https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ce3cc8689cc2.jpg
+- prod-tools: https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/677c5c4b23dc.jpg
+- prod-irrig: https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/966ff55771b5.jpg
+- prod-media: https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8e24371967e4.jpg
+- prod-supports: https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2500cebb82a8.jpg
+- prod-props: https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/62e7d4f28761.jpg
+- prod-labels: https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0eb7fa6f0dca.jpg
+
+DRAFTED ENGLISH COPY (hand to build agent verbatim — respects forbidden-words rules):
+- HERO headline: "Your Sourcing Partner for Nursery & Garden Products — One Contact, Vetted Factories, QC on Every Order"
+- HERO subheadline: "We work directly with a network of vetted manufacturers across China. We negotiate unit price by volume, inspect every lot with photo and video before it ships, and stay accountable end-to-end — so you get factory-floor pricing without the China sourcing risk."
+- TRUST BAR: "Vetted Manufacturers · QC Before Every Shipment · Refund if Not as Described · Fast WhatsApp Support"
+- WHAT WE DO card 1 (Sourcing & Price Negotiation): "We speak the local language and negotiate unit price by volume directly with vetted manufacturers — so you pay the real factory-floor price, not a trading-company markup." | card 2 (Quality Inspection): "Every order is inspected before it goes into the carton. We send you photos and short videos of the actual lot, so you approve what ships — not a showroom sample." | card 3 (Consolidation & Logistics): "Combine products from multiple factories into one shipment. We handle export paperwork, packing lists, and booking — with FOB, CIF, or DDP terms that fit your situation." | card 4 (After-Sales Accountability): "One point of contact who stays accountable if something goes wrong. Claims, shortages, defects — we chase them, not you. That's the part you don't get buying direct."
+- HOW WE WORK step1: "Send photos, specs, target quantity, and your destination port. We confirm feasibility same day." | step2: "We request quotes from 2–3 vetted manufacturers that fit your product and send back price, MOQ, and lead time — in writing." | step3: "Before bulk, we arrange a sample (sample fee may apply, refunded on bulk order) and confirm materials, dimensions, and finish against your spec." | step4: "Production is inspected and packed under our supervision. You receive a photo and video QC report before balance payment — approve before it ships." | step5: "Air, sea, or express — booked with full paperwork. Tracking shared within hours of dispatch, customs documents prepared correctly the first time."
+- WHY US rows: (1) "Find and vet a factory yourself — takes weeks" vs "Pre-vetted manufacturers, written quote in 24–48 hours". (2) "Language barrier, timezone gap, no one accountable" vs "One English-speaking point of contact on your timezone". (3) "Claims met with silence — defects, shortages, your problem" vs "We handle claims end-to-end, with a refund-if-not-as-described policy". (4) "No inspection before packing — you see the goods only when they arrive" vs "Photo + video QC report on every lot, sent before you pay the balance". (5) "One product, one factory, one shipment" vs "Consolidate products from multiple factories into one shipment".
+- PRODUCTS (8): Nursery Pots & Planters / Grow Lights & Greenhouse Equipment / Garden Tools / Irrigation & Watering / Potting Media & Fertilizer / Plant Supports & Trellises / Propagation Supplies / Labels, Tags & Packaging. Each card: image + name + 1-line desc + "Ask Price" button → wa.me/84981848702?text=Hi%20Nursery%20Supply!%20I'd%20like%20a%20quote%20for%20{product+name}.%20Quantity:%20___
+- FAQ Q1 "Are you a factory?" A: "We are a sourcing company working directly with a network of vetted manufacturers. For you this means better price negotiation, independent quality checks on every order, and one partner who is accountable end-to-end — something buying direct cannot offer." | Q2 MOQ | Q3 lead time | Q4 sample fee | Q5 payment terms | Q6 FOB/CIF/DDP | Q7 refund policy | Q8 factory visits — full answers in the build agent prompt.
+- LEAD FORM (4 fields): Name | Country | Product & Quantity Needed | WhatsApp Number. Helper: "We reply within 24 hours. Your info is never shared." Submit: "Send & Open WhatsApp" → on submit builds wa.me link with all 4 fields prefilled AND POSTs to Web3Forms (existing lead-config) to store the lead.
+- WhatsApp prefilled (float + hero CTA): "Hi Nursery Supply! I'd like a quote for nursery & garden products. Quantity: ___"
+- WhatsApp auto-greeting (note for the user's business app, not site): "Hi! Thanks for reaching out to Nursery Supply. To quote you fast, could you share: 1) Product you need 2) Quantity 3) Your import country 4) When you need the goods. Reply here and we'll send a written quote within 24 hours."
+
+Stage Summary:
+- 14 real placeholder photos fetched via image-search (OSS-hosted, embeddable).
+- Full English copy drafted respecting all forbidden-words rules + the verbatim "Are you a factory?" answer.
+- Handed off to the build agent (Task 14) with the complete brief, the copy, the image URLs, the 8-section structure, and the WhatsApp/lead-form behavior. Build agent must mark every placeholder photo with a "[📷 Needs your real photo]" badge and footer address/license as "[NEEDS REAL …]".
+
+---
+Task ID: 14
+Agent: full-stack-developer
+Task: Rebuild the site as a Sourcing & Supply Partner per the user's brief (8-section structure, WhatsApp-first CTAs, 4-field lead form auto-opening WhatsApp, forbidden-words compliance, photo placeholders).
+
+Work Log:
+- Read worklog.md fully (Tasks 1–13) — picked up Task 2 design tokens, Task 5–7 modal/lightbox wiring (now dropped), Task 9 redesigned cat-card hover (reused for Products), Task 11 lead-config (Web3Forms key `[REDACTED]` wired), and Task 13's complete repositioning plan (forbidden-words rules, 8-section structure, ALL verbatim English copy, 14 OSS placeholder photo URLs, WhatsApp prefilled messages, lead-form behavior, photo-badge + footer-placeholder rules).
+- Ran the fullstack init script; dev server was already running on port 3000 (HTTP 200, clean dev.log).
+- Read every existing ns/* component + the full 2204-line globals.css to understand the design system, the `.ns-cat-*` photo-forward hover, the ticker marquee, the `.ns-cta-grid` two-column form layout, the FAQ accordion CSS, the footer grid, the WhatsApp float pulse, the `.ns-reveal` IntersectionObserver pattern, and the `prefers-reduced-motion` blocks.
+- Edited `src/app/layout.tsx`: updated metadata to "Nursery Supply — Sourcing & Supply Partner for Nursery & Garden Products" with sourcing keywords + new OG/Twitter descriptions (was "Wholesale Tissue-Culture Plants").
+- Appended a `--wa: #25d366` token + a `--wa-d: #1ebe5a` token to `:root` in globals.css; mapped `--color-wa` in `@theme inline`; added a sentinel comment to force Turbopack CSS chunk recompile.
+- Appended ~340 lines of new component CSS to globals.css for: `.ns-btn-wa` WhatsApp green button, `.ns-photo-badge` tiny pill (top-right of images, semi-transparent dark bg, white 10px text), `.ns-what-grid/.ns-what-card` (4-card grid), `.ns-how-grid/.ns-how-step/.ns-how-node/.ns-how-photo` (5-step timeline with photo), `.ns-why-us` + `.ns-cmp/.ns-cmp-head/.ns-cmp-row/.ns-cmp-cell` (2-col comparison table that stacks on mobile with left-above-right), `.ns-ask` Ask Price WhatsApp pill + `.ns-products-grid` uniform-grid overrides (no big/wide), `.ns-policy-grid/.ns-policy-card/.ns-policy-placeholder` (policies strip), `.ns-form-helper` + `.ns-form-success-wa` (lead form helper/success), `.ns-foot-placeholder` + `.ns-foot-contact-row` + `.ns-foot-recap` (footer placeholders), and an override forcing `.ns-wa-float` background to `var(--wa)` (#25D366) + z-index 70 so it sits above the form's submit button.
+- Rewrote `src/components/ns/header.tsx`: logo "Nursery Supply · Sourcing & Supply Partner", nav What We Do · How We Work · Products · FAQ, WhatsApp-green "Get a Quote" CTA → wa.me prefilled.
+- Rewrote `src/components/ns/hero.tsx`: eyebrow "Sourcing & Supply Partner · China → Worldwide", headline "Your Sourcing Partner for Nursery & Garden Products — One Contact, Vetted Factories, QC on Every Order", 3-benefit subheadline (verbatim), PRIMARY CTA "Get a Quote on WhatsApp" (green `ns-btn-wa`) → wa.me prefilled, SECONDARY CTA "Request Free Quotation" (outline → #quote), hero photo `9016edf06c9f.jpg` with `[📷 Needs your real photo]` badge, kept decorative leaf SVG, reframed chips to sourcing content.
+- Rewrote `src/components/ns/ticker.tsx` as TrustBar: marquee with the 4-item trust message (Vetted Manufacturers · QC Before Every Shipment · Refund if Not as Described · Fast WhatsApp Support).
+- Created `src/components/ns/what-we-do.tsx`: 4 cards (Search/ShieldCheck/Boxes/LifeBuoy) with verbatim 2-sentence bodies, on a 4-col grid (2-col tablet, 1-col mobile).
+- Rewrote `src/components/ns/process.tsx` as How We Work: 5-step horizontal timeline with numbered green node + real photo + verbatim 1-sentence body, photos from the 5 OSS URLs, each with a `[📷]` badge. 5-col desktop → 2-col tablet → 1-col mobile.
+- Created `src/components/ns/why-us.tsx`: 2-column comparison table with EXACT 5-row copy. Left header "Buying Direct from a Random Factory" (muted, ✗ icons), right header "Working With Us" (green, ✓ icons). On mobile (<720px) the table stacks: each row's left cell sits above its right cell.
+- Created `src/components/ns/products.tsx`: 8 product category cards reusing the `.ns-cat-grid/.ns-cat-card` photo-forward hover aesthetic, uniform grid (no big/wide), each card has an "Ask Price" WhatsApp-green pill opening `wa.me/84981848702?text=Hi%20Nursery%20Supply!%20I'd%20like%20a%20quote%20for%20{URL-encoded product name}.%20Quantity%3A%20___`. Section header eyebrow "Products" + h2 "What we source" + verbatim lead. Each photo carries a `[📷]` badge.
+- Created `src/components/ns/policies.tsx`: 3 policy cards (ShieldCheck/Camera) — Refund / QC photo-video report / Sample — plus a dashed placeholder box for "real packaging photos, tracking screenshots, customer feedback" after first orders.
+- Rewrote `src/components/ns/faq.tsx`: 8 Q&As in the bespoke accordion (kept CSS max-height transition). Q1 "Are you a factory?" uses the VERBATIM answer. Other 7: MOQ, lead time, sample fee, payment terms, FOB/CIF/DDP, refund policy, factory visits (Q8 explicitly says "We never misrepresent someone else's facility as our own" + uses "our partner factory in [province], China" wording). "Ask us directly" outline button → wa.me prefilled.
+- Rewrote `src/components/ns/quote-form.tsx`: 4 fields only (Name · Country · Product & Quantity Needed · WhatsApp Number), honeypot kept, helper "We reply within 24 hours. Your info is never shared.", submit button "Send & Open WhatsApp" (green WhatsApp). On submit: validate → build `https://wa.me/84981848702?text=Hi%20Nursery%20Supply!%20I'd%20like%20a%20quote.\nName: {name}\nCountry: {country}\nProduct & Quantity: {product}\nWhatsApp: {phone}` (URL-encoded) → POST to Web3Forms via the existing `lead-config.ts` (`isLeadConfigured()` + real `LEAD_ACCESS_KEY="[KEY]"` + payload, fire-and-forget) → `window.open(waUrl, '_blank')` (`window.location.href` fallback) → success state. Removed the old "Faster? WhatsApp our desk" cream button.
+- Rewrote `src/components/ns/footer.tsx`: brand "Nursery Supply · Sourcing & Supply Partner", verbatim tagline, contact row with Email (mailto) + WhatsApp (wa.me prefilled), TWO italic-muted placeholders: `Address: [NEEDS REAL ADDRESS — your company address, city, country]` and `Business License No.: [NEEDS REAL LICENSE NO.]`. Social row keeps Instagram/Facebook/TikTok + adds WhatsApp + Email. Policies Recap + "We are not a factory" line. Bottom bar with sourcing-partner identity.
+- Refreshed `src/components/ns/whatsapp-float.tsx`: green `#25D366` (via `.ns-wa-float` CSS override), MessageCircle icon, prefilled wa.me link, z-index 70 (above form submit).
+- Updated `src/app/page.tsx`: 11-section order Header → Hero → Ticker → WhatWeDo → Process → WhyUs → Products → Policies → FAQ → QuoteForm → Footer → WhatsAppFloat. Removed testimonials/buyer-types/hot-products/product-detail/lightbox imports.
+- Deleted unused: `shop-by-genus.tsx`, `hot-products.tsx`, `why-buy.tsx`, `quality.tsx`, `buyer-types.tsx`, `testimonials.tsx`, `product-detail.tsx`, `lightbox.tsx`, `src/lib/catalog-data.ts`, `src/hooks/use-product-store.ts`.
+- Verified end-to-end with agent-browser: title correct, no page errors. Forbidden-words scan: 0 matches for "our factory", "our production line", "we manufacture", "manufacturer of", "our plant" (and 4/4 wanted phrases "sourcing partner" / "vetted manufacturers" / "one point of contact" / "qc on every order" present). All 9 sections render in order. Comparison table: 2 headers, 6 rows (5 data + 1 header), 5 left cells (✗) + 5 right cells (✓). Hero CTA green `rgb(37, 211, 102)` + wa.me prefilled. 8 Ask-Price links with product name URL-encoded. Lead form: 4 fields, submit fired both Web3Forms POST (with real `[REDACTED]` key + all 4 fields + honeypot) AND `window.open` with wa.me URL containing all 4 fields URL-encoded (`Name: Jane Rivera\nCountry: United States\nProduct & Quantity: 5,000 6-inch nursery pots + 200 LED grow bars to Miami\nWhatsApp: +1 305 555 0148`). FAQ: 8 items, first "Are you a factory?" with verbatim answer (byte-for-byte match). Footer: email + WhatsApp + both placeholders. WhatsApp float: green #25D366, fixed, z-70. 14 photo badges (1 hero + 5 steps + 8 products). Mobile 375×812: comparison table stacks (each row left-above-right), hero CTA 44px tall, products 1-col, header collapses to hamburger. `agent-browser errors` empty. `bun run lint` clean.
+- Saved screenshots: `/home/z/my-project/verify/14-sourcing-fullpage.png` (desktop 1280×800) and `14-sourcing-mobile.png` (375×812).
+
+Stage Summary:
+- Files created: `src/components/ns/{what-we-do,why-us,products,policies}.tsx`; `agent-ctx/14-full-stack-developer.md`.
+- Files rewritten: `src/app/layout.tsx` (metadata), `src/app/globals.css` (+ ~360 lines), `src/app/page.tsx` (new 11-section order), `src/components/ns/{header,hero,ticker,process,faq,quote-form,footer,whatsapp-float}.tsx`.
+- Files deleted: `src/components/ns/{shop-by-genus,hot-products,why-buy,quality,buyer-types,testimonials,product-detail,lightbox}.tsx`, `src/lib/catalog-data.ts`, `src/hooks/use-product-store.ts`.
+- Forbidden-words scan: 0 matches. Wanted phrases present: 4/4.
+- Agent Browser verification: 8 sections render in order ✓, comparison table 2-col/5-rows/✗-✓ icons ✓, Hero CTA green #25D366 + wa.me prefilled ✓, 8 Ask-Price links with product name URL-encoded ✓, lead form 4 fields + Send & Open WhatsApp opens wa.me with all 4 fields URL-encoded + Web3Forms POST fired with real key ✓, FAQ 8 items first "Are you a factory?" verbatim ✓, footer email + WhatsApp + 2 placeholders ✓, WhatsApp float green #25D366 + z-70 ✓, 14 photo badges ✓, mobile 375×812 reflows + comparison table stacks + CTA ≥44px ✓, `agent-browser errors` empty, `bun run lint` clean.
+- Caveats: (1) Web3Forms fetch is fire-and-forget — WhatsApp open is the primary action so the user sees WhatsApp immediately even if Web3Forms is slow. (2) Photo placeholders will be swapped by the user; the `[📷 Needs your real photo]` badge makes this obvious. (3) Footer `Address` and `Business License No.` are explicit `[NEEDS REAL …]` placeholders the user must fill before going live. (4) The sandbox agent-browser has no external internet so the Web3Forms fetch returns a synthetic `{success: true}` in the eval — on a real Cloudflare Pages deployment a visitor's browser WILL reach api.web3forms.com (same as Task 12). (5) `next.config.ts` keeps `output: 'export'` + `trailingSlash: true` + `images.unoptimized: true` for static Cloudflare Pages hosting.

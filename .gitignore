@@ -54,3 +54,6 @@ server.log
 /skills/
 out/
 upload/
+tool-results/
+verify/
+agent-ctx/

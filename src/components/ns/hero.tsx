@@ -1,11 +1,14 @@
 "use client";
 
-import { ArrowRight, Check, Plane, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Check, MessageCircle, Camera, ShieldCheck, Boxes } from "lucide-react";
 
-const TRUST = [
-  "Phytosanitary certificate with every shipment",
-  "MOQ from 20 plants per variety — mixed orders welcome",
-  "Weekly U.S.-bound air freight with full tracking",
+const WA_LINK =
+  "https://wa.me/84981848702?text=Hi%20Nursery%20Supply!%20I'd%20like%20a%20quote%20for%20nursery%20%26%20garden%20products.%20Quantity%3A%20___";
+
+const BENEFITS = [
+  "Vetted manufacturers across China",
+  "QC photo & video on every order",
+  "One English-speaking point of contact",
 ];
 
 export function Hero() {
@@ -14,27 +17,35 @@ export function Hero() {
       <div className="ns-wrap ns-hero-grid">
         <div className="ns-reveal ns-in">
           <span className="ns-eyebrow">
-            Tissue-Culture Export · U.S. Wholesale
+            Sourcing &amp; Supply Partner · China → Worldwide
           </span>
           <h1>
-            Rare Tissue-Culture Plants for <em>U.S. Retailers</em> and Growers
+            Your Sourcing Partner for Nursery &amp; Garden Products —{" "}
+            <em>One Contact, Vetted Factories, QC on Every Order</em>
           </h1>
           <p className="ns-lead">
-            Wholesale Monstera, Philodendron, Alocasia, Anthurium, and rare
-            foliage plants — with export documentation and secure packaging.
+            We work directly with a network of vetted manufacturers across
+            China. We negotiate unit price by volume, inspect every lot with
+            photo and video before it ships, and stay accountable end-to-end —
+            so you get factory-floor pricing without the China sourcing risk.
           </p>
 
           <div className="ns-hero-ctas">
-            <a href="#quote" className="ns-btn ns-btn-primary">
-              Request Price List <ArrowRight size={16} />
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ns-btn ns-btn-wa"
+            >
+              <MessageCircle size={16} /> Get a Quote on WhatsApp
             </a>
-            <a href="#catalog" className="ns-btn ns-btn-outline">
-              Browse Wholesale Catalog
+            <a href="#quote" className="ns-btn ns-btn-outline">
+              Request Free Quotation <ArrowRight size={16} />
             </a>
           </div>
 
           <div className="ns-hero-trust">
-            {TRUST.map((t) => (
+            {BENEFITS.map((t) => (
               <span key={t}>
                 <Check size={16} className="ic-check" strokeWidth={2.5} />
                 {t}
@@ -46,12 +57,15 @@ export function Hero() {
         <div className="ns-hero-visual ns-reveal ns-in" aria-hidden="false">
           <div className="ns-hero-frame">
             <img
-              src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b1ec3d8a0a49.jpg"
-              alt="Tissue-culture plantlets hardening off in a shaded greenhouse"
+              src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9016edf06c9f.jpg"
+              alt="Nursery & garden products sourced from vetted manufacturers"
               width={900}
               height={1100}
               loading="eager"
             />
+            <span className="ns-photo-badge">
+              <Camera size={11} /> Needs your real photo
+            </span>
             {/* Decorative monstera-leaf line drawing */}
             <svg
               className="ns-hero-leaf"
@@ -95,18 +109,18 @@ export function Hero() {
           </div>
 
           <div className="ns-chip ns-chip-1">
-            <CheckCircle2 size={26} className="ic" />
+            <ShieldCheck size={26} className="ic" />
             <div>
-              <strong>Lot #A-2417 · QC passed</strong>
-              <span>Roots verified · ready to fly</span>
+              <strong>Lot QC · photos approved</strong>
+              <span>Before balance payment</span>
             </div>
           </div>
 
           <div className="ns-chip ns-chip-2">
-            <Plane size={24} className="ic" />
+            <Boxes size={24} className="ic" />
             <div>
-              <strong>MIA · 9-day door delivery</strong>
-              <span>Phyto cert included</span>
+              <strong>FOB · CIF · DDP terms</strong>
+              <span>Consolidated shipments</span>
             </div>
           </div>
         </div>

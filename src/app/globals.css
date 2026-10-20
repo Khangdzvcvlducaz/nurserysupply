@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* sentinel: pd-modal-v1 — forces Turbopack CSS chunk recompile */
+/* sentinel: pd-modal-v1 + t14-sourcing-v1 — forces Turbopack CSS chunk recompile */
 @custom-variant dark (&:is(.dark *));
 
 /* ============== Design tokens (from worklog.md) ============== */
@@ -26,6 +26,7 @@
   --color-caramel-bg: var(--caramel-bg);
   --color-ok: var(--ok);
   --color-ok-bg: var(--ok-bg);
+  --color-wa: var(--wa);
 
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
@@ -75,6 +76,8 @@
   --caramel-bg: #f5e9d7;
   --ok: #2e7d4f;
   --ok-bg: #e8f2e9;
+  --wa: #25d366;
+  --wa-d: #1ebe5a;
 
   --r: 16px;
   --sh: 0 22px 44px -24px rgba(23, 59, 44, 0.28);
@@ -2200,4 +2203,471 @@
   .pd-thumb, .pd-larger, .pd-share .sh, .ns-pd-close, .ns-lb-x {
     transition: none !important;
   }
+}
+
+/* =========================================================== */
+/* ============ Task 14: Sourcing & Supply Partner =========== */
+/* =========================================================== */
+/* sentinel: t14-sourcing-v1 — forces Turbopack CSS chunk recompile */
+
+/* ============== WhatsApp-green buttons ============== */
+.ns-btn-wa {
+  background: var(--wa);
+  color: #ffffff;
+  box-shadow: 0 10px 24px -12px rgba(37, 211, 102, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.ns-btn-wa:hover {
+  background: var(--wa-d);
+  box-shadow: 0 14px 30px -12px rgba(37, 211, 102, 0.65);
+}
+.ns-btn-wa.on-dark {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+/* ============== Photo placeholder badge ============== */
+.ns-photo-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 6;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(14, 42, 30, 0.72);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  padding: 5px 8px;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+  white-space: nowrap;
+}
+.ns-photo-badge svg {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+}
+
+/* ============== What We Do (4 cards) ============== */
+.ns-what-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.ns-what-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 26px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.ns-what-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 44px -24px rgba(23, 59, 44, 0.28);
+  border-color: rgba(23, 59, 44, 0.22);
+}
+.ns-what-ic {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--sage-3);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--sage-2);
+  margin-bottom: 4px;
+}
+.ns-what-card h3 {
+  font-size: 1.08rem;
+  margin: 0;
+  line-height: 1.25;
+  color: var(--ink);
+}
+.ns-what-card p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+@media (max-width: 1019px) {
+  .ns-what-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .ns-what-grid { grid-template-columns: 1fr; }
+}
+
+/* ============== How We Work (5-step timeline with photos) ============== */
+.ns-how-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  position: relative;
+  padding-top: 8px;
+}
+.ns-how-step {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+.ns-how-node {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #f2eee0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.08rem;
+  box-shadow: 0 10px 22px -10px rgba(23, 59, 44, 0.5);
+  position: relative;
+  z-index: 2;
+  margin-bottom: 4px;
+}
+.ns-how-photo {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--sage-3);
+  border: 1px solid var(--line);
+}
+.ns-how-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s ease;
+}
+.ns-how-step:hover .ns-how-photo img {
+  transform: scale(1.05);
+}
+.ns-how-step h4 {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.ns-how-step p {
+  font-size: 0.83rem;
+  color: var(--ink-2);
+  line-height: 1.55;
+  margin: 0;
+}
+@media (max-width: 1019px) {
+  .ns-how-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 18px;
+  }
+}
+@media (max-width: 560px) {
+  .ns-how-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* ============== Why Us (2-column comparison) ============== */
+.ns-why-us {
+  background: var(--cream-2);
+}
+.ns-cmp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 18px 40px -28px rgba(23, 59, 44, 0.18);
+}
+.ns-cmp-head {
+  padding: 22px 26px;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.06rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--line);
+}
+.ns-cmp-head.left {
+  background: rgba(179, 38, 30, 0.04);
+  color: var(--ink-3);
+  border-right: 1px solid var(--line);
+}
+.ns-cmp-head.right {
+  background: var(--green);
+  color: #f2eee0;
+}
+.ns-cmp-head .pill {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  opacity: 0.85;
+}
+.ns-cmp-row {
+  display: contents;
+}
+.ns-cmp-cell {
+  padding: 20px 26px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  border-top: 1px solid var(--line);
+}
+.ns-cmp-cell.left {
+  background: #fbfaf4;
+  color: var(--ink-3);
+  border-right: 1px solid var(--line);
+}
+.ns-cmp-cell.right {
+  background: #ffffff;
+  color: var(--ink);
+  font-weight: 500;
+}
+.ns-cmp-ic {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.ns-cmp-cell.left .ns-cmp-ic {
+  color: #b3261e;
+}
+.ns-cmp-cell.right .ns-cmp-ic {
+  color: var(--ok);
+}
+@media (max-width: 720px) {
+  .ns-cmp {
+    grid-template-columns: 1fr;
+  }
+  .ns-cmp-head.left {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  /* On mobile, the right column is shown under the left for each row */
+  .ns-cmp-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .ns-cmp-cell.left {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .ns-cmp-cell.right {
+    border-top: 0;
+  }
+}
+
+/* ============== Products — Ask Price button ============== */
+/* Reuses .ns-cat-grid + .ns-cat-card hover aesthetic for the cards.
+   Each card has a small green "Ask Price" WhatsApp pill in its panel. */
+.ns-ask {
+  margin-top: 8px;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  background: var(--wa);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  transition: background 0.3s ease, gap 0.3s ease, transform 0.2s ease;
+}
+.ns-ask:hover {
+  background: var(--wa-d);
+  gap: 10px;
+  transform: translateY(-1px);
+}
+.ns-ask svg {
+  transition: transform 0.3s ease;
+}
+.ns-ask:hover svg {
+  transform: translateX(2px);
+}
+
+/* Products grid is uniform (no big/wide) — override the cat-card span rules */
+.ns-products-grid .ns-cat-card.big,
+.ns-products-grid .ns-cat-card.wide,
+.ns-products-grid .ns-cat-card.std {
+  grid-column: span 1;
+  grid-row: auto;
+}
+.ns-products-grid .ns-cat-card .ns-cat-reveal {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 8px;
+}
+.ns-products-grid .ns-cat-card .ns-cat-cta {
+  display: none;
+}
+
+/* ============== Policies ============== */
+.ns-policy {
+  background: var(--cream-2);
+}
+.ns-policy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 28px;
+}
+.ns-policy-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px 22px 22px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.ns-policy-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 36px -22px rgba(23, 59, 44, 0.22);
+  border-color: rgba(23, 59, 44, 0.2);
+}
+.ns-policy-ic {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--ok-bg);
+  color: var(--ok);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(46, 125, 79, 0.22);
+}
+.ns-policy-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--ink);
+  font-weight: 500;
+}
+.ns-policy-placeholder {
+  background: #ffffff;
+  border: 1px dashed var(--line-2);
+  border-radius: 16px;
+  padding: 24px 26px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  color: var(--ink-2);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.ns-policy-placeholder .ph-ic {
+  flex-shrink: 0;
+  color: var(--ink-3);
+  margin-top: 2px;
+}
+.ns-policy-placeholder strong {
+  color: var(--ink);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+@media (max-width: 900px) {
+  .ns-policy-grid { grid-template-columns: 1fr; }
+}
+
+/* ============== Quote form: WhatsApp-first ============== */
+.ns-form-helper {
+  font-size: 0.82rem;
+  color: var(--ink-3);
+  margin-top: 14px;
+  margin-bottom: 6px;
+  text-align: center;
+  line-height: 1.5;
+}
+.ns-form-success-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  font-size: 0.84rem;
+  color: var(--ink-2);
+}
+.ns-form-success-wa a {
+  color: var(--wa-d);
+  font-weight: 700;
+  text-decoration: none;
+}
+.ns-form-success-wa a:hover { text-decoration: underline; }
+
+/* ============== Footer placeholder lines ============== */
+.ns-foot-placeholder {
+  display: block;
+  color: rgba(242, 238, 224, 0.45) !important;
+  font-style: italic;
+  font-size: 0.82rem !important;
+  margin-top: 2px;
+}
+.ns-foot-contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  font-size: 0.88rem;
+  margin-top: 6px;
+}
+.ns-foot-contact-row a {
+  color: rgba(242, 238, 224, 0.85);
+  text-decoration: none;
+}
+.ns-foot-contact-row a:hover { color: #ffffff; text-decoration: underline; }
+.ns-foot-contact-row .lbl {
+  color: rgba(242, 238, 224, 0.5);
+  font-weight: 500;
+  margin-right: 6px;
+}
+.ns-foot-recap {
+  font-size: 0.78rem;
+  color: rgba(242, 238, 224, 0.6);
+  margin-top: 16px;
+  line-height: 1.6;
+  border-top: 1px dashed rgba(255, 255, 255, 0.16);
+  padding-top: 14px;
+}
+
+/* Keep WhatsApp float above the form submit button */
+.ns-wa-float { z-index: 70; }
+
+/* ============== WhatsApp float — green #25D366 ============== */
+/* Override the default green with WhatsApp green for the float + matching pulse */
+.ns-wa-float {
+  background: var(--wa);
+  box-shadow: 0 14px 32px -10px rgba(37, 211, 102, 0.55);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+.ns-wa-float:hover { background: var(--wa-d); }
+.ns-wa-float::before {
+  border-color: var(--wa);
 }

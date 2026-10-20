@@ -576,3 +576,26 @@ Stage Summary:
 - Files deleted: 6 obsolete sourcing components (`what-we-do,why-us,products,policies,ticker,process.tsx`).
 - Verification results (Agent Browser): fonts Rubik/Jost ✓, palette #006334/#18ba60/#ffc30c/#25d366 ✓, 14 sections in order ✓, 8 categories with real images + Ask Price → wa.me prefilled with genus name ✓, 8 hot-sale products + 6 new arrivals with real images + Ask Price → wa.me prefilled with product name ✓, hero CTA + float = green #25D366 + wa.me prefilled ✓, About stats: 4 count-up + 4 [NEEDS REAL — …] placeholders ✓, testimonials with Demo badges + section note ✓, FAQ 8 items + "Are you a factory?" uses "partner labs/greenhouses" (no owned-factory claim) ✓, footer email + WhatsApp + 2 [NEEDS REAL …] placeholders ✓, quote form auto-opens WhatsApp with 4 fields prefilled + fires Web3Forms POST ✓, elegant category hover (lift -6px / scale 1.07 / reveal open / no mix-blend) ✓, mobile 375×812 responsive + CTAs ≥44px touch targets ✓, `agent-browser errors` empty, `bun run lint` clean.
 - Caveats: (1) Dev server HMR for CSS may serve the stale chunk on the very first load after a CSS rewrite until the sentinel comment is bumped — fixed by bumping `t17-minhuijt-pivot-v1` → `t17-minhuijt-pivot-v2` which forces a chunk-hash change. (2) The sandbox Agent Browser has no external internet so the Web3Forms POST returns a synthetic `{success:true}` interceptor response in the eval — on a real Cloudflare Pages deployment a visitor's browser WILL reach api.web3forms.com (same as Task 12). (3) Testimonials shown are representative quotes (NOT real customers); the "Demo" badge + section note make this obvious so the user can swap real feedback in after first orders. (4) 4 facility-stat placeholders (`lab area`, `greenhouse area`, `partner greenhouses count`, `location`) and 2 footer placeholders (`address`, `business license no.`) are explicit `[NEEDS REAL — …]` markers the user must fill before going live — NO fabricated facility numbers were used. (5) Static-export config kept (`next.config.ts` `output: "export"`, `trailingSlash: true`, `images.unoptimized: true`) for Cloudflare Pages hosting. (6) Sonner toaster is mounted bottom-right which briefly overlaps the floating WhatsApp button during a toast — same non-blocking note as Tasks 2/5-7.
+
+---
+Task ID: 18 (orchestrator verify & push)
+Agent: orchestrator
+Task: Independent verification + GitHub push of the minhuijt.com-style plant-selling redesign (Task 17 build).
+
+Work Log:
+- Agent Browser independent verification:
+  * Fonts: h2 = Rubik, body = Jost (getComputedStyle confirmed). ✓
+  * Palette: --mh-green #006334, --mh-green-bright #18ba60, --mh-gold #ffc30c all set; hero bg rgb(0,99,52) dark green; hero CTA bg rgb(37,211,102) WhatsApp green. ✓
+  * 14 sections render in order. ✓
+  * 28 real z-cdn plant images (8 categories + 8 hot-sale + 6 new-arrivals + facility). ✓
+  * WhatsApp CTAs: hero "Get A Quote" href = wa.me/84981848702?text=Hi%20Nursery%20Supply!...; 36 total wa.me links. ✓
+  * Honest positioning: word-boundary regex for "our factory | we manufacture | manufacturer of | our plant | our production line" = ALL FALSE (the only naive match was "our plant" as a substring of "yOUR PLANTlets" — false positive). "partner labs/greenhouses" language present. NO fabricated facility ownership. ✓
+  * 6 [NEEDS REAL] placeholders (4 facility stats + 2 footer address/license). ✓
+  * Hero CTA + float = green #25D366 prefilled. ✓
+  * bun run lint clean; agent-browser errors empty.
+- Committed: 7273eb4 (plant-selling minhuijt-styled redesign). Staged only real project files (excluded .zscripts/dev.pid + tool-results/ + verify/ + agent-ctx/ which are gitignored). Secret scan on staged content: 0 matches.
+- Pushed to GitHub: 096aea9..7273eb4 main -> main (fast-forward). PAT used one-time, NOT stored in .git/config (verified clean). NO Push Protection block this time (worklog redacted in Task 15, tool-results excluded).
+
+Stage Summary:
+- Repo https://github.com/Khangdzvcvlducaz/nurserysupply at commit 7273eb4: Nursery Supply now sells PLANTS (tissue-culture / rare foliage) with the minhuijt.com design — Rubik+Jost fonts, #006334/#18ba60/#ffc30c palette, 14 sections, real plant catalog (16 products + 8 categories with z-cdn images), WhatsApp-first CTAs (36 wa.me links), honest "partner labs/greenhouses" positioning (no fabricated facilities), 6 [NEEDS REAL] placeholders, static-export ready for Cloudflare Pages.
+- Caveats: (1) Testimonials are demo-marked (replace with real feedback after first orders). (2) Facility stats + footer address/license are [NEEDS REAL] placeholders. (3) Web3Forms lead POST can't be fully tested in sandbox (no external internet from browser), works on real deployment. (4) User should rotate the PAT (transmitted via chat).

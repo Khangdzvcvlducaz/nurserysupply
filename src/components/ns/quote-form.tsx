@@ -1,8 +1,15 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { ArrowRight, Check, CheckCircle2, MessageCircle, Send } from "lucide-react";
+import { ArrowRight, Check, CheckCircle2, Loader2, MessageCircle, Send } from "lucide-react";
 import { toast } from "sonner";
+import {
+  LEAD_ACCESS_KEY,
+  LEAD_EMAIL_RECIPIENT,
+  LEAD_ENDPOINT,
+  LEAD_PROVIDER,
+  isLeadConfigured,
+} from "@/lib/lead-config";
 
 const PERKS = [
   "Current availability across 140+ varieties",
@@ -20,33 +27,117 @@ const BUSINESS_TYPES = [
   "Other",
 ];
 
+type Lead = {
+  name: string;
+  email: string;
+  phone: string;
+  btype: string;
+  msg: string;
+  /** honeypot — must stay empty; bots fill it, humans don't */
+  company: string;
+};
+
+const EMPTY: Lead = { name: "", email: "", phone: "", btype: "", msg: "", company: "" };
+
 export function QuoteForm() {
   const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    btype: "",
-    msg: "",
-  });
+  const [submitting, setSubmitting] = useState(false);
+  const [form, setForm] = useState<Lead>(EMPTY);
 
-  const update = (k: keyof typeof form, v: string) =>
+  const update = (k: keyof Lead, v: string) =>
     setForm((f) => ({ ...f, [k]: v }));
 
-  const onSubmit = (e: FormEvent) => {
+  /** Build the payload the chosen provider expects. */
+  function buildPayload() {
+    const base = {
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+      "business type": form.btype,
+      message: form.msg,
+      subject: "Wholesale price list request",
+      from_name: "Nursery Supply website",
+      // Honeypot: Web3Forms uses `botcheck`, Formspree uses `_gotcha`.
+      botcheck: form.company,
+    };
+    return base;
+  }
+
+  /** Fallback when no provider is configured: open a pre-filled email. */
+  function fallbackMailto() {
+    const subject = encodeURIComponent("Wholesale price list request");
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nBusiness type: ${form.btype}\n\n${form.msg}`,
+    );
+    window.location.href = `mailto:${LEAD_EMAIL_RECIPIENT}?subject=${subject}&body=${body}`;
+  }
+
+  const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
+
+    // Honeypot: if filled, silently drop (bot).
+    if (form.company) {
+      setSubmitted(true);
+      return;
+    }
     if (!form.name || !form.email || !form.btype) {
       toast.error("Please fill in your name, email, and business type.");
       return;
     }
-    // Email regex sanity check
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email);
     if (!emailOk) {
       toast.error("Please enter a valid email address.");
       return;
     }
-    setSubmitted(true);
-    toast.success("Request received — our desk will reply within 1 business day.");
+
+    // If no provider configured yet, fall back to email so the form
+    // still works (dev / before the key is pasted in).
+    if (!isLeadConfigured()) {
+      toast("Lead endpoint not configured — opening your email app instead.", {
+        description: "Set LEAD_ACCESS_KEY in src/lib/lead-config.ts to capture leads automatically.",
+      });
+      fallbackMailto();
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      let res: Response;
+      if (LEAD_PROVIDER === "web3forms") {
+        res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({ ...buildPayload(), access_key: LEAD_ACCESS_KEY }),
+        });
+      } else {
+        // Formspree — accepts JSON too
+        res = await fetch(LEAD_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(buildPayload()),
+        });
+      }
+
+      const data = await res.json().catch(() => ({} as Record<string, unknown>));
+      const ok =
+        res.ok &&
+        // Web3Forms returns { success: true }; Formspree returns arbitrary JSON
+        (LEAD_PROVIDER === "formspree" || data.success !== false);
+
+      if (ok) {
+        setSubmitted(true);
+        setForm(EMPTY);
+        toast.success("Request received — our desk will reply within 1 business day.");
+      } else {
+        throw new Error(
+          (typeof data.message === "string" && data.message) || "Submission failed",
+        );
+      }
+    } catch {
+      toast.error("Could not send right now — please WhatsApp us instead.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -106,6 +197,18 @@ export function QuoteForm() {
                   Reaches our wholesale desk in Miami — same team as our
                   WhatsApp.
                 </p>
+
+                {/* Honeypot — visually hidden, must stay empty */}
+                <input
+                  type="text"
+                  name="company"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="ns-honeypot"
+                  value={form.company}
+                  onChange={(e) => update("company", e.target.value)}
+                />
 
                 <div className="ns-frow">
                   <div className="ns-field">
@@ -177,8 +280,20 @@ export function QuoteForm() {
                   />
                 </div>
 
-                <button type="submit" className="ns-btn ns-btn-primary">
-                  Send Request <Send size={16} />
+                <button
+                  type="submit"
+                  className="ns-btn ns-btn-primary"
+                  disabled={submitting}
+                >
+                  {submitting ? (
+                    <>
+                      <Loader2 size={16} className="ic animate-spin" /> Sending…
+                    </>
+                  ) : (
+                    <>
+                      Send Request <Send size={16} />
+                    </>
+                  )}
                 </button>
               </form>
             )}

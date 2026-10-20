@@ -23,7 +23,7 @@
 export const LEAD_PROVIDER: "web3forms" | "formspree" = "web3forms";
 
 // Web3Forms access key. REPLACE with your real key from web3forms.com
-export const LEAD_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+export const LEAD_ACCESS_KEY = "c7a7d427-c883-4d41-a32e-00aec0565540";
 
 // Formspree endpoint (used only when LEAD_PROVIDER === "formspree")
 export const LEAD_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
